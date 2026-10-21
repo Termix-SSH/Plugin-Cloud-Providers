@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "AWS、Azure、Google Cloud、DigitalOcean、Hetzner、その他のクラウドからホストを追加し、同期状態を維持します。"
+  },
+  "tab": {
+    "title": "クラウド"
+  },
+  "permissions": {
+    "view": {
+      "title": "クラウドアカウントの表示",
+      "description": "クラウドタブを開き、クラウドアカウントを表示します。"
+    },
+    "manage": {
+      "title": "クラウドアカウントの管理",
+      "description": "クラウドアカウントを追加し、インスタンスをホストとしてインポートし、同期を実行します。"
+    }
+  },
+  "description": "クラウドアカウントを追加して、そのサーバーをホストとして利用します。選択したものをインポートするか、スケジュールに従ってアカウント全体を同期します。",
+  "empty": "クラウドアカウントがまだありません。",
+  "add": "アカウントを追加",
+  "edit": "編集",
+  "delete": "削除",
+  "test": "キーのテスト",
+  "syncNow": "今すぐ同期",
+  "saved": "保存済み",
+  "deleteConfirm": "{{name}} を削除しますか？ホストは Termix に残ります。",
+  "testOk": "キーが正常に動作しました。{{count}} 台のサーバーが見つかりました。",
+  "testFailed": "キーが正常に動作しませんでした。",
+  "syncDone": "{{created}} 件追加、{{updated}} 件更新、{{removed}} 件削除しました。",
+  "syncFailed": "{{count}} 件のホストの書き込みに失敗しました。",
+  "lastSync": "最終同期: {{date}}",
+  "status": {
+    "never": "まだ同期されていません",
+    "error": "失敗しました"
+  },
+  "state": {
+    "running": "実行中",
+    "stopped": "停止済み",
+    "other": "不明"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "アクセスキーID",
+    "secretAccessKey": "シークレットアクセスキー",
+    "sessionToken": "セッショントークン（オプション）",
+    "regions": "リージョン（空欄で全て）",
+    "service": "サービス",
+    "tenantId": "テナント ID",
+    "clientId": "クライアント ID",
+    "clientSecret": "クライアントシークレット",
+    "subscriptionId": "サブスクリプション ID",
+    "serviceAccount": "サービスアカウントキー (JSON)",
+    "projectId": "プロジェクト ID (オプション)",
+    "token": "API トークン",
+    "tenancyId": "テナンシー OCID",
+    "userId": "ユーザー OCID",
+    "fingerprint": "API キーのフィンガープリント",
+    "privateKey": "秘密鍵 (PEM)",
+    "compartments": "コンパートメント OCID（テナンシー全体の場合は空欄）",
+    "secretKey": "シークレットキー",
+    "zones": "ゾーン（すべてを対象にする場合は空欄）",
+    "username": "ユーザー名",
+    "password": "パスワード"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 と Lightsail",
+    "public-first": "公開、次にプライベート",
+    "public": "公開のみ",
+    "private": "プライベートのみ",
+    "manual": "手動",
+    "auto": "自動",
+    "keep": "ホストを保持",
+    "mark": "ホストを「欠落」としてマーク",
+    "delete": "ホストを削除"
+  },
+  "form": {
+    "addTitle": "クラウドアカウントを追加",
+    "editTitle": "クラウドアカウントを編集",
+    "account": "アカウント",
+    "hosts": "ホスト",
+    "sync": "同期",
+    "provider": "プロバイダー",
+    "name": "名前",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "保存済みの値を維持する場合は空のままにしてください",
+    "keysHint": "キーは暗号化されて保存され、二度と表示されません。置き換えるにはフィールドに入力してください。",
+    "folder": "フォルダー",
+    "folderPlaceholder": "名前と同じ",
+    "defaultUser": "デフォルトの SSH ユーザー",
+    "defaultUserHint": "新しいホストに使用されます。別のユーザーを使用するには、インスタンスに termix-user:name タグを付けます。",
+    "credential": "デフォルトのログイン情報",
+    "noCredential": "なし（接続時に確認）",
+    "address": "使用するアドレス",
+    "syncMode": "同期",
+    "interval": "同期間隔（分）",
+    "onRemoved": "インスタンスが削除された場合",
+    "add": "アカウントを追加",
+    "save": "保存"
+  },
+  "discover": {
+    "title": "サーバーをインポート",
+    "instances": "サーバー",
+    "loading": "サーバーを読み込み中...",
+    "empty": "サーバーが見つかりません。",
+    "all": "すべて選択",
+    "none": "選択解除",
+    "noAddress": "アドレスなし",
+    "imported": "インポート済み",
+    "import": "{{count}} をインポート",
+    "done": "{{created}} 件追加、{{updated}} 件更新しました。",
+    "failed": "{{count}} 台のホストの書き込みに失敗しました。"
+  }
+}

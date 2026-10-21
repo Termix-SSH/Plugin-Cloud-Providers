@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Proveïdors de núvol",
+    "description": "Afegeix amfitrions des d'AWS, Azure, Google Cloud, DigitalOcean, Hetzner i altres núvols, i mantén-los sincronitzats."
+  },
+  "tab": {
+    "title": "Núvol"
+  },
+  "permissions": {
+    "view": {
+      "title": "Veure comptes de núvol",
+      "description": "Obre la pestanya Núvol i visualitza els teus comptes de núvol."
+    },
+    "manage": {
+      "title": "Gestionar comptes de núvol",
+      "description": "Afegeix comptes de núvol, importa instàncies com a amfitrions i executa sincronitzacions."
+    }
+  },
+  "description": "Afegeix un compte de núvol per convertir els seus servidors en amfitrions. Importa els que triïs o sincronitza tot el compte amb un temporitzador.",
+  "empty": "Encara no hi ha comptes de núvol.",
+  "add": "Afegeix un compte",
+  "edit": "Edita",
+  "delete": "Suprimeix",
+  "test": "Prova les claus",
+  "syncNow": "Sincronitza ara",
+  "saved": "Desat",
+  "deleteConfirm": "Vols suprimir {{name}}? Els seus amfitrions es mantindran a Termix.",
+  "testOk": "Les claus funcionen. S'han trobat {{count}} servidors.",
+  "testFailed": "Les claus no han funcionat.",
+  "syncDone": "{{created}} afegits, {{updated}} actualitzats, {{removed}} eliminats.",
+  "syncFailed": "No s'han pogut escriure {{count}} amfitrions.",
+  "lastSync": "Sincronitzat el {{date}}",
+  "status": {
+    "never": "Encara no s'ha sincronitzat",
+    "error": "Ha fallat"
+  },
+  "state": {
+    "running": "en execució",
+    "stopped": "aturat",
+    "other": "desconegut"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID de la clau d'accés",
+    "secretAccessKey": "Clau d'accés secreta",
+    "sessionToken": "Token de sessió (opcional)",
+    "regions": "Regions (deixa-ho buit per a totes)",
+    "service": "Servei",
+    "tenantId": "ID de l'inquilí",
+    "clientId": "ID del client",
+    "clientSecret": "Secret del client",
+    "subscriptionId": "ID de la subscripció",
+    "serviceAccount": "Clau del compte de servei (JSON)",
+    "projectId": "ID del projecte (opcional)",
+    "token": "Token de l'API",
+    "tenancyId": "OCID de la tenència",
+    "userId": "OCID de l'usuari",
+    "fingerprint": "Petjada digital de la clau de l'API",
+    "privateKey": "Clau privada (PEM)",
+    "compartments": "OCID dels compartiments (deixa-ho buit per a la tenència)",
+    "secretKey": "Clau secreta",
+    "zones": "Zones (deixa-ho buit per a totes)",
+    "username": "Nom d'usuari",
+    "password": "Contrasenya"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 i Lightsail",
+    "public-first": "Públic, altrament privat",
+    "public": "Només públic",
+    "private": "Només privat",
+    "manual": "Manual",
+    "auto": "Automàtic",
+    "keep": "Conservar l'amfitrió",
+    "mark": "Marcar l'amfitrió com a mancant",
+    "delete": "Suprimir l'amfitrió"
+  },
+  "form": {
+    "addTitle": "Afegir compte del núvol",
+    "editTitle": "Editar compte del núvol",
+    "account": "Compte",
+    "hosts": "Amfitrions",
+    "sync": "Sincronitzar",
+    "provider": "Proveïdor",
+    "name": "Nom",
+    "namePlaceholder": "Producció AWS",
+    "keepKeys": "Deixeu-ho buit per conservar el valor desat",
+    "keysHint": "Les claus s'emmagatzemen xifrades i no es tornen a mostrar. Ompliu els camps per substituir-les.",
+    "folder": "Carpeta",
+    "folderPlaceholder": "Igual que el nom",
+    "defaultUser": "Usuari SSH predeterminat",
+    "defaultUserHint": "S'utilitza per als amfitrions nous. Etiqueteu una instància amb termix-user:nom per utilitzar un altre usuari per a ella.",
+    "credential": "Inici de sessió predeterminat",
+    "noCredential": "Cap, preguntar en connectar",
+    "address": "Adreça a utilitzar",
+    "syncMode": "Sincronització",
+    "interval": "Minuts entre sincronitzacions",
+    "onRemoved": "Quan una instància desapareix",
+    "add": "Afegir compte",
+    "save": "Desar"
+  },
+  "discover": {
+    "title": "Importar servidors",
+    "instances": "Servidors",
+    "loading": "Carregant servidors...",
+    "empty": "No s'han trobat servidors.",
+    "all": "Seleccionar-ho tot",
+    "none": "Desseleccionar-ho tot",
+    "noAddress": "sense adreça",
+    "imported": "Importat",
+    "import": "Importar {{count}}",
+    "done": "{{created}} afegits, {{updated}} actualitzats.",
+    "failed": "No s'han pogut escriure {{count}} amfitrions."
+  }
+}

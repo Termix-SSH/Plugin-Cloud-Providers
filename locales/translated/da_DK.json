@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Skyudbydere",
+    "description": "Tilføj værtsmaskiner fra AWS, Azure, Google Cloud, DigitalOcean, Hetzner og andre skytjenester, og hold dem synkroniseret."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Se cloud-konti",
+      "description": "Åbn fanen Cloud og se dine cloud-konti."
+    },
+    "manage": {
+      "title": "Administrer cloud-konti",
+      "description": "Tilføj cloud-konti, importer instanser som værter og kør synkroniseringer."
+    }
+  },
+  "description": "Tilføj en skykonto for at omdanne dens servere til værter. Importér dem, du vælger, eller synkroniser hele kontoen efter en tidsplan.",
+  "empty": "Ingen cloud-konti endnu.",
+  "add": "Tilføj konto",
+  "edit": "Rediger",
+  "delete": "Slet",
+  "test": "Test nøgler",
+  "syncNow": "Synkroniser nu",
+  "saved": "Gemt",
+  "deleteConfirm": "Slet {{name}}? Dens værter forbliver i Termix.",
+  "testOk": "Nøglerne fungerer. Fundet {{count}} servere.",
+  "testFailed": "Nøglerne fungerede ikke.",
+  "syncDone": "{{created}} tilføjet, {{updated}} opdateret, {{removed}} fjernet.",
+  "syncFailed": "{{count}} værter kunne ikke skrives.",
+  "lastSync": "Synkroniseret {{date}}",
+  "status": {
+    "never": "Ikke synkroniseret endnu",
+    "error": "Mislykkedes"
+  },
+  "state": {
+    "running": "kører",
+    "stopped": "stoppet",
+    "other": "ukendt"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Adgangsnøgle-ID",
+    "secretAccessKey": "Hemmelig adgangsnøgle",
+    "sessionToken": "Sessionstoken (valgfrit)",
+    "regions": "Regioner (tom for alle)",
+    "service": "Tjeneste",
+    "tenantId": "Tenant-ID",
+    "clientId": "Klient-ID",
+    "clientSecret": "Klienthemmelighed",
+    "subscriptionId": "Abonnements-ID",
+    "serviceAccount": "Nøgle til tjenestekonto (JSON)",
+    "projectId": "Projekt-ID (valgfrit)",
+    "token": "API-token",
+    "tenancyId": "Tenancy OCID",
+    "userId": "Bruger OCID",
+    "fingerprint": "API-nøgle fingeraftryk",
+    "privateKey": "Privat nøgle (PEM)",
+    "compartments": "Compartments OCIDs (tom for tenancy)",
+    "secretKey": "Hemmelig nøgle",
+    "zones": "Zoner (tom for alle)",
+    "username": "Brugernavn",
+    "password": "Adgangskode"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 og Lightsail",
+    "public-first": "Offentlig, ellers privat",
+    "public": "Kun offentlig",
+    "private": "Kun privat",
+    "manual": "Manuel",
+    "auto": "Automatisk",
+    "keep": "Behold værten",
+    "mark": "Mærk værten som manglende",
+    "delete": "Slet værten"
+  },
+  "form": {
+    "addTitle": "Tilføj cloud-konto",
+    "editTitle": "Rediger cloud-konto",
+    "account": "Konto",
+    "hosts": "Værter",
+    "sync": "Synkronisering",
+    "provider": "Udbyder",
+    "name": "Navn",
+    "namePlaceholder": "Produktion AWS",
+    "keepKeys": "Lad være tom for at beholde den gemte værdi",
+    "keysHint": "Nøgler gemmes krypteret og vises aldrig igen. Udfyld felterne for at erstatte dem.",
+    "folder": "Mappe",
+    "folderPlaceholder": "Samme som navnet",
+    "defaultUser": "Standard SSH-bruger",
+    "defaultUserHint": "Bruges til nye værter. Tag en instans med termix-user:name for at bruge en anden bruger til den.",
+    "credential": "Standard login",
+    "noCredential": "Ingen, spørg ved forbindelse",
+    "address": "Adresse at bruge",
+    "syncMode": "Synkronisering",
+    "interval": "Minutter mellem synkroniseringer",
+    "onRemoved": "Når en instans forsvinder",
+    "add": "Tilføj konto",
+    "save": "Gem"
+  },
+  "discover": {
+    "title": "Importér servere",
+    "instances": "Servere",
+    "loading": "Indlæser servere...",
+    "empty": "Ingen servere fundet.",
+    "all": "Vælg alle",
+    "none": "Fravælg alle",
+    "noAddress": "ingen adresse",
+    "imported": "Importeret",
+    "import": "Importér {{count}}",
+    "done": "{{created}} tilføjet, {{updated}} opdateret.",
+    "failed": "Kunne ikke gemme {{count}} værter."
+  }
+}

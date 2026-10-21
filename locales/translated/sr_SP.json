@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "Додајте хостове са AWS, Azure, Google Cloud, DigitalOcean, Hetzner и других облачних платформи, и одржавајте их усклађеним."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Види cloud налоге",
+      "description": "Отвори Cloud таб и види своје cloud налоге."
+    },
+    "manage": {
+      "title": "Управљај cloud налозима",
+      "description": "Додај cloud налоге, увези инстанце као хостове и покренуј синхронизације."
+    }
+  },
+  "description": "Додај cloud налог да претвориш његове сервере у хостове. Увези оне које изабереš, или синхронизуј цео налог по распореду.",
+  "empty": "Још нема cloud налога.",
+  "add": "Додај налог",
+  "edit": "Уреди",
+  "delete": "Обриши",
+  "test": "Тестирај кључеве",
+  "syncNow": "Синхронизуј сада",
+  "saved": "Сачувано",
+  "deleteConfirm": "Обрисати {{name}}? Његови хостови остају у Termix-у.",
+  "testOk": "Кључеви раде. Пронађено {{count}} сервера.",
+  "testFailed": "Кључеви нису радили.",
+  "syncDone": "{{created}} додато, {{updated}} ажурирано, {{removed}} уклоњено.",
+  "syncFailed": "Није могуће сачувати {{count}} хостова.",
+  "lastSync": "Синхронизовано {{date}}",
+  "status": {
+    "never": "Још увек није синхронизовано",
+    "error": "Неуспешно"
+  },
+  "state": {
+    "running": "активно",
+    "stopped": "заустављено",
+    "other": "непознато"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID приступног кључа",
+    "secretAccessKey": "Тајни приступни кључ",
+    "sessionToken": "Токен сесије (опционо)",
+    "regions": "Региони (празно за све)",
+    "service": "Услуга",
+    "tenantId": "ИД закупца",
+    "clientId": "ИД клијента",
+    "clientSecret": "Тајна клијента",
+    "subscriptionId": "ИД претплате",
+    "serviceAccount": "Кључ налога за услуге (JSON)",
+    "projectId": "ИД пројекта (опционо)",
+    "token": "API жетон",
+    "tenancyId": "ИД закупца (OCID)",
+    "userId": "ИД корисника (OCID)",
+    "fingerprint": "Отисак API кључа",
+    "privateKey": "Приватни кључ (PEM)",
+    "compartments": "OCID-ови компартмана (празно за tenancy)",
+    "secretKey": "Тајни кључ",
+    "zones": "Зоне (празно за све)",
+    "username": "Корисничко име",
+    "password": "Лозинка"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 и Lightsail",
+    "public-first": "Јавно, иначе приватно",
+    "public": "Само јавно",
+    "private": "Само приватно",
+    "manual": "Ручно",
+    "auto": "Аутоматски",
+    "keep": "Задржи хост",
+    "mark": "Означи хост као недостајући",
+    "delete": "Обриши хост"
+  },
+  "form": {
+    "addTitle": "Додај облак налог",
+    "editTitle": "Уреди облак налог",
+    "account": "Налог",
+    "hosts": "Домаћини",
+    "sync": "Синхронизација",
+    "provider": "Провајдер",
+    "name": "Име",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Оставите празно да задржите сачувану вредност",
+    "keysHint": "Кључеви се чувају шифровано и никада се не приказују поново. Попуните поља да бисте их заменили.",
+    "folder": "Фасцикла",
+    "folderPlaceholder": "Исто као име",
+    "defaultUser": "Подразумевани SSH корисник",
+    "defaultUserHint": "Користи се за нове хостове. Означите инстанцу са termix-user:name да бисте користили другог корисника за њу.",
+    "credential": "Подразумевана пријава",
+    "noCredential": "Ништа, питај при повезивању",
+    "address": "Адреса за коришћење",
+    "syncMode": "Синхронизација",
+    "interval": "Минути између синхронизација",
+    "onRemoved": "Када инстанца нестане",
+    "add": "Додај налог",
+    "save": "Сачувај"
+  },
+  "discover": {
+    "title": "Увези сервере",
+    "instances": "Сервери",
+    "loading": "Учитавање сервера...",
+    "empty": "Ниједан сервер није пронађен.",
+    "all": "Изабери све",
+    "none": "Поништи избор",
+    "noAddress": "нема адресе",
+    "imported": "Увезено",
+    "import": "Увези {{count}}",
+    "done": "{{created}} додатих, {{updated}} ажурираних.",
+    "failed": "Није могуће сачувати {{count}} хостова."
+  }
+}

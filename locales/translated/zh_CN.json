@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "云服务商",
+    "description": "添加来自 AWS、Azure、Google Cloud、DigitalOcean、Hetzner 及其他云平台的服务器，并保持同步。"
+  },
+  "tab": {
+    "title": "云"
+  },
+  "permissions": {
+    "view": {
+      "title": "查看云账户",
+      "description": "打开“云”标签页并查看您的云账户。"
+    },
+    "manage": {
+      "title": "管理云账户",
+      "description": "添加云账户，将实例导入为主机，并运行同步。"
+    }
+  },
+  "description": "添加云账户以将其服务器转换为主机。导入您选择的服务器，或按定时计划同步整个账户。",
+  "empty": "暂无云账户。",
+  "add": "添加账户",
+  "edit": "编辑",
+  "delete": "删除",
+  "test": "测试密钥",
+  "syncNow": "立即同步",
+  "saved": "已保存",
+  "deleteConfirm": "删除 {{name}}？其主机将保留在 Termix 中。",
+  "testOk": "密钥有效。找到 {{count}} 台服务器。",
+  "testFailed": "密钥无效。",
+  "syncDone": "新增 {{created}} 个，更新 {{updated}} 个，移除 {{removed}} 个。",
+  "syncFailed": "无法写入 {{count}} 个主机。",
+  "lastSync": "同步于 {{date}}",
+  "status": {
+    "never": "尚未同步",
+    "error": "失败"
+  },
+  "state": {
+    "running": "运行中",
+    "stopped": "已停止",
+    "other": "未知"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "访问密钥 ID",
+    "secretAccessKey": "秘密访问密钥",
+    "sessionToken": "会话令牌（可选）",
+    "regions": "区域（留空表示全部）",
+    "service": "服务",
+    "tenantId": "租户 ID",
+    "clientId": "客户端 ID",
+    "clientSecret": "客户端密钥",
+    "subscriptionId": "订阅 ID",
+    "serviceAccount": "服务账户密钥 (JSON)",
+    "projectId": "项目 ID（可选）",
+    "token": "API 令牌",
+    "tenancyId": "租户 OCID",
+    "userId": "用户 OCID",
+    "fingerprint": "API 密钥指纹",
+    "privateKey": "私钥 (PEM)",
+    "compartments": "隔间 OCID（留空表示租户）",
+    "secretKey": "密钥",
+    "zones": "区域（留空表示全部）",
+    "username": "用户名",
+    "password": "密码"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 和 Lightsail",
+    "public-first": "优先使用公网地址，否则使用私网地址",
+    "public": "仅使用公网地址",
+    "private": "仅使用私网地址",
+    "manual": "手动",
+    "auto": "自动",
+    "keep": "保留主机",
+    "mark": "将主机标记为缺失",
+    "delete": "删除主机"
+  },
+  "form": {
+    "addTitle": "添加云账户",
+    "editTitle": "编辑云账户",
+    "account": "账户",
+    "hosts": "主机",
+    "sync": "同步",
+    "provider": "服务商",
+    "name": "名称",
+    "namePlaceholder": "生产环境 AWS",
+    "keepKeys": "留空以保留已保存的值",
+    "keysHint": "密钥经过加密存储，且不会再次显示。填写字段以替换它们。",
+    "folder": "文件夹",
+    "folderPlaceholder": "与名称相同",
+    "defaultUser": "默认 SSH 用户",
+    "defaultUserHint": "用于新主机。为实例添加 termix-user:name 标签以使用其他用户。",
+    "credential": "默认登录凭据",
+    "noCredential": "无，连接时询问",
+    "address": "使用的地址",
+    "syncMode": "同步",
+    "interval": "同步间隔（分钟）",
+    "onRemoved": "当实例消失时",
+    "add": "添加账户",
+    "save": "保存"
+  },
+  "discover": {
+    "title": "导入服务器",
+    "instances": "服务器",
+    "loading": "正在加载服务器...",
+    "empty": "未找到服务器。",
+    "all": "全选",
+    "none": "取消全选",
+    "noAddress": "无地址",
+    "imported": "已导入",
+    "import": "导入 {{count}} 项",
+    "done": "已添加 {{created}} 项，已更新 {{updated}} 项。",
+    "failed": "{{count}} 个主机无法写入。"
+  }
+}

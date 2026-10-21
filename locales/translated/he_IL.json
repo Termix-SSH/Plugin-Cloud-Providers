@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "ספקי ענן",
+    "description": "הוסף מארחים מ-AWS, Azure, Google Cloud, DigitalOcean, Hetzner ועננים נוספים, ושמור על סנכרון ביניהם."
+  },
+  "tab": {
+    "title": "ענן"
+  },
+  "permissions": {
+    "view": {
+      "title": "צפייה בחשבונות ענן",
+      "description": "פתח את הלשונית ענן וראה את חשבונות הענן שלך."
+    },
+    "manage": {
+      "title": "ניהול חשבונות ענן",
+      "description": "הוסף חשבונות ענן, ייבא מופעים כמארחים והפעל סנכרון."
+    }
+  },
+  "description": "הוסף חשבון ענן כדי להפוך את השרתים שלו למארחים. ייבא את אלו שבחרת, או סנכרן את כל החשבון לפי לוח זמנים.",
+  "empty": "אין חשבונות ענן עדיין.",
+  "add": "הוסף חשבון",
+  "edit": "עריכה",
+  "delete": "מחיקה",
+  "test": "בדיקת מפתחות",
+  "syncNow": "סנכרון עכשיו",
+  "saved": "נשמר",
+  "deleteConfirm": "למחוק את {{name}}? המארחים שלו יישארו ב-Termix.",
+  "testOk": "המפתחות עובדים. נמצאו {{count}} שרתים.",
+  "testFailed": "המפתחות לא עבדו.",
+  "syncDone": "{{created}} נוספו, {{updated}} עודכנו, {{removed}} הוסרו.",
+  "syncFailed": "לא ניתן היה לכתוב {{count}} מארחים.",
+  "lastSync": "סונכרן ב-{{date}}",
+  "status": {
+    "never": "טרם סונכרן",
+    "error": "נכשל"
+  },
+  "state": {
+    "running": "פעיל",
+    "stopped": "עצור",
+    "other": "לא ידוע"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "מזהה מפתח גישה",
+    "secretAccessKey": "מפתח גישה סודי",
+    "sessionToken": "אסימון סשן (אופציונלי)",
+    "regions": "אזורים (ריק לכולם)",
+    "service": "שירות",
+    "tenantId": "מזהה שוכר",
+    "clientId": "מזהה לקוח",
+    "clientSecret": "סוד לקוח",
+    "subscriptionId": "מזהה מנוי",
+    "serviceAccount": "מפתח חשבון שירות (JSON)",
+    "projectId": "מזהה פרויקט (אופציונלי)",
+    "token": "אסימון API",
+    "tenancyId": "OCID של שוכר",
+    "userId": "OCID של משתמש",
+    "fingerprint": "טביעת אצבע של מפתח API",
+    "privateKey": "מפתח פרטי (PEM)",
+    "compartments": "מזהי תאים (OCID) (ריק עבור ה-tenancy)",
+    "secretKey": "מפתח סודי",
+    "zones": "אזורים (ריק עבור כולם)",
+    "username": "שם משתמש",
+    "password": "סיסמה"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 ו-Lightsail",
+    "public-first": "ציבורי, אחרת פרטי",
+    "public": "ציבורי בלבד",
+    "private": "פרטי בלבד",
+    "manual": "ידני",
+    "auto": "אוטומטי",
+    "keep": "שמור את המארח",
+    "mark": "סמן את המארח כחסר",
+    "delete": "מחק את המארח"
+  },
+  "form": {
+    "addTitle": "הוסף חשבון ענן",
+    "editTitle": "ערוך חשבון ענן",
+    "account": "חשבון",
+    "hosts": "מארחים",
+    "sync": "סנכרון",
+    "provider": "ספק",
+    "name": "שם",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "השאר ריק כדי לשמור על הערך הקיים",
+    "keysHint": "המפתחות מאוחסנים בצופן ואינם מוצגים שוב. מלא את השדות כדי להחליף אותם.",
+    "folder": "תיקייה",
+    "folderPlaceholder": "זהה לשם",
+    "defaultUser": "משתמש SSH ברירת מחדל",
+    "defaultUserHint": "משמש לאירוחים חדשים. תג את המופע עם termix-user:name כדי להשתמש במשתמש אחר עבורו.",
+    "credential": "התחברות ברירת מחדל",
+    "noCredential": "ללא, שאל בעת החיבור",
+    "address": "כתובת לשימוש",
+    "syncMode": "סנכרון",
+    "interval": "דקות בין סנכרונים",
+    "onRemoved": "כאשר מופע נעלם",
+    "add": "הוסף חשבון",
+    "save": "שמור"
+  },
+  "discover": {
+    "title": "ייבוא שרתים",
+    "instances": "שרתים",
+    "loading": "טוען שרתים...",
+    "empty": "לא נמצאו שרתים.",
+    "all": "בחירת הכל",
+    "none": "ביטול בחירה",
+    "noAddress": "ללא כתובת",
+    "imported": "ייובא",
+    "import": "ייבוא {{count}}",
+    "done": "{{created}} נוספו, {{updated}} עודכנו.",
+    "failed": "לא ניתן היה לכתוב {{count}} מארחים."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Fournisseurs cloud",
+    "description": "Ajoutez des hôtes depuis AWS, Azure, Google Cloud, DigitalOcean, Hetzner et d'autres clouds, et gardez-les synchronisés."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Voir les comptes cloud",
+      "description": "Ouvrez l'onglet Cloud et consultez vos comptes cloud."
+    },
+    "manage": {
+      "title": "Gérer les comptes cloud",
+      "description": "Ajoutez des comptes cloud, importez des instances en tant qu'hôtes et lancez des synchronisations."
+    }
+  },
+  "description": "Ajoutez un compte cloud pour transformer ses serveurs en hôtes. Importez ceux que vous choisissez, ou synchronisez l'ensemble du compte selon un planning.",
+  "empty": "Aucun compte cloud pour le moment.",
+  "add": "Ajouter un compte",
+  "edit": "Modifier",
+  "delete": "Supprimer",
+  "test": "Tester les clés",
+  "syncNow": "Synchroniser maintenant",
+  "saved": "Enregistré",
+  "deleteConfirm": "Supprimer {{name}} ? Ses hôtes restent dans Termix.",
+  "testOk": "Les clés fonctionnent. {{count}} serveurs trouvés.",
+  "testFailed": "Les clés ne fonctionnent pas.",
+  "syncDone": "{{created}} ajoutés, {{updated}} mis à jour, {{removed}} supprimés.",
+  "syncFailed": "{{count}} hôtes n'ont pas pu être écrits.",
+  "lastSync": "Synchronisé le {{date}}",
+  "status": {
+    "never": "Pas encore synchronisé",
+    "error": "Échec"
+  },
+  "state": {
+    "running": "en cours",
+    "stopped": "arrêté",
+    "other": "inconnu"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID de clé d'accès",
+    "secretAccessKey": "Clé d'accès secrète",
+    "sessionToken": "Jeton de session (facultatif)",
+    "regions": "Régions (laisser vide pour toutes)",
+    "service": "Service",
+    "tenantId": "ID du locataire",
+    "clientId": "ID du client",
+    "clientSecret": "Secret du client",
+    "subscriptionId": "ID d'abonnement",
+    "serviceAccount": "Clé du compte de service (JSON)",
+    "projectId": "ID du projet (facultatif)",
+    "token": "Jeton API",
+    "tenancyId": "OCID du locataire",
+    "userId": "OCID de l'utilisateur",
+    "fingerprint": "Empreinte de la clé API",
+    "privateKey": "Clé privée (PEM)",
+    "compartments": "OCIDs des compartiments (vide pour la tenancy)",
+    "secretKey": "Clé secrète",
+    "zones": "Zones (vide pour toutes)",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 et Lightsail",
+    "public-first": "Public, sinon privé",
+    "public": "Public uniquement",
+    "private": "Privé uniquement",
+    "manual": "Manuel",
+    "auto": "Automatique",
+    "keep": "Conserver l'hôte",
+    "mark": "Marquer l'hôte comme manquant",
+    "delete": "Supprimer l'hôte"
+  },
+  "form": {
+    "addTitle": "Ajouter un compte cloud",
+    "editTitle": "Modifier le compte cloud",
+    "account": "Compte",
+    "hosts": "Hôtes",
+    "sync": "Synchronisation",
+    "provider": "Fournisseur",
+    "name": "Nom",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Laissez vide pour conserver la valeur enregistrée",
+    "keysHint": "Les clés sont stockées de manière chiffrée et ne sont plus affichées. Remplissez les champs pour les remplacer.",
+    "folder": "Dossier",
+    "folderPlaceholder": "Identique au nom",
+    "defaultUser": "Utilisateur SSH par défaut",
+    "defaultUserHint": "Utilisé pour les nouveaux hôtes. Ajoutez l'étiquette termix-user:name à une instance pour utiliser un autre utilisateur pour celle-ci.",
+    "credential": "Connexion par défaut",
+    "noCredential": "Aucune, demander lors de la connexion",
+    "address": "Adresse à utiliser",
+    "syncMode": "Synchronisation",
+    "interval": "Minutes entre les synchronisations",
+    "onRemoved": "Lorsqu'une instance disparaît",
+    "add": "Ajouter un compte",
+    "save": "Enregistrer"
+  },
+  "discover": {
+    "title": "Importer des serveurs",
+    "instances": "Serveurs",
+    "loading": "Chargement des serveurs...",
+    "empty": "Aucun serveur trouvé.",
+    "all": "Tout sélectionner",
+    "none": "Tout désélectionner",
+    "noAddress": "aucune adresse",
+    "imported": "Importé",
+    "import": "Importer {{count}}",
+    "done": "{{created}} ajouté(s), {{updated}} mis à jour.",
+    "failed": "{{count}} hôtes n'ont pas pu être enregistrés."
+  }
+}

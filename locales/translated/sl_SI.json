@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud ponudniki",
+    "description": "Dodajte gostitelje iz AWS, Azure, Google Cloud, DigitalOcean, Hetzner in drugih oblakov ter jih ohranjajte sinhronizirane."
+  },
+  "tab": {
+    "title": "Oblak"
+  },
+  "permissions": {
+    "view": {
+      "title": "Ogled računov v oblaku",
+      "description": "Odprite zavihek Oblak in si oglejte svoje račune v oblaku."
+    },
+    "manage": {
+      "title": "Upravljanje računov v oblaku",
+      "description": "Dodajanje računov v oblaku, uvoz instanc kot gostiteljev in izvajanje sinhronizacij."
+    }
+  },
+  "description": "Dodajte račun v oblaku, da postanejo njegovi strežniki gostitelji. Uvozite izbrane ali pa sinhronizirajte celoten račun po časovnem načrtu.",
+  "empty": "Še ni računov v oblaku.",
+  "add": "Dodaj račun",
+  "edit": "Uredi",
+  "delete": "Izbriši",
+  "test": "Preveri ključe",
+  "syncNow": "Sinhroniziraj zdaj",
+  "saved": "Shranjeno",
+  "deleteConfirm": "Izbrišem {{name}}? Njegovi gostitelji ostanejo v Termixu.",
+  "testOk": "Ključi delujejo. Najdenih je {{count}} strežnikov.",
+  "testFailed": "Ključi niso delovali.",
+  "syncDone": "{{created}} dodanih, {{updated}} posodobljenih, {{removed}} odstranjenih.",
+  "syncFailed": "{{count}} gostiteljev ni bilo mogoče zapisati.",
+  "lastSync": "Usklajeno {{date}}",
+  "status": {
+    "never": "Še ni usklajeno",
+    "error": "Ni uspelo"
+  },
+  "state": {
+    "running": "v teku",
+    "stopped": "ustavljeno",
+    "other": "neznano"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID dostopnega ključa",
+    "secretAccessKey": "Zasebni dostopni ključ",
+    "sessionToken": "Žeton seje (izbirno)",
+    "regions": "Regije (prazno za vse)",
+    "service": "Storitev",
+    "tenantId": "ID najemnika",
+    "clientId": "ID odjemalca",
+    "clientSecret": "Skrivnost odjemalca",
+    "subscriptionId": "ID naročnine",
+    "serviceAccount": "Ključ storitvenega računa (JSON)",
+    "projectId": "ID projekta (izbirno)",
+    "token": "API žeton",
+    "tenancyId": "OCID najemnika",
+    "userId": "OCID uporabnika",
+    "fingerprint": "Odtis API ključa",
+    "privateKey": "Zasebni ključ (PEM)",
+    "compartments": "OCID-ji predelov (prazno za najem)",
+    "secretKey": "Zasebni ključ",
+    "zones": "Cona (prazno za vse)",
+    "username": "Uporabniško ime",
+    "password": "Geslo"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 in Lightsail",
+    "public-first": "Javno, sicer zasebno",
+    "public": "Samo javno",
+    "private": "Samo zasebno",
+    "manual": "Ročno",
+    "auto": "Samodejno",
+    "keep": "Obdrži gostitelja",
+    "mark": "Označi gostitelja kot manjkajočega",
+    "delete": "Izbriši gostitelja"
+  },
+  "form": {
+    "addTitle": "Dodaj račun v oblaku",
+    "editTitle": "Uredi račun v oblaku",
+    "account": "Račun",
+    "hosts": "Gostitelji",
+    "sync": "Sinhronizacija",
+    "provider": "Ponudnik",
+    "name": "Ime",
+    "namePlaceholder": "Produkcija AWS",
+    "keepKeys": "Pustite prazno, da ohranite shranjeno vrednost",
+    "keysHint": "Ključji so shranjeni šifrirano in se nikoli več ne prikažejo. Izpolnite polja, da jih zamenjate.",
+    "folder": "Mapa",
+    "folderPlaceholder": "Enako kot ime",
+    "defaultUser": "Privzeti SSH uporabnik",
+    "defaultUserHint": "Uporablja se za nove gostitelje. Za uporabo drugega uporabnika označite instanco z oznako termix-user:ime.",
+    "credential": "Privzeta prijava",
+    "noCredential": "Brez, vprašaj ob povezavi",
+    "address": "Naslov za uporabo",
+    "syncMode": "Usklajevanje",
+    "interval": "Minut med usklajevanjema",
+    "onRemoved": "Ko instanca izgine",
+    "add": "Dodaj račun",
+    "save": "Shrani"
+  },
+  "discover": {
+    "title": "Uvoz strežnikov",
+    "instances": "Strežniki",
+    "loading": "Nalaganje strežnikov...",
+    "empty": "Ni najdenih strežnikov.",
+    "all": "Izberi vse",
+    "none": "Prekliči izbor",
+    "noAddress": "brez naslova",
+    "imported": "Uvoženo",
+    "import": "Uvozi {{count}}",
+    "done": "{{created}} dodanih, {{updated}} posodobljenih.",
+    "failed": "Ni bilo mogoče zapisati {{count}} gostiteljev."
+  }
+}

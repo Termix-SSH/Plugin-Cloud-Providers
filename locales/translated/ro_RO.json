@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Furnizori de cloud",
+    "description": "Adăugați gazde din AWS, Azure, Google Cloud, DigitalOcean, Hetzner și alte servicii de cloud, și mențineți-le sincronizate."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Vizualizare conturi cloud",
+      "description": "Deschideți fila Cloud și vizualizați conturile dvs. cloud."
+    },
+    "manage": {
+      "title": "Gestionare conturi cloud",
+      "description": "Adăugați conturi cloud, importați instanțe ca gazde și executați sincronizări."
+    }
+  },
+  "description": "Adăugați un cont cloud pentru a transforma serverele sale în gazde. Importați pe cele pe care le selectați sau sincronizați întregul cont la intervale regulate.",
+  "empty": "Încă nu există conturi cloud.",
+  "add": "Adăugare cont",
+  "edit": "Editează",
+  "delete": "Șterge",
+  "test": "Testează cheile",
+  "syncNow": "Sincronizează acum",
+  "saved": "Salvat",
+  "deleteConfirm": "Șterge {{name}}? Gazdele rămân în Termix.",
+  "testOk": "Cheile funcționează. Au fost găsite {{count}} servere.",
+  "testFailed": "Cheile nu au funcționat.",
+  "syncDone": "{{created}} adăugate, {{updated}} actualizate, {{removed}} eliminate.",
+  "syncFailed": "{{count}} gazde nu au putut fi scrise.",
+  "lastSync": "Sincronizat la {{date}}",
+  "status": {
+    "never": "Nu a fost sincronizat încă",
+    "error": "Eșuat"
+  },
+  "state": {
+    "running": "în execuție",
+    "stopped": "oprit",
+    "other": "necunoscut"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID cheie de acces",
+    "secretAccessKey": "Cheie de acces secretă",
+    "sessionToken": "Token de sesiune (opțional)",
+    "regions": "Regiuni (gol pentru toate)",
+    "service": "Serviciu",
+    "tenantId": "ID chiriaș",
+    "clientId": "ID client",
+    "clientSecret": "Secret client",
+    "subscriptionId": "ID abonament",
+    "serviceAccount": "Cheie cont de serviciu (JSON)",
+    "projectId": "ID proiect (opțional)",
+    "token": "Token API",
+    "tenancyId": "OCID chiriaș",
+    "userId": "OCID utilizator",
+    "fingerprint": "Amprenta cheie API",
+    "privateKey": "Cheie privată (PEM)",
+    "compartments": "OCID-uri compartiment (gol pentru tenancy)",
+    "secretKey": "Cheie secretă",
+    "zones": "Zone (gol pentru toate)",
+    "username": "Nume utilizator",
+    "password": "Parolă"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 și Lightsail",
+    "public-first": "Public, altfel privat",
+    "public": "Doar public",
+    "private": "Doar privat",
+    "manual": "Manual",
+    "auto": "Automat",
+    "keep": "Păstrează gazda",
+    "mark": "Marchează gazda ca lipsă",
+    "delete": "Șterge gazda"
+  },
+  "form": {
+    "addTitle": "Adaugă cont cloud",
+    "editTitle": "Editează contul cloud",
+    "account": "Cont",
+    "hosts": "Gazde",
+    "sync": "Sincronizare",
+    "provider": "Furnizor",
+    "name": "Nume",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Lăsați gol pentru a păstra valoarea salvată",
+    "keysHint": "Cheile sunt stocate criptate și nu mai sunt afișate niciodată. Completați câmpurile pentru a le înlocui.",
+    "folder": "Dosar",
+    "folderPlaceholder": "Același ca numele",
+    "defaultUser": "Utilizator SSH implicit",
+    "defaultUserHint": "Folosit pentru noile gazde. Etichetați o instanță cu termix-user:nume pentru a folosi un alt utilizator pentru aceasta.",
+    "credential": "Autentificare implicită",
+    "noCredential": "Niciuna, întreabă la conectare",
+    "address": "Adresa de utilizat",
+    "syncMode": "Sincronizare",
+    "interval": "Minute între sincronizări",
+    "onRemoved": "Când o instanță dispare",
+    "add": "Adaugă cont",
+    "save": "Salvează"
+  },
+  "discover": {
+    "title": "Importă servere",
+    "instances": "Servere",
+    "loading": "Se încarcă serverele...",
+    "empty": "Niciun server găsit.",
+    "all": "Selectează toate",
+    "none": "Deselectează toate",
+    "noAddress": "fără adresă",
+    "imported": "Importat",
+    "import": "Importă {{count}}",
+    "done": "{{created}} adăugat(e), {{updated}} actualizat(e).",
+    "failed": "Nu s-au putut scrie {{count}} gazde."
+  }
+}

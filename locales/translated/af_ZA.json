@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Wolkverskaffers",
+    "description": "Voeg gasheerders by van AWS, Azure, Google Cloud, DigitalOcean, Hetzner en ander wolke, en hou hulle gesinkroniseer."
+  },
+  "tab": {
+    "title": "Wolk"
+  },
+  "permissions": {
+    "view": {
+      "title": "Sien wolkrekeninge",
+      "description": "Maak die Wolk-oop en sien jou wolkrekeninge."
+    },
+    "manage": {
+      "title": "Bestuur wolkrekeninge",
+      "description": "Voeg wolkrekeninge by, voer instansies as gasheerders in en voer sinkroniserings uit."
+    }
+  },
+  "description": "Voeg 'n wolkrekening by om sy bedieners in gasheerders te verander. Voer die een wat jy kies in, of sinkroniseer die hele rekening op 'n tydsberekening.",
+  "empty": "Nog geen wolkrekeninge nie.",
+  "add": "Voeg rekening by",
+  "edit": "Wysig",
+  "delete": "Vee uit",
+  "test": "Toets sleutels",
+  "syncNow": "Sinkroniseer nou",
+  "saved": "Stoor",
+  "deleteConfirm": "Vee {{name}} uit? Sy gasheerders bly in Termix.",
+  "testOk": "Sleutels werk. {{count}} bedieners gevind.",
+  "testFailed": "Die sleutels het nie gewerk nie.",
+  "syncDone": "{{created}} bygevoeg, {{updated}} opgedateer, {{removed}} verwyder.",
+  "syncFailed": "{{count}} gasheerders kon nie geskryf word nie.",
+  "lastSync": "Gesinkroniseer {{date}}",
+  "status": {
+    "never": "Nog nie gesinkroniseer nie",
+    "error": "Misluk"
+  },
+  "state": {
+    "running": "hardloop",
+    "stopped": "gestop",
+    "other": "onbekend"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Toegangssleutel-ID",
+    "secretAccessKey": "Geheime toegangssleutel",
+    "sessionToken": "Sessietoken (opsioneel)",
+    "regions": "Streeks (leeg vir almal)",
+    "service": "Diens",
+    "tenantId": "Huurder-ID",
+    "clientId": "Kliënt-ID",
+    "clientSecret": "Kliëntgeheim",
+    "subscriptionId": "Intekening-ID",
+    "serviceAccount": "Diensrekening-sleutel (JSON)",
+    "projectId": "Projek-ID (opsioneel)",
+    "token": "API-token",
+    "tenancyId": "Huurder OCID",
+    "userId": "Gebruiker OCID",
+    "fingerprint": "API-sleutelvingerafdruk",
+    "privateKey": "Privaat sleutel (PEM)",
+    "compartments": "Kompartement OCIDs (leeg vir die huurder)",
+    "secretKey": "Geheime sleutel",
+    "zones": "Sones (leeg vir almal)",
+    "username": "Gebruikersnaam",
+    "password": "Wagwoord"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 en Lightsail",
+    "public-first": "Openbaar, anders privaat",
+    "public": "Slegs openbaar",
+    "private": "Slegs privaat",
+    "manual": "Handmatig",
+    "auto": "Outomaties",
+    "keep": "Behou die gasheer",
+    "mark": "Merk die gasheer as ontbreek",
+    "delete": "Verwyder die gasheer"
+  },
+  "form": {
+    "addTitle": "Voeg wolkrekening by",
+    "editTitle": "Wysig wolkrekening",
+    "account": "Rekening",
+    "hosts": "Gasheer",
+    "sync": "Sinkroniseer",
+    "provider": "Verskaffer",
+    "name": "Naam",
+    "namePlaceholder": "Produksie AWS",
+    "keepKeys": "Laat leeg om die gestoorde waarde te behou",
+    "keysHint": "Sleutels word versleutel gestoor en word nooit weer vertoon nie. Vul die velde in om hulle te vervang.",
+    "folder": "Gids",
+    "folderPlaceholder": "Dieselfde as die naam",
+    "defaultUser": "Standaard SSH-gebruiker",
+    "defaultUserHint": "Word vir nuwe gasheer gebruik. Merk 'n instansie met termix-user:name om 'n ander gebruiker daarvoor te gebruik.",
+    "credential": "Standaard aanmelding",
+    "noCredential": "Geen, vra wanneer verbind",
+    "address": "Adres om te gebruik",
+    "syncMode": "Sinkroniseer",
+    "interval": "Minute tussen sinkroniserings",
+    "onRemoved": "Wanneer 'n instansie weg is",
+    "add": "Voeg rekening by",
+    "save": "Stoor"
+  },
+  "discover": {
+    "title": "Voer bedieners in",
+    "instances": "Bedieners",
+    "loading": "Laai bedieners...",
+    "empty": "Geen bedieners gevind nie.",
+    "all": "Kies alles",
+    "none": "Kies geen",
+    "noAddress": "geen adres nie",
+    "imported": "Ingevoer",
+    "import": "Voer {{count}} in",
+    "done": "{{created}} bygevoeg, {{updated}} opgedateer.",
+    "failed": "{{count}} gasheerbedieners kon nie geskryf word nie."
+  }
+}

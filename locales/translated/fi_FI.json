@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Pilvipalveluntarjoajat",
+    "description": "Lisää isäntiä AWS:stä, Azuresta, Google Cloudista, DigitalOceanista, Hetzneristä ja muista pilvipalveluista sekä pidä ne synkronoituna."
+  },
+  "tab": {
+    "title": "Pilvi"
+  },
+  "permissions": {
+    "view": {
+      "title": "Näe pilvitilit",
+      "description": "Avaa Pilvi-välilehti ja näe pilvitilisi."
+    },
+    "manage": {
+      "title": "Hallinnoi pilvitilejä",
+      "description": "Lisää pilvitilejä, tuo instanssit isänniksi ja suorita synkronointeja."
+    }
+  },
+  "description": "Lisää pilvitili muuttaaksesi sen palvelimet isänniksi. Tuo valitsemasi tai synkronoi koko tili aikataulun mukaan.",
+  "empty": "Ei vielä pilvitilejä.",
+  "add": "Lisää tili",
+  "edit": "Muokkaa",
+  "delete": "Poista",
+  "test": "Testaa avaimet",
+  "syncNow": "Synkronoi nyt",
+  "saved": "Tallennettu",
+  "deleteConfirm": "Haluatko poistaa kohteen {{name}}? Sen isäntäpalvelimet pysyvät Termixissä.",
+  "testOk": "Avaimet toimivat. Löydettiin {{count}} palvelinta.",
+  "testFailed": "Avaimet eivät toimineet.",
+  "syncDone": "{{created}} lisätty, {{updated}} päivitetty, {{removed}} poistettu.",
+  "syncFailed": "Virhe: {{count}} isäntää ei voitu kirjoittaa.",
+  "lastSync": "Synkronoitu {{date}}",
+  "status": {
+    "never": "Ei vielä synkronoitu",
+    "error": "Epäonnistui"
+  },
+  "state": {
+    "running": "käynnissä",
+    "stopped": "pysäytetty",
+    "other": "tuntematon"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Pääsyavaimen tunniste",
+    "secretAccessKey": "Salainen pääsyavain",
+    "sessionToken": "Istunto-token (valinnainen)",
+    "regions": "Alueet (tyhjä = kaikki)",
+    "service": "Palvelu",
+    "tenantId": "Maksajan tunnus",
+    "clientId": "Asiakastunnus",
+    "clientSecret": "Asiakassalaisuus",
+    "subscriptionId": "Tilauksen tunnus",
+    "serviceAccount": "Palvelutilin avain (JSON)",
+    "projectId": "Projektin tunnus (valinnainen)",
+    "token": "API-tunniste",
+    "tenancyId": "Maksajan OCID",
+    "userId": "Käyttäjän OCID",
+    "fingerprint": "API-avaimen sormenjälki",
+    "privateKey": "Yksityinen avain (PEM)",
+    "compartments": "Osaston OCID:t (tyhjä koko tenancylle)",
+    "secretKey": "Salainen avain",
+    "zones": "Vyöhykkeet (tyhjä kaikille)",
+    "username": "Käyttäjänimi",
+    "password": "Salasana"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 ja Lightsail",
+    "public-first": "Julkinen, muuten yksityinen",
+    "public": "Vain julkinen",
+    "private": "Vain yksityinen",
+    "manual": "Manuaalinen",
+    "auto": "Automaattinen",
+    "keep": "Säilytä isäntä",
+    "mark": "Merkitse isäntä puuttuvaksi",
+    "delete": "Poista isäntä"
+  },
+  "form": {
+    "addTitle": "Lisää pilvitili",
+    "editTitle": "Muokkaa pilvitiliä",
+    "account": "Tili",
+    "hosts": "Isäntä",
+    "sync": "Synkronointi",
+    "provider": "Palveluntarjoaja",
+    "name": "Nimi",
+    "namePlaceholder": "Tuotanto AWS",
+    "keepKeys": "Jätä tyhjäksi, jos haluat säilyttää tallennetun arvon",
+    "keysHint": "Avaimet tallennetaan salattuina, eikä niitä näytetä uudelleen. Täytä kentät korvataksesi ne.",
+    "folder": "Kansio",
+    "folderPlaceholder": "Sama kuin nimi",
+    "defaultUser": "Oletus-SSH-käyttäjä",
+    "defaultUserHint": "Käytetään uusille isäntäpalvelimille. Merkitse instanssi termix-user:name-tunnisteella käyttääksesi sille toista käyttäjää.",
+    "credential": "Oletuskirjautuminen",
+    "noCredential": "Ei mitään, kysy yhteyden muodostettaessa",
+    "address": "Käytettävä osoite",
+    "syncMode": "Synkronointi",
+    "interval": "Minuutteja synkronointien välillä",
+    "onRemoved": "Kun instanssi poistuu",
+    "add": "Lisää tili",
+    "save": "Tallenna"
+  },
+  "discover": {
+    "title": "Tuo palvelimia",
+    "instances": "Palvelimet",
+    "loading": "Ladataan palvelimia...",
+    "empty": "Palvelimia ei löytynyt.",
+    "all": "Valitse kaikki",
+    "none": "Tyhjennä valinta",
+    "noAddress": "ei osoitetta",
+    "imported": "Tuotu",
+    "import": "Tuo {{count}}",
+    "done": "{{created}} lisätty, {{updated}} päivitetty.",
+    "failed": "Virhe: {{count}} isäntää ei voitu kirjoittaa."
+  }
+}

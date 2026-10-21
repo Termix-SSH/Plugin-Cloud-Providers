@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "موفّرو السحابة",
+    "description": "أضف مضيفين من AWS وAzure وGoogle Cloud وDigitalOcean وHetzner وسحابة أخرى، واحفظهم محدّثين."
+  },
+  "tab": {
+    "title": "السحابة"
+  },
+  "permissions": {
+    "view": {
+      "title": "عرض حسابات السحابة",
+      "description": "افتح علامة السحابة وعرض حساباتك السحابية."
+    },
+    "manage": {
+      "title": "إدارة حسابات السحابة",
+      "description": "أضف حسابات سحابية، واستورد الحالات كمضيفين، ونفّذ عمليات المزامنة."
+    }
+  },
+  "description": "أضف حساباً سحابياً لتحويل خوادمه إلى مضيفين. استورد ما تختاره، أوزامن الحساب كاملاً على فترات زمنية.",
+  "empty": "لا توجد حسابات سحابية بعد.",
+  "add": "إضافة حساب",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "test": "اختبار المفاتيح",
+  "syncNow": "مزامنة الآن",
+  "saved": "تم الحفظ",
+  "deleteConfirm": "حذف {{name}}؟ سيظل مضيفوه في Termix.",
+  "testOk": "المفاتيح تعمل. تم العثور على {{count}} خوادم.",
+  "testFailed": "المفاتيح لم تعمل.",
+  "syncDone": "تمت إضافة {{created}}، وتحديث {{updated}}، وإزالة {{removed}}.",
+  "syncFailed": "تعذّر كتابة {{count}} مضيفين.",
+  "lastSync": "تمت المزامنة في {{date}}",
+  "status": {
+    "never": "لم تتم المزامنة بعد",
+    "error": "فشل"
+  },
+  "state": {
+    "running": "يعمل",
+    "stopped": "متوقف",
+    "other": "غير معروف"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "معرف مفتاح الوصول",
+    "secretAccessKey": "مفتاح الوصول السري",
+    "sessionToken": "رمز الجلسة (اختياري)",
+    "regions": "المناطق (فارغة للكل)",
+    "service": "الخدمة",
+    "tenantId": "معرف المستأجر",
+    "clientId": "معرف العميل",
+    "clientSecret": "السر الخاص بالعميل",
+    "subscriptionId": "معرف الاشتراك",
+    "serviceAccount": "مفتاح حساب الخدمة (JSON)",
+    "projectId": "معرف المشروع (اختياري)",
+    "token": "رمز API",
+    "tenancyId": "معرف OCID للمستأجر",
+    "userId": "معرف OCID للمستخدم",
+    "fingerprint": "بصمة مفتاح API",
+    "privateKey": "المفتاح الخاص (PEM)",
+    "compartments": "معرفات OCID للأقسام (فارغة للمستأجر)",
+    "secretKey": "المفتاح السري",
+    "zones": "المناطق (فارغة للكل)",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 وLightsail",
+    "public-first": "عام، وإلا خاص",
+    "public": "عام فقط",
+    "private": "خاص فقط",
+    "manual": "يدوي",
+    "auto": "تلقائي",
+    "keep": "إبقاء المضيف",
+    "mark": "تعيين علامة المضيف كـ مفقود",
+    "delete": "حذف المضيف"
+  },
+  "form": {
+    "addTitle": "إضافة حساب سحابي",
+    "editTitle": "تعديل الحساب السحابي",
+    "account": "الحساب",
+    "hosts": "المضيفات",
+    "sync": "المزامنة",
+    "provider": "المزود",
+    "name": "الاسم",
+    "namePlaceholder": "AWS للإنتاج",
+    "keepKeys": "اتركه فارغاً للحفاظ على القيمة المحفوظة",
+    "keysHint": "تُخزن المفاتيح مشفرة ولا تظهر أبداً. املأ الحقول لاستبدالها.",
+    "folder": "المجلد",
+    "folderPlaceholder": "نفس الاسم",
+    "defaultUser": "مستخدم SSH الافتراضي",
+    "defaultUserHint": "يُستخدم للمضيفات الجديدة. ضع علامة termix-user:name على مثيل لاستخدام مستخدم آخر له.",
+    "credential": "تسجيل الدخول الافتراضي",
+    "noCredential": "لا شيء، اسأل عند الاتصال",
+    "address": "العنوان المراد استخدامه",
+    "syncMode": "المزامنة",
+    "interval": "الدقائق بين عمليات المزامنة",
+    "onRemoved": "عندما يختفي مثيل",
+    "add": "إضافة حساب",
+    "save": "حفظ"
+  },
+  "discover": {
+    "title": "استيراد الخوادم",
+    "instances": "الخوادم",
+    "loading": "جارٍ تحميل الخوادم...",
+    "empty": "لم يتم العثور على خوادم.",
+    "all": "تحديد الكل",
+    "none": "إلغاء تحديد الكل",
+    "noAddress": "لا يوجد عنوان",
+    "imported": "تم الاستيراد",
+    "import": "استيراد {{count}}",
+    "done": "تمت إضافة {{created}}، وتحديث {{updated}}.",
+    "failed": "تعذر كتابة {{count}} مضيف."
+  }
+}

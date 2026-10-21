@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "AWS, Azure, Google Cloud, DigitalOcean, Hetzner 등 다양한 클라우드에서 호스트를 추가하고 동기화 상태를 유지하세요."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Cloud 계정 보기",
+      "description": "Cloud 탭을 열고 Cloud 계정을 확인합니다."
+    },
+    "manage": {
+      "title": "Cloud 계정 관리",
+      "description": "Cloud 계정을 추가하고, 인스턴스를 호스트로 가져오며, 동기화를 실행합니다."
+    }
+  },
+  "description": "Cloud 계정을 추가하여 해당 서버를 호스트로 전환하세요. 선택한 항목만 가져오거나, 정해진 시간에 전체 계정을 동기화할 수 있습니다.",
+  "empty": "아직 Cloud 계정이 없습니다.",
+  "add": "계정 추가",
+  "edit": "편집",
+  "delete": "삭제",
+  "test": "키 테스트",
+  "syncNow": "지금 동기화",
+  "saved": "저장됨",
+  "deleteConfirm": "{{name}}(을)를 삭제하시겠습니까? 호스트는 Termix에 유지됩니다.",
+  "testOk": "키가 작동합니다. {{count}}개의 서버를 찾았습니다.",
+  "testFailed": "키가 작동하지 않습니다.",
+  "syncDone": "{{created}}개 추가, {{updated}}개 업데이트, {{removed}}개 제거됨.",
+  "syncFailed": "{{count}}개의 호스트를 작성할 수 없습니다.",
+  "lastSync": "동기화됨 {{date}}",
+  "status": {
+    "never": "아직 동기화되지 않음",
+    "error": "실패"
+  },
+  "state": {
+    "running": "실행 중",
+    "stopped": "정지됨",
+    "other": "알 수 없음"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "액세스 키 ID",
+    "secretAccessKey": "비밀 액세스 키",
+    "sessionToken": "세션 토큰 (선택 사항)",
+    "regions": "리전 (모두 포함하려면 비워두세요)",
+    "service": "서비스",
+    "tenantId": "테넌트 ID",
+    "clientId": "클라이언트 ID",
+    "clientSecret": "클라이언트 시크릿",
+    "subscriptionId": "구독 ID",
+    "serviceAccount": "서비스 계정 키 (JSON)",
+    "projectId": "프로젝트 ID (선택사항)",
+    "token": "API 토큰",
+    "tenancyId": "테넌시 OCID",
+    "userId": "사용자 OCID",
+    "fingerprint": "API 키 지문",
+    "privateKey": "개인 키 (PEM)",
+    "compartments": "구획 OCID (테넌시 전체는 비워두세요)",
+    "secretKey": "비밀 키",
+    "zones": "존 (전체는 비워두세요)",
+    "username": "사용자 이름",
+    "password": "비밀번호"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 및 Lightsail",
+    "public-first": "공개 우선, 그 외 비공개",
+    "public": "공개만",
+    "private": "비공개만",
+    "manual": "수동",
+    "auto": "자동",
+    "keep": "호스트 유지",
+    "mark": "호스트를 누락된 것으로 표시",
+    "delete": "호스트 삭제"
+  },
+  "form": {
+    "addTitle": "클라우드 계정 추가",
+    "editTitle": "클라우드 계정 수정",
+    "account": "계정",
+    "hosts": "호스트",
+    "sync": "동기화",
+    "provider": "제공자",
+    "name": "이름",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "저장된 값을 유지하려면 비워두세요",
+    "keysHint": "키는 암호화되어 저장되며 다시 표시되지 않습니다. 새 키로 교체하려면 필드를 채워주세요.",
+    "folder": "폴더",
+    "folderPlaceholder": "이름과 동일",
+    "defaultUser": "기본 SSH 사용자",
+    "defaultUserHint": "새 호스트에 사용됩니다. 다른 사용자를 사용하려면 인스턴스에 termix-user:name 태그를 지정하세요.",
+    "credential": "기본 로그인",
+    "noCredential": "없음, 연결 시 요청",
+    "address": "사용할 주소",
+    "syncMode": "동기화",
+    "interval": "동기화 간격(분)",
+    "onRemoved": "인스턴스가 사라졌을 때",
+    "add": "계정 추가",
+    "save": "저장"
+  },
+  "discover": {
+    "title": "서버 가져오기",
+    "instances": "서버",
+    "loading": "서버 로드 중...",
+    "empty": "서버를 찾을 수 없습니다.",
+    "all": "전체 선택",
+    "none": "선택 해제",
+    "noAddress": "주소 없음",
+    "imported": "가져옴",
+    "import": "{{count}}개 가져오기",
+    "done": "{{created}}개 추가, {{updated}}개 업데이트됨.",
+    "failed": "{{count}}개의 호스트를 저장하지 못했습니다."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "Pridėkite serverius iš AWS, Azure, Google Cloud, DigitalOcean, Hetzner ir kitų debesijos paslaugų teikėjų bei išlaikykite juos sinchronizuotus."
+  },
+  "tab": {
+    "title": "Debesys"
+  },
+  "permissions": {
+    "view": {
+      "title": "Peržiūrėti debesijos paskyras",
+      "description": "Atidarykite „Debesys“ skirtuką ir peržiūrėkite savo debesijos paskyras."
+    },
+    "manage": {
+      "title": "Tvarkyti debesijos paskyras",
+      "description": "Pridėkite debesijos paskyras, importuokite instancijas kaip serverius ir vykdykite sinchronizaciją."
+    }
+  },
+  "description": "Pridėkite debesijos paskyrą, kad jos serveriai taptų serveriais. Importuokite pasirinktus arba sinchronizuokite visą paskyrą pagal nustatytą grafiką.",
+  "empty": "Dar nėra debesijos paskyrų.",
+  "add": "Pridėti paskyrą",
+  "edit": "Redaguoti",
+  "delete": "Pašalinti",
+  "test": "Patikrinti raktus",
+  "syncNow": "Sinchronizuoti dabar",
+  "saved": "Išsaugota",
+  "deleteConfirm": "Pašalinti „{{name}}“? Jo serveriai liks Termix.",
+  "testOk": "Raktai veikia. Rasta {{count}} serverių.",
+  "testFailed": "Raktai neveikė.",
+  "syncDone": "Pridėta {{created}}, atnaujinta {{updated}}, pašalinta {{removed}}.",
+  "syncFailed": "Nepavyko įrašyti {{count}} serverių.",
+  "lastSync": "Sinchronizuota {{date}}",
+  "status": {
+    "never": "Dar nesinchronizuota",
+    "error": "Nepavyko"
+  },
+  "state": {
+    "running": "vykdoma",
+    "stopped": "sustabdyta",
+    "other": "nežinoma"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Prieigos rakšo ID",
+    "secretAccessKey": "Slaptasis prieigos raktas",
+    "sessionToken": "Sesijos žetonas (nebūtina)",
+    "regions": "Regionai (palikite tuščią, jei visi)",
+    "service": "Paslauga",
+    "tenantId": "Namo ID",
+    "clientId": "Kliento ID",
+    "clientSecret": "Kliento slaptažodis",
+    "subscriptionId": "Prenumeratos ID",
+    "serviceAccount": "Paslaugos paskyros raktas (JSON)",
+    "projectId": "Projekto ID (nebūtina)",
+    "token": "API žetonas",
+    "tenancyId": "Namo OCID",
+    "userId": "Naudotojo OCID",
+    "fingerprint": "API rakšto pirštų atspaudas",
+    "privateKey": "Privatus raktas (PEM)",
+    "compartments": "Skyriaus OCID (tuščia, jei tenancy)",
+    "secretKey": "Slaptasis raktas",
+    "zones": "Zonos (tuščia, jei visos)",
+    "username": "Vartotojo vardas",
+    "password": "Slaptažodis"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 ir Lightsail",
+    "public-first": "Viešas, kitaip privatus",
+    "public": "Tik viešas",
+    "private": "Tik privatus",
+    "manual": "Rankinis",
+    "auto": "Automatinis",
+    "keep": "Palikti serverį",
+    "mark": "Pažymėti serverį kaip nerandamą",
+    "delete": "Pašalinti serverį"
+  },
+  "form": {
+    "addTitle": "Pridėti debesijos paskyrą",
+    "editTitle": "Redaguoti debesijos paskyrą",
+    "account": "Paskyra",
+    "hosts": "Serveriai",
+    "sync": "Sinchronizavimas",
+    "provider": "Tiekėjas",
+    "name": "Pavadinimas",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Palikite tuščią, jei norite išlaikyti išsaugotą reikšmę",
+    "keysHint": "Raktai saugomi šifruoti ir daugiau niekada nerodomi. Užpildykite laukelius, jei norite juos pakeisti.",
+    "folder": "Aplankas",
+    "folderPlaceholder": "Toks pats kaip pavadinimas",
+    "defaultUser": "Numatytasis SSH vartotojas",
+    "defaultUserHint": "Naudojama naujiems serveriams. Jei norite naudoti kitą vartotoją, priskirkite instancijai žymą termix-user:name.",
+    "credential": "Numatytoji prisijungimo informacija",
+    "noCredential": "Nėra, klausti prisijungiant",
+    "address": "Adresas",
+    "syncMode": "Sinchronizavimas",
+    "interval": "Minutės tarp sinchronizavimų",
+    "onRemoved": "Kai instancija dingsta",
+    "add": "Pridėti paskyrą",
+    "save": "Išsaugoti"
+  },
+  "discover": {
+    "title": "Importuoti serverius",
+    "instances": "Serveriai",
+    "loading": "Įkeliami serveriai...",
+    "empty": "Serverių nerasta.",
+    "all": "Pažymėti visus",
+    "none": "Atžymėti visus",
+    "noAddress": "nėra adreso",
+    "imported": "Importuota",
+    "import": "Importuoti {{count}}",
+    "done": "{{created}} pridėta, {{updated}} atnaujinta.",
+    "failed": "Nepavyko įrašyti {{count}} priimtuvo."
+  }
+}

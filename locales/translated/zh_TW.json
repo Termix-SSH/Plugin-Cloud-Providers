@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "雲端服務供應商",
+    "description": "從 AWS、Azure、Google Cloud、DigitalOcean、Hetzner 及其他雲端平台新增主機，並保持同步。"
+  },
+  "tab": {
+    "title": "雲端"
+  },
+  "permissions": {
+    "view": {
+      "title": "查看雲端帳戶",
+      "description": "開啟雲端分頁並查看您的雲端帳戶。"
+    },
+    "manage": {
+      "title": "管理雲端帳戶",
+      "description": "新增雲端帳戶、將執行個體匯入為主機，並執行同步。"
+    }
+  },
+  "description": "新增雲端帳戶以將其伺服器轉換為主機。匯入您選擇的伺服器，或設定排程以同步整個帳戶。",
+  "empty": "目前沒有雲端帳戶。",
+  "add": "新增帳戶",
+  "edit": "編輯",
+  "delete": "刪除",
+  "test": "測試金鑰",
+  "syncNow": "立即同步",
+  "saved": "已儲存",
+  "deleteConfirm": "刪除 {{name}} 嗎？其主機將保留在 Termix 中。",
+  "testOk": "金鑰運作正常。找到 {{count}} 台伺服器。",
+  "testFailed": "金鑰無法運作。",
+  "syncDone": "新增 {{created}} 個，更新 {{updated}} 個，移除 {{removed}} 個。",
+  "syncFailed": "無法寫入 {{count}} 個主機。",
+  "lastSync": "已於 {{date}} 同步",
+  "status": {
+    "never": "尚未同步",
+    "error": "失敗"
+  },
+  "state": {
+    "running": "執行中",
+    "stopped": "已停止",
+    "other": "未知"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "存取金鑰 ID",
+    "secretAccessKey": "秘密存取金鑰",
+    "sessionToken": "工作階段權杖（選填）",
+    "regions": "地區（留空表示全部）",
+    "service": "服務",
+    "tenantId": "租用戶 ID",
+    "clientId": "用戶端 ID",
+    "clientSecret": "用戶端密碼",
+    "subscriptionId": "訂閱 ID",
+    "serviceAccount": "服務帳戶金鑰（JSON）",
+    "projectId": "專案 ID（選填）",
+    "token": "API 權杖",
+    "tenancyId": "租用戶 OCID",
+    "userId": "使用者 OCID",
+    "fingerprint": "API 金鑰指紋",
+    "privateKey": "私密金鑰（PEM）",
+    "compartments": "隔間 OCID（留空表示租用戶）",
+    "secretKey": "秘密金鑰",
+    "zones": "區域（留空表示全部）",
+    "username": "使用者名稱",
+    "password": "密碼"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 與 Lightsail",
+    "public-first": "優先使用公開位址，否則使用私密位址",
+    "public": "僅公開位址",
+    "private": "僅私密位址",
+    "manual": "手動",
+    "auto": "自動",
+    "keep": "保留主機",
+    "mark": "將主機標記為遺失",
+    "delete": "刪除主機"
+  },
+  "form": {
+    "addTitle": "新增雲端帳戶",
+    "editTitle": "編輯雲端帳戶",
+    "account": "帳戶",
+    "hosts": "主機",
+    "sync": "同步",
+    "provider": "供應商",
+    "name": "名稱",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "留空以保留已儲存的值",
+    "keysHint": "金鑰會以加密方式儲存，且不會再次顯示。填寫欄位以取代它們。",
+    "folder": "資料夾",
+    "folderPlaceholder": "與名稱相同",
+    "defaultUser": "預設 SSH 使用者",
+    "defaultUserHint": "用於新增的主機。為執行個體加上 termix-user:name 標籤，即可為其使用其他使用者。",
+    "credential": "預設登入資訊",
+    "noCredential": "無，連線時詢問",
+    "address": "要使用的位址",
+    "syncMode": "同步",
+    "interval": "同步間隔（分鐘）",
+    "onRemoved": "當執行個體消失時",
+    "add": "新增帳戶",
+    "save": "儲存"
+  },
+  "discover": {
+    "title": "匯入伺服器",
+    "instances": "伺服器",
+    "loading": "正在載入伺服器...",
+    "empty": "找不到伺服器。",
+    "all": "全選",
+    "none": "取消全選",
+    "noAddress": "無位址",
+    "imported": "已匯入",
+    "import": "匯入 {{count}}",
+    "done": "已新增 {{created}} 個，已更新 {{updated}} 個。",
+    "failed": "無法寫入 {{count}} 個主機。"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Skytjenere",
+    "description": "Legg til vertsmaskiner fra AWS, Azure, Google Cloud, DigitalOcean, Hetzner og andre skytjenere, og hold dem synkronisert."
+  },
+  "tab": {
+    "title": "Sky"
+  },
+  "permissions": {
+    "view": {
+      "title": "Se skykontoer",
+      "description": "Åpne fanen Sky og se skykontoene dine."
+    },
+    "manage": {
+      "title": "Administrer skykontoer",
+      "description": "Legg til skykontoer, importer instanser som vertsmaskiner og kjør synkroniseringer."
+    }
+  },
+  "description": "Legg til en skykonto for å gjøre serverne dine til vertsmaskiner.Importer de du velger, eller synkroniser hele kontoen på et tidspunkt.",
+  "empty": "Ingen skykontoer ennå.",
+  "add": "Legg til konto",
+  "edit": "Rediger",
+  "delete": "Slett",
+  "test": "Test nøkler",
+  "syncNow": "Synkroniser nå",
+  "saved": "Lagret",
+  "deleteConfirm": "Slett {{name}}? Vertene forblir i Termix.",
+  "testOk": "Nøklene fungerer. Fant {{count}} servere.",
+  "testFailed": "Nøklene fungerte ikke.",
+  "syncDone": "{{created}} lagt til, {{updated}} oppdatert, {{removed}} fjernet.",
+  "syncFailed": "{{count}} verter kunne ikke skrives.",
+  "lastSync": "Synkronisert {{date}}",
+  "status": {
+    "never": "Ikke synkronisert ennå",
+    "error": "Mislyktes"
+  },
+  "state": {
+    "running": "kjører",
+    "stopped": "stoppet",
+    "other": "ukjent"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Tilgangs-ID",
+    "secretAccessKey": "Hemmelig tilgangsnøkkel",
+    "sessionToken": "Sesjonstoken (valgfritt)",
+    "regions": "Regioner (tom for alle)",
+    "service": "Tjeneste",
+    "tenantId": "Leietaker-ID",
+    "clientId": "Klient-ID",
+    "clientSecret": "Klienthemmelighet",
+    "subscriptionId": "Abonnements-ID",
+    "serviceAccount": "Nøkkel for tjenestekonto (JSON)",
+    "projectId": "Prosjekt-ID (valgfritt)",
+    "token": "API-token",
+    "tenancyId": "Leietaker-OCID",
+    "userId": "Bruker-OCID",
+    "fingerprint": "API-nøkkelfingeravtrykk",
+    "privateKey": "Privat nøkkel (PEM)",
+    "compartments": "Kompartement-OCID-er (tomt for tenancy)",
+    "secretKey": "Hemmelig nøkkel",
+    "zones": "Soner (tomt for alle)",
+    "username": "Brukernavn",
+    "password": "Passord"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 og Lightsail",
+    "public-first": "Offentlig, ellers privat",
+    "public": "Kun offentlig",
+    "private": "Kun privat",
+    "manual": "Manuell",
+    "auto": "Automatisk",
+    "keep": "Behold verten",
+    "mark": "Merk verten som manglende",
+    "delete": "Slett verten"
+  },
+  "form": {
+    "addTitle": "Legg til skykonto",
+    "editTitle": "Rediger skykonto",
+    "account": "Konto",
+    "hosts": "Verte",
+    "sync": "Synkroniser",
+    "provider": "Tjenesteleverandør",
+    "name": "Navn",
+    "namePlaceholder": "Produksjon AWS",
+    "keepKeys": "La stå tomt for å beholde den lagrede verdien",
+    "keysHint": "Nøkler lagres kryptert og vises aldri igjen. Fyll ut feltene for å erstatte dem.",
+    "folder": "Mappe",
+    "folderPlaceholder": "Samme som navnet",
+    "defaultUser": "Standard SSH-bruker",
+    "defaultUserHint": "Brukes for nye vertsmaskiner. Merk en instans med termix-user:name for å bruke en annen bruker for den.",
+    "credential": "Standard pålogging",
+    "noCredential": "Ingen, spør ved tilkobling",
+    "address": "Adresse som skal brukes",
+    "syncMode": "Synkronisering",
+    "interval": "Minutter mellom synkroniseringer",
+    "onRemoved": "Når en instans forsvinner",
+    "add": "Legg til konto",
+    "save": "Lagre"
+  },
+  "discover": {
+    "title": "Importer servere",
+    "instances": "Servere",
+    "loading": "Laster inn servere...",
+    "empty": "Ingen servere funnet.",
+    "all": "Velg alle",
+    "none": "Fjern valg",
+    "noAddress": "ingen adresse",
+    "imported": "Importert",
+    "import": "Importer {{count}}",
+    "done": "{{created}} lagt til, {{updated}} oppdatert.",
+    "failed": "Kunne ikke skrive {{count}} vertsdatamaskiner."
+  }
+}

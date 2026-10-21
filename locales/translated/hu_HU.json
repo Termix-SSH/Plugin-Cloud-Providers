@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Felhőszolgáltatók",
+    "description": "Adjon hozzá gazdagépeket az AWS, Azure, Google Cloud, DigitalOcean, Hetzner és más felhőszolgáltatóktól, és tartsa őket szinkronban."
+  },
+  "tab": {
+    "title": "Felhő"
+  },
+  "permissions": {
+    "view": {
+      "title": "Felhőfiókok megtekintése",
+      "description": "Nyissa meg a Felhő fület, és tekintse meg felhőfiókjait."
+    },
+    "manage": {
+      "title": "Felhőfiókok kezelése",
+      "description": "Felhőfiókok hozzáadása, példányok importálása gazdagépeként és szinkronizálás futtatása."
+    }
+  },
+  "description": "Adjon hozzá egy felhőfiókot, hogy annak szerverei gazdagépekké váljanak. Importálja a kiválasztottakat, vagy időzítéssel szinkronizálja az egész fiókot.",
+  "empty": "Még nincsenek felhőfiókok.",
+  "add": "Fiók hozzáadása",
+  "edit": "Szerkesztés",
+  "delete": "Törlés",
+  "test": "Kulcsok tesztelése",
+  "syncNow": "Szinkronizálás most",
+  "saved": "Mentve",
+  "deleteConfirm": "Törli a(z) {{name}} elemet? A hozzá tartozó hostok megmaradnak a Termixben.",
+  "testOk": "A kulcsok működnek. {{count}} szerver található.",
+  "testFailed": "A kulcsok nem működnek.",
+  "syncDone": "{{created}} hozzáadva, {{updated}} frissítve, {{removed}} eltávolítva.",
+  "syncFailed": "{{count}} host nem írható.",
+  "lastSync": "Szinkronizálva: {{date}}",
+  "status": {
+    "never": "Még nem szinkronizálva",
+    "error": "Sikertelen"
+  },
+  "state": {
+    "running": "fut",
+    "stopped": "leállítva",
+    "other": "ismeretlen"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Hozzáférési kulcs azonosítója",
+    "secretAccessKey": "Titkos hozzáférési kulcs",
+    "sessionToken": "Munkamenet-jeton (opcionális)",
+    "regions": "Régiók (üresen hagyva az összes)",
+    "service": "Szolgáltatás",
+    "tenantId": "Bérlő azonosító",
+    "clientId": "Kliens azonosító",
+    "clientSecret": "Kliens titok",
+    "subscriptionId": "Előfizetés azonosító",
+    "serviceAccount": "Szolgáltatói fiók kulcsa (JSON)",
+    "projectId": "Projekt azonosító (opcionális)",
+    "token": "API token",
+    "tenancyId": "Bérlési OCID",
+    "userId": "Felhasználói OCID",
+    "fingerprint": "API-kulcs ujjlenyomat",
+    "privateKey": "Privát kulcs (PEM)",
+    "compartments": "Kompartmens-OCID-k (üres a tenancy esetén)",
+    "secretKey": "Titkos kulcs",
+    "zones": "Zónák (üres az összeshez)",
+    "username": "Felhasználónév",
+    "password": "Jelszó"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 és Lightsail",
+    "public-first": "Nyilvános, egyébként privát",
+    "public": "Csak nyilvános",
+    "private": "Csak privát",
+    "manual": "Manuális",
+    "auto": "Automatikus",
+    "keep": "A host megtartása",
+    "mark": "A host hiányzóként történő jelölése",
+    "delete": "A host törlése"
+  },
+  "form": {
+    "addTitle": "Felhőfiók hozzáadása",
+    "editTitle": "Felhőfiók szerkesztése",
+    "account": "Fiók",
+    "hosts": "Hostok",
+    "sync": "Szinkronizálás",
+    "provider": "Szolgáltató",
+    "name": "Név",
+    "namePlaceholder": "Éles AWS",
+    "keepKeys": "Hagyd üresen a mentett érték megőrzéséhez",
+    "keysHint": "A kulcsok titkosítva tárolódnak, és soha nem jelennek meg újra. Töltsd ki a mezőket a cseréjükhez.",
+    "folder": "Mappa",
+    "folderPlaceholder": "Ugyanaz, mint a név",
+    "defaultUser": "Alapértelmezett SSH felhasználó",
+    "defaultUserHint": "Új hosztoknál használatos. Jelöljön meg egy példányt termix-user:name címkével, hogy más felhasználót használjon hozzá.",
+    "credential": "Alapértelmezett bejelentkezés",
+    "noCredential": "Egyik sem, kérdezzen rá kapcsoláskor",
+    "address": "Használandó cím",
+    "syncMode": "Szinkronizálás",
+    "interval": "Szinkronizálások közötti percek",
+    "onRemoved": "Amikor egy példány eltűnik",
+    "add": "Fiók hozzáadása",
+    "save": "Mentés"
+  },
+  "discover": {
+    "title": "Szerverek importálása",
+    "instances": "Szerverek",
+    "loading": "Szerverek betöltése...",
+    "empty": "Nem található szerver.",
+    "all": "Összes kijelölése",
+    "none": "Kijelölés törlése",
+    "noAddress": "nincs cím",
+    "imported": "Importálva",
+    "import": "{{count}} importálása",
+    "done": "{{created}} hozzáadva, {{updated}} frissítve.",
+    "failed": "Nem sikerült írni {{count}} gazdagépet."
+  }
+}

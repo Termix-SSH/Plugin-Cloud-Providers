@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "เพิ่มโฮสต์จาก AWS, Azure, Google Cloud, DigitalOcean, Hetzner และคลาวด์อื่นๆ แล้วซิงค์ข้อมูลให้อยู่เสมอ"
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "ดูบัญชีคลาวด์",
+      "description": "เปิดแท็บ Cloud เพื่อดูบัญชีคลาวด์ของคุณ"
+    },
+    "manage": {
+      "title": "จัดการบัญชีคลาวด์",
+      "description": "เพิ่มบัญชีคลาวด์ นำเข้าอินสแตนซ์เป็นโฮสต์ และดำเนินการซิงค์"
+    }
+  },
+  "description": "เพิ่มบัญชีคลาวด์เพื่อเปลี่ยนเซิร์ฟเวอร์ให้เป็นโฮสต์ นำเข้าเฉพาะที่คุณเลือก หรือซิงค์ทั้งบัญชีตามเวลาที่กำหนด",
+  "empty": "ยังไม่มีบัญชีคลาวด์",
+  "add": "เพิ่มบัญชี",
+  "edit": "แก้ไข",
+  "delete": "ลบ",
+  "test": "ทดสอบคีย์",
+  "syncNow": "ซิงค์ตอนนี้",
+  "saved": "บันทึกแล้ว",
+  "deleteConfirm": "ลบ {{name}} หรือไม่? โฮสต์จะยังคงอยู่ใน Termix",
+  "testOk": "คีย์ใช้งานได้ พบเซิร์ฟเวอร์ {{count}} ตัว",
+  "testFailed": "คีย์ใช้งานไม่ได้",
+  "syncDone": "เพิ่ม {{created}} อัปเดต {{updated}} ลบ {{removed}}",
+  "syncFailed": "ไม่สามารถเขียนโฮสต์ได้ {{count}} ตัว",
+  "lastSync": "ซิงค์เมื่อ {{date}}",
+  "status": {
+    "never": "ยังไม่ได้ซิงค์",
+    "error": "ล้มเหลว"
+  },
+  "state": {
+    "running": "กำลังทำงาน",
+    "stopped": "หยุดทำงาน",
+    "other": "ไม่ทราบสถานะ"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Session token (ไม่บังคับ)",
+    "regions": "ภูมิภาค (เว้นว่างเพื่อแสดงทั้งหมด)",
+    "service": "Service",
+    "tenantId": "Tenant ID",
+    "clientId": "Client ID",
+    "clientSecret": "Client secret",
+    "subscriptionId": "Subscription ID",
+    "serviceAccount": "Service account key (JSON)",
+    "projectId": "Project ID (optional)",
+    "token": "API token",
+    "tenancyId": "Tenancy OCID",
+    "userId": "User OCID",
+    "fingerprint": "ลายนิ้วมือคีย์ API",
+    "privateKey": "คีย์ส่วนตัว (PEM)",
+    "compartments": "OCID ของคอมพาร์ทเมนต์ (เว้นว่างสำหรับเทนันซี)",
+    "secretKey": "คีย์ลับ",
+    "zones": "โซน (เว้นว่างสำหรับทั้งหมด)",
+    "username": "ชื่อผู้ใช้",
+    "password": "รหัสผ่าน"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 และ Lightsail",
+    "public-first": "สาธารณะ หรือส่วนตัว",
+    "public": "เฉพาะสาธารณะ",
+    "private": "เฉพาะส่วนตัว",
+    "manual": "แบบแมนนวล",
+    "auto": "อัตโนมัติ",
+    "keep": "เก็บโฮสต์ไว้",
+    "mark": "ติดแท็กโฮสต์ว่าหายไป",
+    "delete": "ลบโฮสต์"
+  },
+  "form": {
+    "addTitle": "เพิ่มบัญชีคลาวด์",
+    "editTitle": "แก้ไขบัญชีคลาวด์",
+    "account": "บัญชีผู้ใช้",
+    "hosts": "โฮสต์",
+    "sync": "ซิงค์",
+    "provider": "ผู้ให้บริการ",
+    "name": "ชื่อ",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "เว้นว่างไว้เพื่อคงค่าที่บันทึกไว้",
+    "keysHint": "คีย์จะถูกเก็บไว้แบบเข้ารหัสและจะไม่แสดงอีกเลย กรอกในช่องเพื่อแทนที่คีย์เดิม",
+    "folder": "โฟลเดอร์",
+    "folderPlaceholder": "เหมือนกับชื่อ",
+    "defaultUser": "ผู้ใช้ SSH เริ่มต้น",
+    "defaultUserHint": "ใช้สำหรับโฮสต์ใหม่ ติดแท็กอินสแตนซ์ด้วย termix-user:name เพื่อใช้ผู้ใช้อื่นสำหรับอินสแตนซ์นั้น",
+    "credential": "การเข้าสู่ระบบเริ่มต้น",
+    "noCredential": "ไม่มี, ถามเมื่อเชื่อมต่อ",
+    "address": "ที่อยู่ที่จะใช้",
+    "syncMode": "ซิงค์",
+    "interval": "นาทีระหว่างแต่ละครั้งของการซิงค์",
+    "onRemoved": "เมื่ออินสแตนซ์หายไป",
+    "add": "เพิ่มบัญชี",
+    "save": "บันทึก"
+  },
+  "discover": {
+    "title": "นำเข้าเซิร์ฟเวอร์",
+    "instances": "เซิร์ฟเวอร์",
+    "loading": "กำลังโหลดเซิร์ฟเวอร์...",
+    "empty": "ไม่พบเซิร์ฟเวอร์",
+    "all": "เลือกทั้งหมด",
+    "none": "ยกเลิกการเลือกทั้งหมด",
+    "noAddress": "ไม่มีที่อยู่",
+    "imported": "นำเข้าแล้ว",
+    "import": "นำเข้า {{count}} รายการ",
+    "done": "เพิ่ม {{created}} รายการ, อัปเดต {{updated}} รายการ",
+    "failed": "ไม่สามารถเขียนข้อมูลไปยังโฮสต์ {{count}} ตัวได้"
+  }
+}

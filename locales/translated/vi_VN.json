@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Nhà cung cấp đám mây",
+    "description": "Thêm máy chủ từ AWS, Azure, Google Cloud, DigitalOcean, Hetzner và các nền tảng đám mây khác, đồng thời giữ chúng đồng bộ."
+  },
+  "tab": {
+    "title": "Đám mây"
+  },
+  "permissions": {
+    "view": {
+      "title": "Xem tài khoản đám mây",
+      "description": "Mở tab Đám mây và xem các tài khoản đám mây của bạn."
+    },
+    "manage": {
+      "title": "Quản lý tài khoản đám mây",
+      "description": "Thêm tài khoản đám mây, nhập các phiên bản làm máy chủ và chạy đồng bộ."
+    }
+  },
+  "description": "Thêm một tài khoản đám mây để chuyển đổi các máy chủ của nó thành máy chủ. Nhập những máy bạn chọn, hoặc đồng bộ toàn bộ tài khoản theo lịch trình.",
+  "empty": "Chưa có tài khoản đám mây nào.",
+  "add": "Thêm tài khoản",
+  "edit": "Chỉnh sửa",
+  "delete": "Xóa",
+  "test": "Kiểm tra khóa",
+  "syncNow": "Đồng bộ ngay",
+  "saved": "Đã lưu",
+  "deleteConfirm": "Xóa {{name}}? Các máy chủ của nó vẫn giữ trong Termix.",
+  "testOk": "Khóa hoạt động. Tìm thấy {{count}} máy chủ.",
+  "testFailed": "Khóa không hoạt động.",
+  "syncDone": "{{created}} đã thêm, {{updated}} đã cập nhật, {{removed}} đã xóa.",
+  "syncFailed": "Không thể ghi {{count}} máy chủ.",
+  "lastSync": "Đã đồng bộ {{date}}",
+  "status": {
+    "never": "Chưa đồng bộ",
+    "error": "Thất bại"
+  },
+  "state": {
+    "running": "đang chạy",
+    "stopped": "đã dừng",
+    "other": "không xác định"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID khóa truy cập",
+    "secretAccessKey": "Khóa truy cập bí mật",
+    "sessionToken": "Mã thông báo phiên (tùy chọn)",
+    "regions": "Khu vực (để trống để chọn tất cả)",
+    "service": "Dịch vụ",
+    "tenantId": "ID Tenant",
+    "clientId": "ID Client",
+    "clientSecret": "Bí mật Client",
+    "subscriptionId": "ID Đăng ký",
+    "serviceAccount": "Khóa tài khoản dịch vụ (JSON)",
+    "projectId": "ID Dự án (tùy chọn)",
+    "token": "Mã thông báo API",
+    "tenancyId": "OCID Tenancy",
+    "userId": "OCID Người dùng",
+    "fingerprint": "Dấu vân tay khóa API",
+    "privateKey": "Khóa riêng (PEM)",
+    "compartments": "OCID Ngăn chứa (để trống cho tenancy)",
+    "secretKey": "Khóa bí mật",
+    "zones": "Khu vực (để trống để chọn tất cả)",
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 và Lightsail",
+    "public-first": "Công khai, nếu không thì riêng tư",
+    "public": "Chỉ công khai",
+    "private": "Chỉ riêng tư",
+    "manual": "Thủ công",
+    "auto": "Tự động",
+    "keep": "Giữ lại host",
+    "mark": "Đánh dấu host là bị thiếu",
+    "delete": "Xóa host"
+  },
+  "form": {
+    "addTitle": "Thêm tài khoản đám mây",
+    "editTitle": "Chỉnh sửa tài khoản đám mây",
+    "account": "Tài khoản",
+    "hosts": "Hosts",
+    "sync": "Đồng bộ",
+    "provider": "Nhà cung cấp",
+    "name": "Tên",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Để trống để giữ giá trị đã lưu",
+    "keysHint": "Các key được lưu trữ dưới dạng mã hóa và sẽ không bao giờ được hiển thị lại. Điền vào các trường để thay thế chúng.",
+    "folder": "Thư mục",
+    "folderPlaceholder": "Giống như tên",
+    "defaultUser": "Người dùng SSH mặc định",
+    "defaultUserHint": "Dùng cho các host mới. Gắn thẻ một instance termix-user:name để sử dụng người dùng khác cho nó.",
+    "credential": "Đăng nhập mặc định",
+    "noCredential": "Không có, hỏi khi kết nối",
+    "address": "Địa chỉ sử dụng",
+    "syncMode": "Đồng bộ",
+    "interval": "Phút giữa các lần đồng bộ",
+    "onRemoved": "Khi một instance biến mất",
+    "add": "Thêm tài khoản",
+    "save": "Lưu"
+  },
+  "discover": {
+    "title": "Nhập máy chủ",
+    "instances": "Máy chủ",
+    "loading": "Đang tải máy chủ...",
+    "empty": "Không tìm thấy máy chủ nào.",
+    "all": "Chọn tất cả",
+    "none": "Bỏ chọn tất cả",
+    "noAddress": "không có địa chỉ",
+    "imported": "Đã nhập",
+    "import": "Nhập {{count}}",
+    "done": "{{created}} đã thêm, {{updated}} đã cập nhật.",
+    "failed": "{{count}} hosts không thể ghi được."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud-leverantörer",
+    "description": "Lägg till värdar från AWS, Azure, Google Cloud, DigitalOcean, Hetzner och andra molntjänster, och håll dem synkroniserade."
+  },
+  "tab": {
+    "title": "Moln"
+  },
+  "permissions": {
+    "view": {
+      "title": "Visa molnkonton",
+      "description": "Öppna fliken Moln och se dina molnkonton."
+    },
+    "manage": {
+      "title": "Hantera molnkonton",
+      "description": "Lägg till molnkonton, importera instanser som värdar och kör synkroniseringar."
+    }
+  },
+  "description": "Lägg till ett molnkonto för att omvandla dess servrar till värdar. Importera de du väljer, eller synkronisera hela kontot enligt schema.",
+  "empty": "Inga molnkonton ännu.",
+  "add": "Lägg till konto",
+  "edit": "Redigera",
+  "delete": "Ta bort",
+  "test": "Testa nycklar",
+  "syncNow": "Synkronisera nu",
+  "saved": "Sparad",
+  "deleteConfirm": "Ta bort {{name}}? Dess värdar behålls i Termix.",
+  "testOk": "Nycklarna fungerar. Hittade {{count}} servrar.",
+  "testFailed": "Nycklarna fungerade inte.",
+  "syncDone": "{{created}} tillagda, {{updated}} uppdaterade, {{removed}} borttagna.",
+  "syncFailed": "{{count}} värdar kunde inte skrivas.",
+  "lastSync": "Synkroniserad {{date}}",
+  "status": {
+    "never": "Inte synkroniserad ännu",
+    "error": "Misslyckades"
+  },
+  "state": {
+    "running": "kör",
+    "stopped": "stoppad",
+    "other": "okänd"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Sessionstoken (valfritt)",
+    "regions": "Regioner (tomt för alla)",
+    "service": "Tjänst",
+    "tenantId": "Tenant-ID",
+    "clientId": "Klient-ID",
+    "clientSecret": "Klienthemlighet",
+    "subscriptionId": "Prenumerations-ID",
+    "serviceAccount": "Nyckel för tjänstekonto (JSON)",
+    "projectId": "Projekt-ID (valfritt)",
+    "token": "API-token",
+    "tenancyId": "Tenancy-OCID",
+    "userId": "Användar-OCID",
+    "fingerprint": "API-nyckelns fingeravtryck",
+    "privateKey": "Privat nyckel (PEM)",
+    "compartments": "Fack OCIDs (tomt för tenancy)",
+    "secretKey": "Hemlig nyckel",
+    "zones": "Zoner (tomt för alla)",
+    "username": "Användarnamn",
+    "password": "Lösenord"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 och Lightsail",
+    "public-first": "Offentlig, annars privat",
+    "public": "Endast offentlig",
+    "private": "Endast privat",
+    "manual": "Manuell",
+    "auto": "Automatisk",
+    "keep": "Behåll värdens",
+    "mark": "Märk värden som saknad",
+    "delete": "Ta bort värden"
+  },
+  "form": {
+    "addTitle": "Lägg till molnkonto",
+    "editTitle": "Redigera molnkonto",
+    "account": "Konto",
+    "hosts": "Värdar",
+    "sync": "Synkronisering",
+    "provider": "Tjänsteleverantör",
+    "name": "Namn",
+    "namePlaceholder": "Produktion AWS",
+    "keepKeys": "Lämna tomt för att behålla det sparade värdet",
+    "keysHint": "Nycklar lagras krypterade och visas aldrig igen. Fyll i fälten för att byta ut dem.",
+    "folder": "Mapp",
+    "folderPlaceholder": "Samma som namnet",
+    "defaultUser": "Standard SSH-användare",
+    "defaultUserHint": "Används för nya värdar. Märk en instans med termix-user:name för att använda en annan användare för den.",
+    "credential": "Standardinloggning",
+    "noCredential": "Ingen, fråga vid anslutning",
+    "address": "Adress att använda",
+    "syncMode": "Synkronisering",
+    "interval": "Minuter mellan synkroniseringar",
+    "onRemoved": "När en instans försvinner",
+    "add": "Lägg till konto",
+    "save": "Spara"
+  },
+  "discover": {
+    "title": "Importera servrar",
+    "instances": "Servrar",
+    "loading": "Laddar servrar...",
+    "empty": "Inga servrar hittades.",
+    "all": "Markera alla",
+    "none": "Avmarkera alla",
+    "noAddress": "ingen adress",
+    "imported": "Importerad",
+    "import": "Importera {{count}}",
+    "done": "{{created}} tillagda, {{updated}} uppdaterade.",
+    "failed": "Det gick inte att skriva {{count}} värdar."
+  }
+}

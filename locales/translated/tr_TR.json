@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Sağlayıcıları",
+    "description": "AWS, Azure, Google Cloud, DigitalOcean, Hetzner ve diğer bulutlardan ana bilgisayarlar ekleyin ve senkronize tutun."
+  },
+  "tab": {
+    "title": "Bulut"
+  },
+  "permissions": {
+    "view": {
+      "title": "Bulut hesaplarını görüntüle",
+      "description": "Bulut sekmesini açın ve bulut hesaplarınızı görüntüleyin."
+    },
+    "manage": {
+      "title": "Bulut hesaplarını yönet",
+      "description": "Bulut hesapları ekleyin, örnekleri ana bilgisayar olarak içe aktarın ve senkronizasyonları çalıştırın."
+    }
+  },
+  "description": "Sunucularınızı ana bilgisayarlara dönüştürmek için bir bulut hesabı ekleyin. Seçtiklerinizi içe aktarın veya tüm hesabı zamanlayıcıyla senkronize edin.",
+  "empty": "Henüz bulut hesabı yok.",
+  "add": "Hesap ekle",
+  "edit": "Düzenle",
+  "delete": "Sil",
+  "test": "Anahtarları test et",
+  "syncNow": "Şimdi senkronize et",
+  "saved": "Kaydedildi",
+  "deleteConfirm": "{{name}} silinsin mi? Sunucuları Termix'te kalacak.",
+  "testOk": "Anahtarlar çalışıyor. {{count}} sunucu bulundu.",
+  "testFailed": "Anahtarlar çalışmadı.",
+  "syncDone": "{{created}} eklendi, {{updated}} güncellendi, {{removed}} kaldırıldı.",
+  "syncFailed": "{{count}} sunucu yazılamadı.",
+  "lastSync": "Senkronize edildi {{date}}",
+  "status": {
+    "never": "Henüz senkronize edilmedi",
+    "error": "Başarısız"
+  },
+  "state": {
+    "running": "çalışıyor",
+    "stopped": "durduruldu",
+    "other": "bilinmiyor"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Erişim anahtarı kimliği",
+    "secretAccessKey": "Gizli erişim anahtarı",
+    "sessionToken": "Oturum belirteci (isteğe bağlı)",
+    "regions": "Bölgeler (tümü için boş bırakın)",
+    "service": "Hizmet",
+    "tenantId": "Kiracı Kimliği",
+    "clientId": "İstemci Kimliği",
+    "clientSecret": "İstemci sırrı",
+    "subscriptionId": "Abonelik Kimliği",
+    "serviceAccount": "Hizmet hesabı anahtarı (JSON)",
+    "projectId": "Proje Kimliği (isteğe bağlı)",
+    "token": "API belirteci",
+    "tenancyId": "Kiracılık OCID",
+    "userId": "Kullanıcı OCID",
+    "fingerprint": "API anahtarı parmak izi",
+    "privateKey": "Özel anahtar (PEM)",
+    "compartments": "Bölme OCID'leri (kiracı için boş bırakın)",
+    "secretKey": "Gizli anahtar",
+    "zones": "Bölgeler (tümü için boş bırakın)",
+    "username": "Kullanıcı adı",
+    "password": "Şifre"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 ve Lightsail",
+    "public-first": "Önce genel, yoksa özel",
+    "public": "Sadece genel",
+    "private": "Sadece özel",
+    "manual": "Manuel",
+    "auto": "Otomatik",
+    "keep": "Ana bilgisayarı koru",
+    "mark": "Ana bilgisayarı eksik olarak işaretle",
+    "delete": "Ana bilgisayarı sil"
+  },
+  "form": {
+    "addTitle": "Bulut hesabı ekle",
+    "editTitle": "Bulut hesabını düzenle",
+    "account": "Hesap",
+    "hosts": "Sunucular",
+    "sync": "Senkronizasyon",
+    "provider": "Sağlayıcı",
+    "name": "Ad",
+    "namePlaceholder": "Üretim AWS",
+    "keepKeys": "Kayıtlı değeri korumak için boş bırakın",
+    "keysHint": "Anahtarlar şifreli olarak saklanır ve bir daha gösterilmez. Değiştirmek için alanları doldurun.",
+    "folder": "Klasör",
+    "folderPlaceholder": "Ad ile aynı",
+    "defaultUser": "Varsayılan SSH kullanıcısı",
+    "defaultUserHint": "Yeni ana bilgisayarlar için kullanılır. Farklı bir kullanıcı kullanmak için bir örneğe termix-user:name etiketi ekleyin.",
+    "credential": "Varsayılan giriş",
+    "noCredential": "Yok, bağlanırken sor",
+    "address": "Kullanılacak adres",
+    "syncMode": "Senkronizasyon",
+    "interval": "Senkronizasyonlar arasındaki dakika",
+    "onRemoved": "Bir örnek kaldırıldığında",
+    "add": "Hesap ekle",
+    "save": "Kaydet"
+  },
+  "discover": {
+    "title": "Sunucuları içe aktar",
+    "instances": "Sunucular",
+    "loading": "Sunucular yükleniyor...",
+    "empty": "Sunucu bulunamadı.",
+    "all": "Tümünü seç",
+    "none": "Seçimi kaldır",
+    "noAddress": "adres yok",
+    "imported": "İçe aktarıldı",
+    "import": "{{count}} içe aktar",
+    "done": "{{created}} eklendi, {{updated}} güncellendi.",
+    "failed": "Bir {{count}} ana bilgisayar yazılamadı."
+  }
+}

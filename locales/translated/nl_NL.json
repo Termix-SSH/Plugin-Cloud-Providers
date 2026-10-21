@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloudproviders",
+    "description": "Voeg hosts toe van AWS, Azure, Google Cloud, DigitalOcean, Hetzner en andere clouds, en houd ze gesynchroniseerd."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Cloudaccounts bekijken",
+      "description": "Open het tabblad Cloud en bekijk je cloudaccounts."
+    },
+    "manage": {
+      "title": "Cloudaccounts beheren",
+      "description": "Voeg cloudaccounts toe, importeer instanties als hosts en voer synchronisaties uit."
+    }
+  },
+  "description": "Voeg een cloudaccount toe om de servers daarvan als hosts te gebruiken. Importeer de servers die je kiest, of synchroniseer het hele account op vaste tijden.",
+  "empty": "Nog geen cloudaccounts.",
+  "add": "Account toevoegen",
+  "edit": "Bewerken",
+  "delete": "Verwijderen",
+  "test": "Sleutels testen",
+  "syncNow": "Nu synchroniseren",
+  "saved": "Opgeslagen",
+  "deleteConfirm": "{{name}} verwijderen? De hosts blijven in Termix staan.",
+  "testOk": "Sleutels werken. {{count}} servers gevonden.",
+  "testFailed": "De sleutels werkten niet.",
+  "syncDone": "{{created}} toegevoegd, {{updated}} bijgewerkt, {{removed}} verwijderd.",
+  "syncFailed": "{{count}} hosts konden niet worden geschreven.",
+  "lastSync": "Gesynchroniseerd op {{date}}",
+  "status": {
+    "never": "Nog niet gesynchroniseerd",
+    "error": "Mislukt"
+  },
+  "state": {
+    "running": "actief",
+    "stopped": "gestopt",
+    "other": "onbekend"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Toegangssleutel-ID",
+    "secretAccessKey": "Geheime toegangssleutel",
+    "sessionToken": "Sessietoken (optioneel)",
+    "regions": "Regio's (leeg voor alle)",
+    "service": "Service",
+    "tenantId": "Tenant-ID",
+    "clientId": "Client-ID",
+    "clientSecret": "Clientgeheim",
+    "subscriptionId": "Abonnements-ID",
+    "serviceAccount": "Sleutel serviceaccount (JSON)",
+    "projectId": "Project-ID (optioneel)",
+    "token": "API-token",
+    "tenancyId": "Tenancy-OCID",
+    "userId": "Gebruikers-OCID",
+    "fingerprint": "API-sleutelvingerafdruk",
+    "privateKey": "Privésleutel (PEM)",
+    "compartments": "Compartiment-OCIDs (leeg voor de tenancy)",
+    "secretKey": "Geheime sleutel",
+    "zones": "Zones (leeg voor alle)",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 en Lightsail",
+    "public-first": "Openbaar, anders privé",
+    "public": "Alleen openbaar",
+    "private": "Alleen privé",
+    "manual": "Handmatig",
+    "auto": "Automatisch",
+    "keep": "Host behouden",
+    "mark": "Host markeren als ontbrekend",
+    "delete": "Host verwijderen"
+  },
+  "form": {
+    "addTitle": "Cloudaccount toevoegen",
+    "editTitle": "Cloudaccount bewerken",
+    "account": "Account",
+    "hosts": "Hosts",
+    "sync": "Synchroniseren",
+    "provider": "Provider",
+    "name": "Naam",
+    "namePlaceholder": "Productie AWS",
+    "keepKeys": "Laat leeg om de opgeslagen waarde te behouden",
+    "keysHint": "Sleutels zijn versleuteld opgeslagen en worden nooit meer getoond. Vul de velden in om ze te vervangen.",
+    "folder": "Map",
+    "folderPlaceholder": "Hetzelfde als de naam",
+    "defaultUser": "Standaard SSH-gebruiker",
+    "defaultUserHint": "Wordt gebruikt voor nieuwe hosts. Voeg een tag toe met de naam termix-user:naam om een andere gebruiker voor deze host te gebruiken.",
+    "credential": "Standaard inloggegevens",
+    "noCredential": "Geen, vragen bij verbinding",
+    "address": "Adres om te gebruiken",
+    "syncMode": "Synchroniseren",
+    "interval": "Minuten tussen synchronisaties",
+    "onRemoved": "Wanneer een host niet meer beschikbaar is",
+    "add": "Account toevoegen",
+    "save": "Opslaan"
+  },
+  "discover": {
+    "title": "Importeer servers",
+    "instances": "Servers",
+    "loading": "Servers laden...",
+    "empty": "Geen servers gevonden.",
+    "all": "Alles selecteren",
+    "none": "Niets selecteren",
+    "noAddress": "geen adres",
+    "imported": "Geïmporteerd",
+    "import": "Importeer {{count}}",
+    "done": "{{created}} toegevoegd, {{updated}} bijgewerkt.",
+    "failed": "Er konden {{count}} hosts niet worden opgeslagen."
+  }
+}

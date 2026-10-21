@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Pilvepakkujad",
+    "description": "Lisa peremeesmasinaid AWS, Azure, Google Cloud, DigitalOcean, Hetzner ja teistest pilveteenustest ning hoia neid sünkroonis."
+  },
+  "tab": {
+    "title": "Pilv"
+  },
+  "permissions": {
+    "view": {
+      "title": "Pilvekontode vaatamine",
+      "description": "Ava Pilve vaheleht ja vaata oma pilvekontosid."
+    },
+    "manage": {
+      "title": "Pilvekontode haldamine",
+      "description": "Lisa pilvekontosid, impordi instantsid peremeesmasinana ja käivita sünkroonimisi."
+    }
+  },
+  "description": "Lisa pilvekonto, et muuta selle serverid peremeesmasinaks. Impordi valitud masinad või sünkrooni kogu konto ajastuse järgi.",
+  "empty": "Pilvekontosid pole veel.",
+  "add": "Lisa konto",
+  "edit": "Muuda",
+  "delete": "Kustuta",
+  "test": "Testi võtmeid",
+  "syncNow": "Sünkrooni kohe",
+  "saved": "Salvestatud",
+  "deleteConfirm": "Kas kustutada {{name}}? Selle hostid jäävad Termixi.",
+  "testOk": "Võtmega on kõik korras. Leiti {{count}} serverit.",
+  "testFailed": "Võtmega ei õnnestunud ühendust luua.",
+  "syncDone": "{{created}} lisatud, {{updated}} uuendatud, {{removed}} eemaldatud.",
+  "syncFailed": "Ei õnnestunud kirjutada {{count}} peremeesarvutit.",
+  "lastSync": "Sünkroonitud {{date}}",
+  "status": {
+    "never": "Pole veel sünkroonitud",
+    "error": "Ebaõnnestus"
+  },
+  "state": {
+    "running": "töötab",
+    "stopped": "peatatud",
+    "other": "tundmatu"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Juurdepääsuvõtme ID",
+    "secretAccessKey": "Salajane juurdepääsuvõti",
+    "sessionToken": "Sessiooni token (valikuline)",
+    "regions": "Piirkonnad (tühjaks jättes kõik)",
+    "service": "Teenuse nimi",
+    "tenantId": "Müüja ID",
+    "clientId": "Kliendi ID",
+    "clientSecret": "Kliendi saladus",
+    "subscriptionId": "Tellimuse ID",
+    "serviceAccount": "Teenuskontoga võti (JSON)",
+    "projectId": "Projekti ID (valikuline)",
+    "token": "API token",
+    "tenancyId": "Müüja OCID",
+    "userId": "Kasutaja OCID",
+    "fingerprint": "API- võtme sõrmejälg",
+    "privateKey": "Privaatvõti (PEM)",
+    "compartments": "Osakonna OCID-id (tühi kogu tenancy jaoks)",
+    "secretKey": "Salavõti",
+    "zones": "Tsoonid (tühi kõikide jaoks)",
+    "username": "Kasutajanimi",
+    "password": "Parool"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 ja Lightsail",
+    "public-first": "Avalik, muidu privaatne",
+    "public": "Ainult avalik",
+    "private": "Ainult privaatne",
+    "manual": "Manuaalne",
+    "auto": "Automaatne",
+    "keep": "Hoia host",
+    "mark": "Märgista host puuduvaks",
+    "delete": "Kustuta host"
+  },
+  "form": {
+    "addTitle": "Lisa pilves konto",
+    "editTitle": "Muuda pilves kontot",
+    "account": "Konto",
+    "hosts": "Majad",
+    "sync": "Sünkroonimine",
+    "provider": "Pakkuja",
+    "name": "Nimi",
+    "namePlaceholder": "Tootmises AWS",
+    "keepKeys": "Jäta tühjaks, et säilitada salvestatud väärtus",
+    "keysHint": "Võtmed on salvestatud krüpteeritult ja neid ei kuvata kunagi uuesti. Täida väljad, et need asendada.",
+    "folder": "Kaust",
+    "folderPlaceholder": "Sama mis nimi",
+    "defaultUser": "Vaikimisi SSH-kasutaja",
+    "defaultUserHint": "Kasutatakse uute hostide puhul. Sildi instants termix-user:name, et kasutada selle jaoks teist kasutajat.",
+    "credential": "Vaikimisi sisselogimine",
+    "noCredential": "Puudub, küsi ühenduse loomisel",
+    "address": "Kasutatav aadress",
+    "syncMode": "Sünkroonimine",
+    "interval": "Minutid sünkroonimiste vahel",
+    "onRemoved": "Kui instants on kadunud",
+    "add": "Lisa konto",
+    "save": "Salvesta"
+  },
+  "discover": {
+    "title": "Impordi serverid",
+    "instances": "Serverid",
+    "loading": "Serverite laadimine...",
+    "empty": "Ühtegi serverit ei leitud.",
+    "all": "Vali kõik",
+    "none": "Tühista valik",
+    "noAddress": "aadress puudub",
+    "imported": "Imporditud",
+    "import": "Impordi {{count}}",
+    "done": "{{created}} lisatud, {{updated}} uuendatud.",
+    "failed": "Ei õnnestunud kirjutada {{count}} hosti andmeid."
+  }
+}

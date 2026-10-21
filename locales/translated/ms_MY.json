@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Pembekal Awan",
+    "description": "Tambah hos dari AWS, Azure, Google Cloud, DigitalOcean, Hetzner dan awan lain, serta kekalkan penyegerakan."
+  },
+  "tab": {
+    "title": "Awan"
+  },
+  "permissions": {
+    "view": {
+      "title": "Lihat akaun awan",
+      "description": "Buka tab Awan dan lihat akaun awan anda."
+    },
+    "manage": {
+      "title": "Urus akaun awan",
+      "description": "Tambah akaun awan, import instans sebagai hos dan jalankan penyegerakan."
+    }
+  },
+  "description": "Tambah akaun awan untuk menukar pelayannya menjadi hos. Import yang anda pilih, atau segerakan keseluruhan akaun pada jadual tetap.",
+  "empty": "Tiada akaun awan lagi.",
+  "add": "Tambah akaun",
+  "edit": "Sunting",
+  "delete": "Padam",
+  "test": "Uji kunci",
+  "syncNow": "Serentak sekarang",
+  "saved": "Disimpan",
+  "deleteConfirm": "Padam {{name}}? Hosnya kekal dalam Termix.",
+  "testOk": "Kunci berfungsi. Ditemui {{count}} pelayan.",
+  "testFailed": "Kunci tidak berfungsi.",
+  "syncDone": "{{created}} ditambah, {{updated}} dikemas kini, {{removed}} dialih keluar.",
+  "syncFailed": "{{count}} hos tidak dapat ditulis.",
+  "lastSync": "Disegerakan {{date}}",
+  "status": {
+    "never": "Belum disegerakan",
+    "error": "Gagal"
+  },
+  "state": {
+    "running": "berjalan",
+    "stopped": "berhenti",
+    "other": "tidak diketahui"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID kunci akses",
+    "secretAccessKey": "Kunci akses rahsia",
+    "sessionToken": "Token sesi (pilihan)",
+    "regions": "Kawasan (kosong untuk semua)",
+    "service": "Perkhidmatan",
+    "tenantId": "ID Penyewa",
+    "clientId": "ID Pelanggan",
+    "clientSecret": "Rahsia pelanggan",
+    "subscriptionId": "ID Langganan",
+    "serviceAccount": "Kunci akaun perkhidmatan (JSON)",
+    "projectId": "ID Projek (pilihan)",
+    "token": "Token API",
+    "tenancyId": "OCID Tenancy",
+    "userId": "OCID Pengguna",
+    "fingerprint": "Cap jari kunci API",
+    "privateKey": "Kunci peribadi (PEM)",
+    "compartments": "OCID kompartmen (kosong untuk penyewaan)",
+    "secretKey": "Kunci rahsia",
+    "zones": "Zon (kosong untuk semua)",
+    "username": "Nama pengguna",
+    "password": "Kata laluan"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 dan Lightsail",
+    "public-first": "Awam, jika tidak peribadi",
+    "public": "Awam sahaja",
+    "private": "Peribadi sahaja",
+    "manual": "Manual",
+    "auto": "Automatik",
+    "keep": "Kekalkan hos",
+    "mark": "Tanda hos sebagai hilang",
+    "delete": "Padam hos"
+  },
+  "form": {
+    "addTitle": "Tambah akaun awan",
+    "editTitle": "Sunting akaun awan",
+    "account": "Akaun",
+    "hosts": "Hos",
+    "sync": "Serentak",
+    "provider": "Pembekal",
+    "name": "Nama",
+    "namePlaceholder": "AWS Pengeluaran",
+    "keepKeys": "Biarkan kosong untuk mengekalkan nilai yang disimpan",
+    "keysHint": "Kunci disimpan dalam keadaan terenkripsi dan tidak akan dipaparkan semula. Isi medan untuk menggantikannya.",
+    "folder": "Folder",
+    "folderPlaceholder": "Sama seperti nama",
+    "defaultUser": "Pengguna SSH lalai",
+    "defaultUserHint": "Digunakan untuk hos baharu. Tag satu contoh termix-user:name untuk menggunakan pengguna lain untuknya.",
+    "credential": "Log masuk lalai",
+    "noCredential": "Tiada, tanya semasa menyambung",
+    "address": "Alamat untuk digunakan",
+    "syncMode": "Serentak",
+    "interval": "Minit antara penyegerakan",
+    "onRemoved": "Apabila contoh hilang",
+    "add": "Tambah akaun",
+    "save": "Simpan"
+  },
+  "discover": {
+    "title": "Import pelayan",
+    "instances": "Pelayan",
+    "loading": "Memuatkan pelayan...",
+    "empty": "Tiada pelayan ditemui.",
+    "all": "Pilih semua",
+    "none": "Nyahpilih semua",
+    "noAddress": "tiada alamat",
+    "imported": "Diimport",
+    "import": "Import {{count}}",
+    "done": "{{created}} ditambah, {{updated}} dikemas kini.",
+    "failed": "{{count}} hos tidak dapat ditulis."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Penyedia Cloud",
+    "description": "Tambahkan host dari AWS, Azure, Google Cloud, DigitalOcean, Hetzner, dan cloud lainnya, serta jaga agar tetap sinkron."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Lihat akun cloud",
+      "description": "Buka tab Cloud dan lihat akun cloud Anda."
+    },
+    "manage": {
+      "title": "Kelola akun cloud",
+      "description": "Tambahkan akun cloud, impor instance sebagai host, dan jalankan sinkronisasi."
+    }
+  },
+  "description": "Tambahkan akun cloud untuk mengubah servernya menjadi host. Impor yang Anda pilih, atau sinkronkan seluruh akun secara berkala.",
+  "empty": "Belum ada akun cloud.",
+  "add": "Tambahkan akun",
+  "edit": "Edit",
+  "delete": "Hapus",
+  "test": "Uji kunci",
+  "syncNow": "Sinkronkan sekarang",
+  "saved": "Tersimpan",
+  "deleteConfirm": "Hapus {{name}}? Host-nya tetap ada di Termix.",
+  "testOk": "Kunci berfungsi. Ditemukan {{count}} server.",
+  "testFailed": "Kunci tidak berfungsi.",
+  "syncDone": "{{created}} ditambahkan, {{updated}} diperbarui, {{removed}} dihapus.",
+  "syncFailed": "{{count}} host tidak dapat ditulis.",
+  "lastSync": "Sinkronisasi {{date}}",
+  "status": {
+    "never": "Belum disinkronkan",
+    "error": "Gagal"
+  },
+  "state": {
+    "running": "berjalan",
+    "stopped": "berhenti",
+    "other": "tidak diketahui"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID kunci akses",
+    "secretAccessKey": "Kunci akses rahasia",
+    "sessionToken": "Token sesi (opsional)",
+    "regions": "Wilayah (kosongkan untuk semua)",
+    "service": "Layanan",
+    "tenantId": "ID Penyewa",
+    "clientId": "ID Klien",
+    "clientSecret": "Rahasia Klien",
+    "subscriptionId": "ID Langganan",
+    "serviceAccount": "Kunci akun layanan (JSON)",
+    "projectId": "ID Proyek (opsional)",
+    "token": "Token API",
+    "tenancyId": "OCID Tenancy",
+    "userId": "OCID Pengguna",
+    "fingerprint": "Sidik jari kunci API",
+    "privateKey": "Kunci privat (PEM)",
+    "compartments": "OCID kompartemen (kosong untuk tenancy)",
+    "secretKey": "Kunci rahasia",
+    "zones": "Zona (kosong untuk semua)",
+    "username": "Nama pengguna",
+    "password": "Kata sandi"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 dan Lightsail",
+    "public-first": "Publik, jika tidak maka privat",
+    "public": "Hanya publik",
+    "private": "Hanya privat",
+    "manual": "Manual",
+    "auto": "Otomatis",
+    "keep": "Pertahankan host",
+    "mark": "Tandai host sebagai hilang",
+    "delete": "Hapus host"
+  },
+  "form": {
+    "addTitle": "Tambahkan akun cloud",
+    "editTitle": "Edit akun cloud",
+    "account": "Akun",
+    "hosts": "Host",
+    "sync": "Sinkronisasi",
+    "provider": "Penyedia",
+    "name": "Nama",
+    "namePlaceholder": "Produksi AWS",
+    "keepKeys": "Biarkan kosong untuk mempertahankan nilai yang tersimpan",
+    "keysHint": "Kunci disimpan dalam bentuk terenkripsi dan tidak akan pernah ditampilkan lagi. Isi bidang ini untuk menggantinya.",
+    "folder": "Folder",
+    "folderPlaceholder": "Sama dengan nama",
+    "defaultUser": "Pengguna SSH default",
+    "defaultUserHint": "Digunakan untuk host baru. Tandai instance dengan termix-user:name untuk menggunakan pengguna lain.",
+    "credential": "Login default",
+    "noCredential": "Tidak ada, minta saat terhubung",
+    "address": "Alamat yang digunakan",
+    "syncMode": "Sinkronisasi",
+    "interval": "Menit antar sinkronisasi",
+    "onRemoved": "Saat instance hilang",
+    "add": "Tambahkan akun",
+    "save": "Simpan"
+  },
+  "discover": {
+    "title": "Impor server",
+    "instances": "Server",
+    "loading": "Memuat server...",
+    "empty": "Tidak ada server ditemukan.",
+    "all": "Pilih semua",
+    "none": "Batalkan semua pilihan",
+    "noAddress": "tanpa alamat",
+    "imported": "Diimpor",
+    "import": "Impor {{count}}",
+    "done": "{{created}} ditambahkan, {{updated}} diperbarui.",
+    "failed": "{{count}} host tidak dapat ditulis."
+  }
+}

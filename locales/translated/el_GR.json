@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Πάροχοι Cloud",
+    "description": "Προσθέστε hosts από AWS, Azure, Google Cloud, DigitalOcean, Hetzner και άλλα cloud, και κρατήστε τους συγχρονισμένους."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Προβολή λογαριασμών cloud",
+      "description": "Ανοίξτε την καρτέλα Cloud και δείτε τους λογαριασμούς cloud σας."
+    },
+    "manage": {
+      "title": "Διαχείριση λογαριασμών cloud",
+      "description": "Προσθέστε λογαριασμούς cloud, εισάγετε instances ως hosts και εκτελέστε συγχρονισμούς."
+    }
+  },
+  "description": "Προσθέστε έναν λογαριασμό cloud για να μετατρέψετε τους servers του σε hosts. Εισάγετε αυτούς που επιλέγετε ή συγχρονίστε ολόκληρο τον λογαριασμό σε προκαθορισμένο χρόνο.",
+  "empty": "Δεν υπάρχουν ακόμη λογαριασμοί cloud.",
+  "add": "Προσθήκη λογαριασμού",
+  "edit": "Επεξεργασία",
+  "delete": "Διαγραφή",
+  "test": "Έλεγχος κλειδιών",
+  "syncNow": "Συγχρονισμός τώρα",
+  "saved": "Αποθηκεύτηκε",
+  "deleteConfirm": "Διαγραφή του {{name}}; Οι υπολογιστές παραμένουν στο Termix.",
+  "testOk": "Τα κλειδιά λειτουργούν. Βρέθηκαν {{count}} διακομιστές.",
+  "testFailed": "Τα κλειδιά δεν λειτουργούν.",
+  "syncDone": "{{created}} προστέθηκαν, {{updated}} ενημερώθηκαν, {{removed}} αφαιρέθηκαν.",
+  "syncFailed": "Δεν ήταν δυνατή η εγγραφή {{count}} υπολογιστών.",
+  "lastSync": "Συγχρονίστηκε στις {{date}}",
+  "status": {
+    "never": "Δεν έχει συγχρονιστεί ακόμη",
+    "error": "Απέτυχε"
+  },
+  "state": {
+    "running": "εκτελείται",
+    "stopped": "σταματημένο",
+    "other": "άγνωστο"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Αναγνωριστικό κλειδιού πρόσβασης",
+    "secretAccessKey": "Μυστικό κλειδί πρόσβασης",
+    "sessionToken": "Διακριτικό συνεδρίας (προαιρετικό)",
+    "regions": "Περιοχές (κενό για όλες)",
+    "service": "Υπηρεσία",
+    "tenantId": "Αναγνωριστικό ενοικιαστή",
+    "clientId": "Αναγνωριστικό πελάτη",
+    "clientSecret": "Μυστικό πελάτη",
+    "subscriptionId": "Αναγνωριστικό συνδρομής",
+    "serviceAccount": "Κλειδί λογαριασμού υπηρεσίας (JSON)",
+    "projectId": "Αναγνωριστικό έργου (προαιρετικό)",
+    "token": "Διακριτικό API",
+    "tenancyId": "OCID ενοικίασης",
+    "userId": "OCID χρήστη",
+    "fingerprint": "API key fingerprint",
+    "privateKey": "Ιδιωτικό κλειδί (PEM)",
+    "compartments": "OCIDs διαμερίσματος (κενό για την ενοικίαση)",
+    "secretKey": "Μυστικό κλειδί",
+    "zones": "Ζώνες (κενό για όλες)",
+    "username": "Όνομα χρήστη",
+    "password": "Κωδικός πρόσβασης"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 και Lightsail",
+    "public-first": "Δημόσιο, αλλιώς ιδιωτικό",
+    "public": "Μόνο δημόσιο",
+    "private": "Μόνο ιδιωτικό",
+    "manual": "Χειροκίνητη",
+    "auto": "Αυτόματη",
+    "keep": "Διατήρηση του host",
+    "mark": "Επισήμανση του host ως λείποντος",
+    "delete": "Διαγραφή του host"
+  },
+  "form": {
+    "addTitle": "Προσθήκη λογαριασμού cloud",
+    "editTitle": "Επεξεργασία λογαριασμού cloud",
+    "account": "Λογαριασμός",
+    "hosts": "Εξυπηρετητές",
+    "sync": "Συγχρονισμός",
+    "provider": "Πάροχος",
+    "name": "Όνομα",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Αφήστε κενό για να διατηρηθεί η αποθηκευμένη τιμή",
+    "keysHint": "Τα κλειδιά αποθηκεύονται κρυπτογραφημένα και δεν εμφανίζονται ξανά. Συμπληρώστε τα πεδία για να τα αντικαταστήσετε.",
+    "folder": "Φάκελος",
+    "folderPlaceholder": "Ίδιο με το όνομα",
+    "defaultUser": "Προεπιλεγμένος χρήστης SSH",
+    "defaultUserHint": "Χρησιμοποιείται για νέους hosts. Ετικετοποιήστε μια instance με termix-user:name για να χρησιμοποιήσετε διαφορετικό χρήστη.",
+    "credential": "Προεπιλεγμένη σύνδεση",
+    "noCredential": "Κανένα, ρώτησε κατά τη σύνδεση",
+    "address": "Διεύθυνση χρήσης",
+    "syncMode": "Συγχρονισμός",
+    "interval": "Λεπτά μεταξύ συγχρονισμών",
+    "onRemoved": "Όταν μια instance αφαιρεθεί",
+    "add": "Προσθήκη λογαριασμού",
+    "save": "Αποθήκευση"
+  },
+  "discover": {
+    "title": "Εισαγωγή διακομιστών",
+    "instances": "Διακομιστές",
+    "loading": "Φόρτωση διακομιστών...",
+    "empty": "Δεν βρέθηκαν διακομιστές.",
+    "all": "Επιλογή όλων",
+    "none": "Αποεπιλογή όλων",
+    "noAddress": "χωρίς διεύθυνση",
+    "imported": "Εισήχθησαν",
+    "import": "Εισαγωγή {{count}}",
+    "done": "{{created}} προστέθηκαν, {{updated}} ενημερώθηκαν.",
+    "failed": "Αδυναμία εγγραφής {{count}} hosts."
+  }
+}

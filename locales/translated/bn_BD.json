@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "AWS, Azure, Google Cloud, DigitalOcean, Hetzner এবং অন্যান্য ক্লাউড থেকে হোস্ট যোগ করুন এবং সেগুলো সিঙ্ক রাখুন।"
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "ক্লাউড অ্যাকাউন্ট দেখুন",
+      "description": "Cloud ট্যাব খুলুন এবং আপনার ক্লাউড অ্যাকাউন্টগুলো দেখুন।"
+    },
+    "manage": {
+      "title": "ক্লাউড অ্যাকাউন্ট পরিচালনা করুন",
+      "description": "ক্লাউড অ্যাকাউন্ট যোগ করুন, ইনস্ট্যান্সগুলো হোস্ট হিসেবে আমদানি করুন এবং সিঙ্ক চালান।"
+    }
+  },
+  "description": "সার্ভারগুলোকে হোস্টে রূপান্তর করতে একটি ক্লাউড অ্যাকাউন্ট যোগ করুন। আপনার পছন্দেরগুলো আমদানি করুন, অথবা একটি নির্দিষ্ট সময়ে পুরো অ্যাকাউন্ট সিঙ্ক করুন।",
+  "empty": "এখনো কোনো ক্লাউড অ্যাকাউন্ট নেই।",
+  "add": "অ্যাকাউন্ট যোগ করুন",
+  "edit": "সম্পাদনা করুন",
+  "delete": "মুছে ফেলুন",
+  "test": "কী পরীক্ষা করুন",
+  "syncNow": "এখনই সিঙ্ক করুন",
+  "saved": "সংরক্ষিত হয়েছে",
+  "deleteConfirm": "{{name}} মুছে ফেলবেন? এর হোস্টগুলো Termix-এই থাকবে।",
+  "testOk": "কীগুলো কাজ করছে। {{count}}টি সার্ভার পাওয়া গেছে।",
+  "testFailed": "কীগুলো কাজ করছে না।",
+  "syncDone": "{{created}}টি যোগ হয়েছে, {{updated}}টি আপডেট হয়েছে, {{removed}}টি সরানো হয়েছে।",
+  "syncFailed": "{{count}}টি হোস্ট লেখা যায়নি।",
+  "lastSync": "{{date}}-এ সিঙ্ক হয়েছে",
+  "status": {
+    "never": "এখনো সিঙ্ক হয়নি",
+    "error": "ব্যর্থ হয়েছে"
+  },
+  "state": {
+    "running": "চলছে",
+    "stopped": "বন্ধ আছে",
+    "other": "অজানা"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Session token (ঐচ্ছিক)",
+    "regions": "Regions (সবগুলোর জন্য খালি রাখুন)",
+    "service": "সার্ভিস",
+    "tenantId": "Tenant ID",
+    "clientId": "Client ID",
+    "clientSecret": "Client secret",
+    "subscriptionId": "Subscription ID",
+    "serviceAccount": "Service account key (JSON)",
+    "projectId": "Project ID (ঐচ্ছিক)",
+    "token": "API token",
+    "tenancyId": "Tenancy OCID",
+    "userId": "User OCID",
+    "fingerprint": "API key fingerprint",
+    "privateKey": "Private key (PEM)",
+    "compartments": "Compartment OCIDs (টেন্যান্সির জন্য খালি রাখুন)",
+    "secretKey": "Secret key",
+    "zones": "Zones (সবগুলোর জন্য খালি রাখুন)",
+    "username": "Username",
+    "password": "Password"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 এবং Lightsail",
+    "public-first": "পাবলিক, অন্যথায় প্রাইভেট",
+    "public": "শুধুমাত্র পাবলিক",
+    "private": "শুধুমাত্র প্রাইভেট",
+    "manual": "ম্যানুয়াল",
+    "auto": "স্বয়ংক্রিয়",
+    "keep": "হোস্টটি রাখুন",
+    "mark": "হোস্টটিকে অনুপস্থিত হিসেবে চিহ্নিত করুন",
+    "delete": "হোস্টটি মুছুন"
+  },
+  "form": {
+    "addTitle": "ক্লাউড অ্যাকাউন্ট যোগ করুন",
+    "editTitle": "ক্লাউড অ্যাকাউন্ট সম্পাদনা করুন",
+    "account": "অ্যাকাউন্ট",
+    "hosts": "হোস্টসমূহ",
+    "sync": "সিঙ্ক",
+    "provider": "প্রোভাইডার",
+    "name": "নাম",
+    "namePlaceholder": "প্রোডাকশন AWS",
+    "keepKeys": "সংরক্ষিত মান রাখতে খালি রাখুন",
+    "keysHint": "কীগুলো এনক্রিপ্টেড অবস্থায় সংরক্ষিত থাকে এবং আর কখনো দেখানো হয় না। এগুলো পরিবর্তন করতে ক্ষেত্রগুলো পূরণ করুন।",
+    "folder": "ফোল্ডার",
+    "folderPlaceholder": "নামের মতোই",
+    "defaultUser": "ডিফল্ট SSH ব্যবহারকারী",
+    "defaultUserHint": "নতুন হোস্টের জন্য ব্যবহৃত হয়। অন্য ব্যবহারকারী ব্যবহার করতে একটি ইনস্ট্যান্সকে termix-user:name ট্যাগ করুন।",
+    "credential": "ডিফল্ট লগইন",
+    "noCredential": "কোনোটিই নয়, সংযোগ করার সময় জিজ্ঞাসা করুন",
+    "address": "ব্যবহারের ঠিকানা",
+    "syncMode": "সিঙ্ক",
+    "interval": "সিঙ্কের মধ্যবর্তী মিনিট",
+    "onRemoved": "যখন একটি ইনস্ট্যান্স অনুপস্থিত হয়",
+    "add": "অ্যাকাউন্ট যোগ করুন",
+    "save": "সংরক্ষণ করুন"
+  },
+  "discover": {
+    "title": "সার্ভার আমদানি করুন",
+    "instances": "সার্ভার",
+    "loading": "সার্ভার লোড হচ্ছে...",
+    "empty": "কোনো সার্ভার পাওয়া যায়নি।",
+    "all": "সব নির্বাচন করুন",
+    "none": "কোনোটিই নির্বাচন করবেন না",
+    "noAddress": "ঠিকানা নেই",
+    "imported": "আমদানি করা হয়েছে",
+    "import": "আমদানি করুন {{count}}",
+    "done": "{{created}} যোগ করা হয়েছে, {{updated}} আপডেট করা হয়েছে।",
+    "failed": "{{count}} হোস্ট লেখা যায়নি।"
+  }
+}

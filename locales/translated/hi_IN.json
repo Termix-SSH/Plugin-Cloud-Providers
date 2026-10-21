@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "AWS, Azure, Google Cloud, DigitalOcean, Hetzner और अन्य क्लाउड से होस्ट जोड़ें और उन्हें सिंक रखें।"
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Cloud खातों को देखें",
+      "description": "Cloud टैब खोलें और अपने cloud खातों को देखें।"
+    },
+    "manage": {
+      "title": "Cloud खातों का प्रबंधन करें",
+      "description": "Cloud खाते जोड़ें, इंस्टेंस को होस्ट के रूप में आयात करें और सिंक चलाएं।"
+    }
+  },
+  "description": "अपने सर्वरों को होस्ट में बदलने के लिए एक cloud खाता जोड़ें। चुने हुए को आयात करें, या समयानुसार पूरे खाते को सिंक करें।",
+  "empty": "अभी तक कोई cloud खाता नहीं।",
+  "add": "खाता जोड़ें",
+  "edit": "संपादित करें",
+  "delete": "हटाएं",
+  "test": "कीज़ का परीक्षण करें",
+  "syncNow": "अभी सिंक करें",
+  "saved": "सहेजा गया",
+  "deleteConfirm": "{{name}} हटाएं? इसके होस्ट Termix में रहेंगे।",
+  "testOk": "कीज़ काम कर रहे हैं। {{count}} सर्वर मिले।",
+  "testFailed": "कीज़ काम नहीं कर रहे हैं।",
+  "syncDone": "{{created}} जोड़े गए, {{updated}} अपडेट किए गए, {{removed}} हटाए गए।",
+  "syncFailed": "{{count}} होस्ट लिखे नहीं जा सके।",
+  "lastSync": "सिंक किया गया {{date}}",
+  "status": {
+    "never": "अभी तक सिंक नहीं हुआ",
+    "error": "विफल"
+  },
+  "state": {
+    "running": "चल रहा है",
+    "stopped": "रोका गया",
+    "other": "अज्ञात"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Session token (वैकल्पिक)",
+    "regions": "Regions (सभी के लिए खाली छोड़ें)",
+    "service": "सेवा",
+    "tenantId": "टेनेंट ID",
+    "clientId": "क्लाइंट ID",
+    "clientSecret": "क्लाइंट सीक्रेट",
+    "subscriptionId": "सब्सक्रिप्शन ID",
+    "serviceAccount": "सेवा खाता कुंजी (JSON)",
+    "projectId": "प्रोजेक्ट ID (वैकल्पिक)",
+    "token": "API टोकन",
+    "tenancyId": "टेनेंसी OCID",
+    "userId": "उपयोगकर्ता OCID",
+    "fingerprint": "API key fingerprint",
+    "privateKey": "Private key (PEM)",
+    "compartments": "Compartment OCIDs (empty for the tenancy)",
+    "secretKey": "Secret key",
+    "zones": "Zones (empty for all)",
+    "username": "Username",
+    "password": "Password"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 and Lightsail",
+    "public-first": "सार्वजनिक, अन्यथा निजी",
+    "public": "केवल सार्वजनिक",
+    "private": "केवल निजी",
+    "manual": "मैनुअल",
+    "auto": "स्वचालित",
+    "keep": "होस्ट को रखें",
+    "mark": "होस्ट को गायब के रूप में टैग करें",
+    "delete": "होस्ट को हटाएं"
+  },
+  "form": {
+    "addTitle": "क्लाउड खाता जोड़ें",
+    "editTitle": "क्लाउड खाता संपादित करें",
+    "account": "खाता",
+    "hosts": "होस्ट",
+    "sync": "सिंक",
+    "provider": "प्रदाता",
+    "name": "नाम",
+    "namePlaceholder": "प्रोडक्शन AWS",
+    "keepKeys": "सहेजा गया मान रखने के लिए खाली छोड़ें",
+    "keysHint": "कीज़ एन्क्रिप्टेड रूप से संग्रहीत की जाती हैं और कभी भी दोबारा नहीं दिखाई जातीं। उन्हें बदलने के लिए फ़ील्ड भरें।",
+    "folder": "फ़ोल्डर",
+    "folderPlaceholder": "नाम के समान",
+    "defaultUser": "डिफ़ॉल्ट SSH उपयोगकर्ता",
+    "defaultUserHint": "नए होस्ट के लिए उपयोग किया जाता है। किसी अन्य उपयोगकर्ता का उपयोग करने के लिए एक इंस्टेंस को termix-user:name टैग करें।",
+    "credential": "डिफ़ॉल्ट लॉगिन",
+    "noCredential": "कोई नहीं, कनेक्ट करते समय पूछें",
+    "address": "उपयोग करने का पता",
+    "syncMode": "सिंक",
+    "interval": "सिंक्स के बीच मिनट",
+    "onRemoved": "जब एक इंस्टेंस गायब हो जाए",
+    "add": "खाता जोड़ें",
+    "save": "सहेजें"
+  },
+  "discover": {
+    "title": "सर्वर आयात करें",
+    "instances": "सर्वर",
+    "loading": "सर्वर लोड हो रहे हैं...",
+    "empty": "कोई सर्वर नहीं मिला।",
+    "all": "सभी चुनें",
+    "none": "कोई न चुनें",
+    "noAddress": "कोई पता नहीं",
+    "imported": "आयातित",
+    "import": "{{count}} आयात करें",
+    "done": "{{created}} जोड़े गए, {{updated}} अपडेट किए गए।",
+    "failed": "{{count}} होस्ट को लिखा नहीं जा सका।"
+  }
+}

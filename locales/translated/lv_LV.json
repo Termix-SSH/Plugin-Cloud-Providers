@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Mākoņa pakalpojumu sniedzēji",
+    "description": "Pievienojiet mezglus no AWS, Azure, Google Cloud, DigitalOcean, Hetzner un citiem mākoņpakalpojumiem, kā arī turiet tos sinhronizētus."
+  },
+  "tab": {
+    "title": "Mākonis"
+  },
+  "permissions": {
+    "view": {
+      "title": "Apskatīt mākoņa kontus",
+      "description": "Atveriet cilni „Mākonis” un apskatiet savus mākoņa kontus."
+    },
+    "manage": {
+      "title": "Pārvaldīt mākoņa kontus",
+      "description": "Pievienojiet mākoņa kontus, importējiet instances kā mezglus un izpildiet sinhronizāciju."
+    }
+  },
+  "description": "Pievienojiet mākoņa kontu, lai tā serveri kļūtu par mezgliem. Importējiet izvēlētos vai sinhronizējiet visu kontu pēc plānojuma.",
+  "empty": "Vēl nav mākoņa kontu.",
+  "add": "Pievienot kontu",
+  "edit": "Rediģēt",
+  "delete": "Dzēst",
+  "test": "Testēt atslēgas",
+  "syncNow": "Sinhronizēt tagad",
+  "saved": "Saglabāts",
+  "deleteConfirm": "Dzēst {{name}}? Tās mezgli paliks Termix.",
+  "testOk": "Atslēgas darbojas. Atrasti {{count}} serveri.",
+  "testFailed": "Atslēgas nestrādāja.",
+  "syncDone": "{{created}} pievienoti, {{updated}} atjaunināti, {{removed}} noņemti.",
+  "syncFailed": "{{count}} mezglus neizdevās ierakstīt.",
+  "lastSync": "Sinhronizēts {{date}}",
+  "status": {
+    "never": "Vēl nav sinhronizēts",
+    "error": "Neizdevās"
+  },
+  "state": {
+    "running": "palaists",
+    "stopped": "apturēts",
+    "other": "nezināms"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Piekļuves atslēgas ID",
+    "secretAccessKey": "Slēptā piekļuves atslēga",
+    "sessionToken": "Sesijas žetons (neobligāts)",
+    "regions": "Reģioni (tukšs, lai visi)",
+    "service": "Pakalpojums",
+    "tenantId": "Īpašnieka ID",
+    "clientId": "Klienta ID",
+    "clientSecret": "Klienta noslēpums",
+    "subscriptionId": "Abonementa ID",
+    "serviceAccount": "Pakalpojumu konta atslēga (JSON)",
+    "projectId": "Projekta ID (neobligāti)",
+    "token": "API marķieris",
+    "tenancyId": "Īpašnieka OCID",
+    "userId": "Lietotāja OCID",
+    "fingerprint": "API atslēgas pirkstu nospiedums",
+    "privateKey": "Privātā atslēga (PEM)",
+    "compartments": "Kompartamentu OCID (tukšs, lai attiektos uz visiem)",
+    "secretKey": "Slēptā atslēga",
+    "zones": "Zonas (tukšs, lai attiektos uz visām)",
+    "username": "Lietotājvārds",
+    "password": "Parole"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 un Lightsail",
+    "public-first": "Publiski, citādi privāti",
+    "public": "Tikai publiski",
+    "private": "Tikai privāti",
+    "manual": "Manuāli",
+    "auto": "Automātiski",
+    "keep": "Atstāt hostu",
+    "mark": "Atzīmēt hostu kā trūkstošu",
+    "delete": "Dzēst hostu"
+  },
+  "form": {
+    "addTitle": "Pievienot mākoņa kontu",
+    "editTitle": "Rediģēt mākoņa kontu",
+    "account": "Konts",
+    "hosts": "Resursdatori",
+    "sync": "Sinhronizācija",
+    "provider": "Pakalpojumu sniedzējs",
+    "name": "Nosaukums",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Atstājiet tukšu, lai saglabātu esošo vērtību",
+    "keysHint": "Atslēgas tiek glabātas šifrētā veidā un vairs netiek parādītas. Lai tās aizvietotu, aizpildiet laukus.",
+    "folder": "Mapes",
+    "folderPlaceholder": "Tāds pats kā nosaukums",
+    "defaultUser": "SSH lietotājs pēc noklusējuma",
+    "defaultUserHint": "Izmanto jauniem mezgliem. Lai izmantotu citu lietotāju, pievienojiet mezglam tagu `termix-user:vārds`.",
+    "credential": "Pieteikšanās pēc noklusējuma",
+    "noCredential": "Nav, vaicāt pievienojoties",
+    "address": "Adrese, ko izmantot",
+    "syncMode": "Sinhronizācija",
+    "interval": "Minūtes starp sinhronizācijām",
+    "onRemoved": "Kad mezgls vairs nav pieejams",
+    "add": "Pievienot kontu",
+    "save": "Saglabāt"
+  },
+  "discover": {
+    "title": "Importēt serverus",
+    "instances": "Serveri",
+    "loading": "Notiek serveru ielāde...",
+    "empty": "Serveri nav atrasti.",
+    "all": "Atlasīt visus",
+    "none": "Noņemt atlasi",
+    "noAddress": "nav adreses",
+    "imported": "Importēts",
+    "import": "Importēt {{count}}",
+    "done": "{{created}} pievienots, {{updated}} atjaunināts.",
+    "failed": "Neizdevās ierakstīt {{count}} saimniekdatorus."
+  }
+}

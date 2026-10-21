@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud Providers",
+    "description": "Добавете хостове от AWS, Azure, Google Cloud, DigitalOcean, Hetzner и други облачни платформи и ги синхронизирайте автоматично."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Преглед на облачни акаунти",
+      "description": "Отваряне на раздела Cloud и преглед на вашите облачни акаунти."
+    },
+    "manage": {
+      "title": "Управление на облачни акаунти",
+      "description": "Добавяне на облачни акаунти, импортиране на инстанции като хостове и изпълнение на синхронизации."
+    }
+  },
+  "description": "Добавете облачен акаунт, за да превърнете неговите сървъри в хостове. Импортирайте избраните от вас или синхронизирайте целия акаунт по график.",
+  "empty": "Все още няма добавени облачни акаунти.",
+  "add": "Добавяне на акаунт",
+  "edit": "Редактиране",
+  "delete": "Изтриване",
+  "test": "Тестване на ключове",
+  "syncNow": "Синхронизиране сега",
+  "saved": "Запазено",
+  "deleteConfirm": "Да се изтрие {{name}}? Хостовете му ще останат в Termix.",
+  "testOk": "Ключовете работят. Намерени са {{count}} сървъра.",
+  "testFailed": "Ключовете не работят.",
+  "syncDone": "{{created}} добавени, {{updated}} актуализирани, {{removed}} премахнати.",
+  "syncFailed": "{{count}} хоста не могат да бъдат записани.",
+  "lastSync": "Синхронизирано на {{date}}",
+  "status": {
+    "never": "Все още не е синхронизирано",
+    "error": "Неуспешно"
+  },
+  "state": {
+    "running": "активен",
+    "stopped": "спрян",
+    "other": "неизвестен"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Session token (по избор)",
+    "regions": "Региони (празно за всички)",
+    "service": "Услуга",
+    "tenantId": "Tenant ID",
+    "clientId": "Client ID",
+    "clientSecret": "Client secret",
+    "subscriptionId": "Subscription ID",
+    "serviceAccount": "Service account key (JSON)",
+    "projectId": "Project ID (по избор)",
+    "token": "API token",
+    "tenancyId": "Tenancy OCID",
+    "userId": "User OCID",
+    "fingerprint": "API key fingerprint",
+    "privateKey": "Private key (PEM)",
+    "compartments": "Compartment OCIDs (празно за tenancy)",
+    "secretKey": "Secret key",
+    "zones": "Зони (празно за всички)",
+    "username": "Потребителско име",
+    "password": "Парола"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 и Lightsail",
+    "public-first": "Публичен, иначе частен",
+    "public": "Само публичен",
+    "private": "Само частен",
+    "manual": "Ръчно",
+    "auto": "Автоматично",
+    "keep": "Запази хоста",
+    "mark": "Маркирай хоста като липсващ",
+    "delete": "Изтрий хоста"
+  },
+  "form": {
+    "addTitle": "Добави облачен акаунт",
+    "editTitle": "Редактирай облачен акаунт",
+    "account": "Акаунт",
+    "hosts": "Хостове",
+    "sync": "Синхронизиране",
+    "provider": "Провайдер",
+    "name": "Име",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Остави празно, за да запазиш съхранената стойност",
+    "keysHint": "Ключовете се съхраняват криптирани и никога не се показват отново. Попълнете полетата, за да ги замените.",
+    "folder": "Папка",
+    "folderPlaceholder": "Същото като името",
+    "defaultUser": "Стандартен SSH потребител",
+    "defaultUserHint": "Използва се за нови хостове. Маркирайте инстанция с termix-user:name, за да използвате друг потребител за нея.",
+    "credential": "Стандартно влизане",
+    "noCredential": "Няма, питай при свързване",
+    "address": "Адрес за използване",
+    "syncMode": "Синхронизиране",
+    "interval": "Минути между синхронизирането",
+    "onRemoved": "Когато инстанцията е изчезнала",
+    "add": "Добави акаунт",
+    "save": "Запази"
+  },
+  "discover": {
+    "title": "Импортирай сървъри",
+    "instances": "Сървъри",
+    "loading": "Зареждане на сървъри...",
+    "empty": "Не са намерени сървъри.",
+    "all": "Избери всички",
+    "none": "Отмени избора",
+    "noAddress": "няма адрес",
+    "imported": "Импортирани",
+    "import": "Импортирай {{count}}",
+    "done": "{{created}} добавени, {{updated}} актуализирани.",
+    "failed": "{{count}} хоста не може да бъде записан."
+  }
+}

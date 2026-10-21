@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Provedores de Cloud",
+    "description": "Adicione hosts da AWS, Azure, Google Cloud, DigitalOcean, Hetzner e outras clouds, e mantenha-os sincronizados."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Ver contas cloud",
+      "description": "Abra a aba Cloud e veja as suas contas cloud."
+    },
+    "manage": {
+      "title": "Gerir contas cloud",
+      "description": "Adicione contas cloud, importe instâncias como hosts e execute sincronizações."
+    }
+  },
+  "description": "Adicione uma conta cloud para transformar os seus servidores em hosts. Importe os que escolher ou sincronize toda a conta com um intervalo definido.",
+  "empty": "Ainda não há contas cloud.",
+  "add": "Adicionar conta",
+  "edit": "Editar",
+  "delete": "Eliminar",
+  "test": "Testar chaves",
+  "syncNow": "Sincronizar agora",
+  "saved": "Guardado",
+  "deleteConfirm": "Eliminar {{name}}? Os seus hosts permanecem no Termix.",
+  "testOk": "As chaves funcionam. Foram encontrados {{count}} servidores.",
+  "testFailed": "As chaves não funcionaram.",
+  "syncDone": "{{created}} adicionados, {{updated}} atualizados, {{removed}} removidos.",
+  "syncFailed": "{{count}} hosts não puderam ser gravados.",
+  "lastSync": "Sincronizado em {{date}}",
+  "status": {
+    "never": "Ainda não sincronizado",
+    "error": "Falhou"
+  },
+  "state": {
+    "running": "em execução",
+    "stopped": "parado",
+    "other": "desconhecido"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID da chave de acesso",
+    "secretAccessKey": "Chave de acesso secreta",
+    "sessionToken": "Token de sessão (opcional)",
+    "regions": "Regiões (vazio para todas)",
+    "service": "Serviço",
+    "tenantId": "ID do inquilino",
+    "clientId": "ID do cliente",
+    "clientSecret": "Segredo do cliente",
+    "subscriptionId": "ID da subscrição",
+    "serviceAccount": "Chave da conta de serviço (JSON)",
+    "projectId": "ID do projeto (opcional)",
+    "token": "Token da API",
+    "tenancyId": "OCID da tenancy",
+    "userId": "OCID do utilizador",
+    "fingerprint": "Impressão digital da chave da API",
+    "privateKey": "Chave privada (PEM)",
+    "compartments": "OCIDs dos compartimentos (vazio para a tenancy)",
+    "secretKey": "Chave secreta",
+    "zones": "Zonas (vazio para todas)",
+    "username": "Nome de utilizador",
+    "password": "Palavra-passe"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 e Lightsail",
+    "public-first": "Público, caso contrário privado",
+    "public": "Apenas público",
+    "private": "Apenas privado",
+    "manual": "Manual",
+    "auto": "Automático",
+    "keep": "Manter o host",
+    "mark": "Marcar o host como indisponível",
+    "delete": "Eliminar o host"
+  },
+  "form": {
+    "addTitle": "Adicionar conta na cloud",
+    "editTitle": "Editar conta na cloud",
+    "account": "Conta",
+    "hosts": "Servidores",
+    "sync": "Sincronização",
+    "provider": "Fornecedor",
+    "name": "Nome",
+    "namePlaceholder": "Produção AWS",
+    "keepKeys": "Deixe vazio para manter o valor guardado",
+    "keysHint": "As chaves são armazenadas de forma encriptada e nunca são novamente exibidas. Preencha os campos para as substituir.",
+    "folder": "Pasta",
+    "folderPlaceholder": "Igual ao nome",
+    "defaultUser": "Utilizador SSH predefinido",
+    "defaultUserHint": "Utilizado para novos hosts. Aplique a etiqueta termix-user:name a uma instância para utilizar um utilizador diferente para a mesma.",
+    "credential": "Início de sessão predefinido",
+    "noCredential": "Nenhum, pedir ao conectar",
+    "address": "Endereço a utilizar",
+    "syncMode": "Sincronização",
+    "interval": "Minutos entre sincronizações",
+    "onRemoved": "Quando uma instância desaparece",
+    "add": "Adicionar conta",
+    "save": "Guardar"
+  },
+  "discover": {
+    "title": "Importar servidores",
+    "instances": "Servidores",
+    "loading": "A carregar servidores...",
+    "empty": "Nenhum servidor encontrado.",
+    "all": "Selecionar tudo",
+    "none": "Desselecionar tudo",
+    "noAddress": "sem endereço",
+    "imported": "Importado",
+    "import": "Importar {{count}}",
+    "done": "{{created}} adicionados, {{updated}} atualizados.",
+    "failed": "Não foi possível gravar {{count}} hosts."
+  }
+}

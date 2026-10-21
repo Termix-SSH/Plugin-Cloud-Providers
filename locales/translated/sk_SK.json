@@ -1,0 +1,127 @@
+{
+  "plugin": {
+    "name": "Cloud poskytovatelia",
+    "description": "Pridajte hostiteľov z AWS, Azure, Google Cloud, DigitalOcean, Hetzner a ďalších cloudu a udržiavajte ich synchronizované."
+  },
+  "tab": {
+    "title": "Cloud"
+  },
+  "permissions": {
+    "view": {
+      "title": "Zobraziť cloudové účty",
+      "description": "Otvorte kartu Cloud a zobrazte svoje cloudové účty."
+    },
+    "manage": {
+      "title": "Spravovať cloudové účty",
+      "description": "Pridávať cloudové účty, importovať inštancie ako hostiteľov a spúšťať synchronizácie."
+    }
+  },
+  "description": "Pridajte cloudový účet, aby ste sa jeho servery stali hostiteľmi. Importujte tie, ktoré vyberiete, alebo synchronizujte celý účet podľa časového plánu.",
+  "empty": "Zatiaľ žiadne cloudové účty.",
+  "add": "Pridať účet",
+  "edit": "Upraviť",
+  "delete": "Odstrániť",
+  "test": "Otestovať kľúče",
+  "syncNow": "Synchronizovať teraz",
+  "saved": "Uložené",
+  "deleteConfirm": "Odstrániť {{name}}? Jeho hostitelia zostanú v Termix.",
+  "testOk": "Kľúče fungujú. Nájdených {{count}} serverov.",
+  "testFailed": "Kľúče nefungovali.",
+  "syncDone": "{{created}} pridaných, {{updated}} aktualizovaných, {{removed}} odstránených.",
+  "syncFailed": "Nepodarilo sa zapísať {{count}} hostiteľov.",
+  "lastSync": "Synchronizované {{date}}",
+  "status": {
+    "never": "Zatiaľ nesynchronizované",
+    "error": "Zlyhalo"
+  },
+  "state": {
+    "running": "beží",
+    "stopped": "zastavené",
+    "other": "neznáme"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "ID prístupového kľúča",
+    "secretAccessKey": "Tajný prístupový kľúč",
+    "sessionToken": "Token relácie (voliteľné)",
+    "regions": "Regióny (prázdne pre všetky)",
+    "service": "Služba",
+    "tenantId": "ID prenajímateľa",
+    "clientId": "ID klienta",
+    "clientSecret": "Tajný kľúč klienta",
+    "subscriptionId": "ID predplatného",
+    "serviceAccount": "Kľúč služby (JSON)",
+    "projectId": "ID projektu (voliteľné)",
+    "token": "API token",
+    "tenancyId": "OCID prenajímateľa",
+    "userId": "OCID používateľa",
+    "fingerprint": "Odtlačok API kľúča",
+    "privateKey": "Súkromný kľúč (PEM)",
+    "compartments": "OCIDy priestorov (prázdne pre tenancy)",
+    "secretKey": "Tajný kľúč",
+    "zones": "Zóny (prázdne pre všetky)",
+    "username": "Meno používateľa",
+    "password": "Heslo"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 a Lightsail",
+    "public-first": "Verejné, inak súkromné",
+    "public": "Len verejné",
+    "private": "Len súkromné",
+    "manual": "Manuálne",
+    "auto": "Automatické",
+    "keep": "Zachovať hostiteľa",
+    "mark": "Označiť hostiteľa ako chýbajúci",
+    "delete": "Odstrániť hostiteľa"
+  },
+  "form": {
+    "addTitle": "Pridať cloudový účet",
+    "editTitle": "Upraviť cloudový účet",
+    "account": "Účet",
+    "hosts": "Hostitelia",
+    "sync": "Synchronizácia",
+    "provider": "Poskytovateľ",
+    "name": "Názov",
+    "namePlaceholder": "Produkčné AWS",
+    "keepKeys": "Nechajte prázdne, ak chcete zachovať uloženú hodnotu",
+    "keysHint": "Kľúče sú uložené šifrované a už sa nezobrazia. Vyplňte polia, ak ich chcete nahradiť.",
+    "folder": "Priečinok",
+    "folderPlaceholder": "Rovnaký ako názov",
+    "defaultUser": "Predvolaný používateľ SSH",
+    "defaultUserHint": "Používa sa pre nové hostiteľy. Pre iného používateľa označte inštanciu tagom termix-user:meno.",
+    "credential": "Predvolané prihlásenie",
+    "noCredential": "Žiadne, opýtať sa pri pripájaní",
+    "address": "Adresa na použitie",
+    "syncMode": "Synchronizácia",
+    "interval": "Minúty medzi synchronizáciami",
+    "onRemoved": "Keď inštancia zmizne",
+    "add": "Pridať účet",
+    "save": "Uložiť"
+  },
+  "discover": {
+    "title": "Importovať servery",
+    "instances": "Servery",
+    "loading": "Načítavajú sa servery...",
+    "empty": "Nenašli sa žiadne servery.",
+    "all": "Vybrať všetko",
+    "none": "Zrušiť výber",
+    "noAddress": "žiadna adresa",
+    "imported": "Importované",
+    "import": "Importovať {{count}}",
+    "done": "{{created}} pridaných, {{updated}} aktualizovaných.",
+    "failed": "Nepodarilo sa zapísať {{count}} hostiteľov."
+  }
+}
