@@ -6,6 +6,12 @@
 
 <p>Add hosts from your cloud accounts and keep them in sync</p>
 
+<!-- VIDEO:START -->
+
+<a href="https://www.youtube.com/watch?v=fgVkd6761qg"><img src="https://img.shields.io/badge/Watch_the_demo-f59145?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch the demo on YouTube" /></a>
+
+<!-- VIDEO:END -->
+
 </div>
 
 <br />

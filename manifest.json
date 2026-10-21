@@ -9,6 +9,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/Termix-SSH/Plugin-Cloud-Providers",
   "docs": "https://docs.termix.site/plugins/cloud-providers",
+  "video": "https://www.youtube.com/watch?v=fgVkd6761qg",
   "category": "Infrastructure",
   "icon": "Cloud",
   "features": [
