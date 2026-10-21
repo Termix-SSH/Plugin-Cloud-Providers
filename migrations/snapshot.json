@@ -1,21 +1,72 @@
 {
   "version": 1,
   "tables": {
-    "notes": {
+    "accounts": {
       "columns": {
         "id": {
           "type": "id",
           "primaryKey": true,
           "notNull": true
         },
-        "userId": {
+        "ownerId": {
           "type": "refUser",
           "length": 255,
           "notNull": true
         },
-        "text": {
+        "provider": {
+          "type": "varchar",
+          "length": 32,
+          "notNull": true
+        },
+        "name": {
+          "type": "varchar",
+          "length": 100,
+          "notNull": true
+        },
+        "credentials": {
           "type": "text",
           "notNull": true
+        },
+        "folder": {
+          "type": "varchar",
+          "length": 255
+        },
+        "defaultUser": {
+          "type": "varchar",
+          "length": 64
+        },
+        "defaultCredentialId": {
+          "type": "integer"
+        },
+        "addressPreference": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true
+        },
+        "syncMode": {
+          "type": "varchar",
+          "length": 8,
+          "notNull": true
+        },
+        "intervalMinutes": {
+          "type": "integer",
+          "notNull": true
+        },
+        "onRemoved": {
+          "type": "varchar",
+          "length": 8,
+          "notNull": true
+        },
+        "status": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true
+        },
+        "lastError": {
+          "type": "text"
+        },
+        "lastSyncAt": {
+          "type": "timestamp"
         },
         "createdAt": {
           "type": "timestamp",
@@ -25,8 +76,58 @@
       },
       "indexes": [
         {
-          "name": "idx_p_hello_world_notes_user_id",
-          "columns": ["userId"]
+          "name": "uq_p_cloud_providers_accounts_owner_name",
+          "columns": [
+            "ownerId",
+            "name"
+          ],
+          "unique": true
+        }
+      ]
+    },
+    "instances": {
+      "columns": {
+        "id": {
+          "type": "id",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "accountId": {
+          "type": "integer",
+          "notNull": true
+        },
+        "instanceId": {
+          "type": "varchar",
+          "length": 255,
+          "notNull": true
+        },
+        "hostId": {
+          "type": "refHost",
+          "notNull": true
+        },
+        "signature": {
+          "type": "varchar",
+          "length": 64
+        },
+        "state": {
+          "type": "varchar",
+          "length": 16
+        }
+      },
+      "indexes": [
+        {
+          "name": "uq_p_cloud_providers_instances_account_instance",
+          "columns": [
+            "accountId",
+            "instanceId"
+          ],
+          "unique": true
+        },
+        {
+          "name": "idx_p_cloud_providers_instances_account",
+          "columns": [
+            "accountId"
+          ]
         }
       ]
     }

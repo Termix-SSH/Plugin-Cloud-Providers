@@ -4,6 +4,6 @@
 
 ### Added
 
-- A tab with notes
-- One admin setting
-- One table with migrations for SQLite, PostgreSQL and MySQL
+- Cloud accounts for AWS (EC2 and Lightsail), Azure, Google Cloud, DigitalOcean, Hetzner, Linode, Vultr, Oracle Cloud, Scaleway and UpCloud
+- Import chosen servers as hosts, or sync a whole account by hand or on a timer
+- Hosts follow name and IP changes, with an option to keep, tag or delete hosts whose server is gone

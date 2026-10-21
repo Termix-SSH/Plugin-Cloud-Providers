@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { fireEvent, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import {
   renderWithApp,
   type RenderedPluginApp,
@@ -21,50 +21,68 @@ afterEach(async () => {
 describe(`${manifest.id} activate`, () => {
   it("registers the rail item and tab", async () => {
     rendered = await renderWithApp(plugin, { manifest, locales });
-    expect(rendered.registered.tabs()).toEqual(["hello-world"]);
+    expect(rendered.registered.tabs()).toEqual(["cloud-providers"]);
     expect(rendered.registered.railItems()).toEqual([
       expect.objectContaining({
-        id: "hello-world",
-        permission: "hello-world.use",
+        id: "cloud-providers",
+        permission: "cloud-providers.view",
       }),
     ]);
   });
 
-  it("shows the greeting and notes", async () => {
+  it("lists accounts with their provider", async () => {
+    const get = vi.fn(async (path: string) => {
+      if (path === "/accounts") {
+        return {
+          data: {
+            accounts: [
+              {
+                id: 1,
+                provider: "hetzner",
+                name: "Hetzner prod",
+                folder: null,
+                defaultUser: null,
+                defaultCredentialId: null,
+                addressPreference: "public-first",
+                syncMode: "auto",
+                intervalMinutes: 60,
+                onRemoved: "keep",
+                status: "ok",
+                lastError: null,
+                lastSyncAt: null,
+              },
+            ],
+          },
+        };
+      }
+      if (path === "/providers") return { data: { providers: [] } };
+      return { data: { credentials: [] } };
+    });
     rendered = await renderWithApp(plugin, {
       manifest,
       locales,
-      api: {
-        get: vi.fn(async () => ({
-          data: {
-            greeting: "Hi there",
-            notes: [{ id: 1, text: "first", createdAt: "" }],
-          },
-        })),
-      } as never,
+      api: { get } as never,
     });
-    rendered.renderTab("hello-world", { isVisible: true });
-    expect(await screen.findByText("Hi there")).toBeTruthy();
-    expect(screen.getByText("first")).toBeTruthy();
+    rendered.renderTab("cloud-providers", { isVisible: true });
+    expect(await screen.findByText("Hetzner prod")).toBeTruthy();
+    expect(screen.getByText(locales.add)).toBeTruthy();
   });
 
-  it("shows an error when a note cannot be saved", async () => {
+  it("shows the empty state", async () => {
+    const get = vi.fn(async (path: string) => ({
+      data:
+        path === "/accounts"
+          ? { accounts: [] }
+          : path === "/providers"
+            ? { providers: [] }
+            : { credentials: [] },
+    }));
     rendered = await renderWithApp(plugin, {
       manifest,
       locales,
-      api: {
-        get: vi.fn(async () => ({ data: { greeting: "Hello", notes: [] } })),
-        post: vi.fn(async () => {
-          throw new Error("offline");
-        }),
-      } as never,
+      api: { get } as never,
     });
-    rendered.renderTab("hello-world", { isVisible: true });
-    await screen.findByText(locales.tab.empty);
-    fireEvent.change(screen.getByPlaceholderText(locales.tab.placeholder), {
-      target: { value: "note" },
-    });
-    fireEvent.click(screen.getByText(locales.tab.add));
-    expect(await screen.findByText(locales.tab.error)).toBeTruthy();
+    rendered.renderTab("cloud-providers", { isVisible: true });
+    expect(await screen.findByText(locales.empty)).toBeTruthy();
   });
 });

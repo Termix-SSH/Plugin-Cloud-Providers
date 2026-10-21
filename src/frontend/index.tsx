@@ -1,114 +1,255 @@
-import { useEffect, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
+  Cloud,
+  DownloadCloud,
+  Pencil,
+  Plug,
+  Plus,
+  RefreshCw,
+  Trash2,
+} from "lucide-react";
+import { toast } from "sonner";
+import {
+  usePluginApi,
   useTranslation,
   type TabProps,
   type TermixApp,
 } from "@termix-ssh/plugin-sdk/frontend";
+import {
+  Button,
+  ListRow,
+  ListRowAction,
+  useConfirm,
+} from "@termix-ssh/plugin-sdk/ui";
+import {
+  createApi,
+  errorMessage,
+  type Account,
+  type AccountInput,
+  type ProviderInfo,
+  type SavedCredential,
+} from "./api";
+import { AccountForm } from "./AccountForm";
+import { DiscoverView } from "./DiscoverView";
 
-const TAB_ID = "hello-world";
+const TAB_ID = "cloud-providers";
 
-interface Note {
-  id: number;
-  text: string;
-  createdAt: string;
-}
+type View =
+  | { kind: "list" }
+  | { kind: "form"; account: Account | null }
+  | { kind: "discover"; account: Account };
 
-function HandIcon(props: { className?: string }) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8" />
-      <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15" />
-    </svg>
-  );
-}
+function CloudTab({ isVisible }: TabProps) {
+  const { t } = useTranslation();
+  const confirm = useConfirm();
+  const pluginApi = usePluginApi();
+  const api = useMemo(() => createApi(pluginApi), [pluginApi]);
+  const [accounts, setAccounts] = useState<Account[]>([]);
+  const [providers, setProviders] = useState<ProviderInfo[]>([]);
+  const [credentials, setCredentials] = useState<SavedCredential[]>([]);
+  const [view, setView] = useState<View>({ kind: "list" });
+  const [busy, setBusy] = useState<number | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
-function createTab(app: TermixApp) {
-  return function HelloWorldTab({ isVisible }: TabProps) {
-    const { t } = useTranslation();
-    const [greeting, setGreeting] = useState("");
-    const [notes, setNotes] = useState<Note[]>([]);
-    const [draft, setDraft] = useState("");
-    const [failed, setFailed] = useState(false);
+  const reload = useCallback(async () => {
+    try {
+      const [list, known, saved] = await Promise.all([
+        api.accounts(),
+        api.providers(),
+        api.credentials(),
+      ]);
+      setAccounts(list);
+      setProviders(known);
+      setCredentials(saved);
+    } catch (error) {
+      toast.error(errorMessage(error));
+    } finally {
+      setLoaded(true);
+    }
+  }, [api]);
 
-    const load = async () => {
-      try {
-        const { data } = await app.api.get<{ greeting: string; notes: Note[] }>(
-          "/notes",
-        );
-        setGreeting(data.greeting);
-        setNotes(data.notes);
-        setFailed(false);
-      } catch {
-        setFailed(true);
-      }
-    };
+  useEffect(() => {
+    if (isVisible) void reload();
+  }, [isVisible, reload]);
 
-    useEffect(() => {
-      if (isVisible) void load();
-    }, [isVisible]);
+  async function save(account: Account | null, input: AccountInput) {
+    try {
+      if (account) await api.update(account.id, input);
+      else await api.create(input);
+      toast.success(t("saved"));
+      setView({ kind: "list" });
+      await reload();
+      return true;
+    } catch (error) {
+      toast.error(errorMessage(error));
+      return false;
+    }
+  }
 
-    const add = async (event: FormEvent) => {
-      event.preventDefault();
-      if (!draft.trim()) return;
-      try {
-        await app.api.post("/notes", { text: draft });
-        setDraft("");
-      } catch {
-        setFailed(true);
-        return;
-      }
-      await load();
-    };
+  async function test(account: Account) {
+    setBusy(account.id);
+    try {
+      const result = await api.test(account.id);
+      if (result.ok) toast.success(t("testOk", { count: result.count ?? 0 }));
+      else toast.error(result.error ?? t("testFailed"));
+    } catch (error) {
+      toast.error(errorMessage(error));
+    } finally {
+      setBusy(null);
+    }
+  }
 
+  async function syncNow(account: Account) {
+    setBusy(account.id);
+    try {
+      const report = await api.sync(account.id);
+      toast.success(
+        t("syncDone", {
+          created: report.created,
+          updated: report.updated,
+          removed: report.removed,
+        }),
+      );
+      if (report.failed > 0)
+        toast.error(t("syncFailed", { count: report.failed }));
+    } catch (error) {
+      toast.error(errorMessage(error));
+    } finally {
+      setBusy(null);
+      await reload();
+    }
+  }
+
+  async function remove(account: Account) {
+    const ok = await confirm({
+      title: t("deleteConfirm", { name: account.name }),
+      confirmLabel: t("delete"),
+    });
+    if (!ok) return;
+    try {
+      await api.remove(account.id);
+      await reload();
+    } catch (error) {
+      toast.error(errorMessage(error));
+    }
+  }
+
+  if (view.kind === "form") {
     return (
-      <div className="flex flex-col gap-4 p-4">
-        <h2 className="text-lg font-semibold">{greeting}</h2>
-        <form onSubmit={add} className="flex gap-2">
-          <input
-            className="flex-1 border border-border bg-transparent px-2 py-1"
-            value={draft}
-            placeholder={t("tab.placeholder")}
-            onChange={(event) => setDraft(event.target.value)}
-          />
-          <button type="submit" className="border border-border px-3 py-1">
-            {t("tab.add")}
-          </button>
-        </form>
-        {failed && <p className="text-sm text-destructive">{t("tab.error")}</p>}
-        {notes.length === 0 ? (
-          <p className="text-sm text-muted-foreground">{t("tab.empty")}</p>
-        ) : (
-          <ul className="flex flex-col gap-1">
-            {notes.map((note) => (
-              <li key={note.id} className="border-b border-border py-1">
-                {note.text}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+      <AccountForm
+        account={view.account}
+        providers={providers}
+        credentials={credentials}
+        onBack={() => setView({ kind: "list" })}
+        onSave={(input) => save(view.account, input)}
+      />
     );
-  };
+  }
+  if (view.kind === "discover") {
+    return (
+      <DiscoverView
+        account={view.account}
+        api={api}
+        onBack={() => setView({ kind: "list" })}
+        onDone={() => {
+          setView({ kind: "list" });
+          void reload();
+        }}
+      />
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-3 p-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold">{t("tab.title")}</h2>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="border-accent-brand/40 text-accent-brand"
+          onClick={() => setView({ kind: "form", account: null })}
+        >
+          <Plus className="mr-1 size-3" /> {t("add")}
+        </Button>
+      </div>
+      <p className="text-xs text-muted-foreground">{t("description")}</p>
+      {loaded && accounts.length === 0 && (
+        <p className="py-4 text-xs text-muted-foreground">{t("empty")}</p>
+      )}
+      {accounts.map((account, index) => (
+        <ListRow
+          key={account.id}
+          stripe={index}
+          icon={<Cloud />}
+          title={account.name}
+          meta={
+            <span>
+              {t(`providers.${account.provider}`)} |{" "}
+              {t(`options.${account.syncMode}`)}
+              {" | "}
+              {account.status === "error"
+                ? (account.lastError ?? t("status.error"))
+                : account.lastSyncAt
+                  ? t("lastSync", {
+                      date: new Date(account.lastSyncAt).toLocaleString(),
+                    })
+                  : t("status.never")}
+            </span>
+          }
+          actions={
+            <>
+              <ListRowAction
+                label={t("test")}
+                disabled={busy === account.id}
+                onClick={() => void test(account)}
+              >
+                <Plug />
+              </ListRowAction>
+              <ListRowAction
+                label={t("discover.title")}
+                onClick={() => setView({ kind: "discover", account })}
+              >
+                <DownloadCloud />
+              </ListRowAction>
+              <ListRowAction
+                label={t("syncNow")}
+                disabled={busy === account.id}
+                onClick={() => void syncNow(account)}
+              >
+                <RefreshCw />
+              </ListRowAction>
+              <ListRowAction
+                label={t("edit")}
+                onClick={() => setView({ kind: "form", account })}
+              >
+                <Pencil />
+              </ListRowAction>
+              <ListRowAction
+                label={t("delete")}
+                tone="destructive"
+                onClick={() => void remove(account)}
+              >
+                <Trash2 />
+              </ListRowAction>
+            </>
+          }
+        />
+      ))}
+    </div>
+  );
 }
 
 export function activate(app: TermixApp): void {
   app.registerRailItem({
     id: TAB_ID,
-    icon: HandIcon,
+    icon: Cloud,
     titleKey: "tab.title",
     kind: "tab",
-    permission: "use",
+    permission: "view",
   });
-  app.registerTab(TAB_ID, createTab(app), {
-    icon: HandIcon,
+  app.registerTab(TAB_ID, CloudTab, {
+    icon: Cloud,
     titleKey: "tab.title",
     singleton: true,
     hostless: true,

@@ -1,4 +1,4 @@
-# Contributing to Hello World
+# Contributing to Cloud Providers
 
 ## Development
 

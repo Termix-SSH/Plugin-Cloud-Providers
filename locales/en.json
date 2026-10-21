@@ -1,27 +1,127 @@
 {
   "plugin": {
-    "name": "Hello World",
-    "description": "A minimal Termix plugin: one tab, one route, one setting and one table."
+    "name": "Cloud Providers",
+    "description": "Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync."
   },
   "tab": {
-    "title": "Hello World",
-    "empty": "No notes yet.",
-    "placeholder": "Write a note",
-    "add": "Add",
-    "error": "Could not load or save notes."
+    "title": "Cloud"
   },
   "permissions": {
-    "use": {
-      "title": "Use Hello World",
-      "description": "Open the Hello World tab and keep notes in it."
+    "view": {
+      "title": "See cloud accounts",
+      "description": "Open the Cloud tab and see your cloud accounts."
+    },
+    "manage": {
+      "title": "Manage cloud accounts",
+      "description": "Add cloud accounts, import instances as hosts and run syncs."
     }
   },
-  "settings": {
-    "admin": {
-      "greeting": {
-        "label": "Greeting",
-        "description": "Shown at the top of the Hello World tab."
-      }
-    }
+  "description": "Add a cloud account to turn its servers into hosts. Import the ones you pick, or sync the whole account on a timer.",
+  "empty": "No cloud accounts yet.",
+  "add": "Add account",
+  "edit": "Edit",
+  "delete": "Delete",
+  "test": "Test keys",
+  "syncNow": "Sync now",
+  "saved": "Saved",
+  "deleteConfirm": "Delete {{name}}? Its hosts stay in Termix.",
+  "testOk": "Keys work. Found {{count}} servers.",
+  "testFailed": "The keys did not work.",
+  "syncDone": "{{created}} added, {{updated}} updated, {{removed}} removed.",
+  "syncFailed": "{{count}} hosts could not be written.",
+  "lastSync": "Synced {{date}}",
+  "status": {
+    "never": "Not synced yet",
+    "error": "Failed"
+  },
+  "state": {
+    "running": "running",
+    "stopped": "stopped",
+    "other": "unknown"
+  },
+  "providers": {
+    "aws": "Amazon Web Services",
+    "azure": "Microsoft Azure",
+    "gcp": "Google Cloud",
+    "digitalocean": "DigitalOcean",
+    "hetzner": "Hetzner Cloud",
+    "linode": "Linode (Akamai)",
+    "vultr": "Vultr",
+    "oracle": "Oracle Cloud",
+    "scaleway": "Scaleway",
+    "upcloud": "UpCloud"
+  },
+  "fields": {
+    "accessKeyId": "Access key ID",
+    "secretAccessKey": "Secret access key",
+    "sessionToken": "Session token (optional)",
+    "regions": "Regions (empty for all)",
+    "service": "Service",
+    "tenantId": "Tenant ID",
+    "clientId": "Client ID",
+    "clientSecret": "Client secret",
+    "subscriptionId": "Subscription ID",
+    "serviceAccount": "Service account key (JSON)",
+    "projectId": "Project ID (optional)",
+    "token": "API token",
+    "tenancyId": "Tenancy OCID",
+    "userId": "User OCID",
+    "fingerprint": "API key fingerprint",
+    "privateKey": "Private key (PEM)",
+    "compartments": "Compartment OCIDs (empty for the tenancy)",
+    "secretKey": "Secret key",
+    "zones": "Zones (empty for all)",
+    "username": "Username",
+    "password": "Password"
+  },
+  "options": {
+    "ec2": "EC2",
+    "lightsail": "Lightsail",
+    "both": "EC2 and Lightsail",
+    "public-first": "Public, else private",
+    "public": "Public only",
+    "private": "Private only",
+    "manual": "Manual",
+    "auto": "Automatic",
+    "keep": "Keep the host",
+    "mark": "Tag the host as missing",
+    "delete": "Delete the host"
+  },
+  "form": {
+    "addTitle": "Add cloud account",
+    "editTitle": "Edit cloud account",
+    "account": "Account",
+    "hosts": "Hosts",
+    "sync": "Sync",
+    "provider": "Provider",
+    "name": "Name",
+    "namePlaceholder": "Production AWS",
+    "keepKeys": "Leave empty to keep the saved value",
+    "keysHint": "Keys are stored encrypted and are never shown again. Fill in the fields to replace them.",
+    "folder": "Folder",
+    "folderPlaceholder": "Same as the name",
+    "defaultUser": "Default SSH user",
+    "defaultUserHint": "Used for new hosts. Tag an instance termix-user:name to use another user for it.",
+    "credential": "Default login",
+    "noCredential": "None, ask when connecting",
+    "address": "Address to use",
+    "syncMode": "Sync",
+    "interval": "Minutes between syncs",
+    "onRemoved": "When an instance is gone",
+    "add": "Add account",
+    "save": "Save"
+  },
+  "discover": {
+    "title": "Import servers",
+    "instances": "Servers",
+    "loading": "Loading servers...",
+    "empty": "No servers found.",
+    "all": "Select all",
+    "none": "Select none",
+    "noAddress": "no address",
+    "imported": "Imported",
+    "import": "Import {{count}}",
+    "done": "{{created}} added, {{updated}} updated.",
+    "failed": "{{count}} hosts could not be written."
   }
 }
