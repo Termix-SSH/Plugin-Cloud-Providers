@@ -123,5 +123,9 @@
     "import": "Nhập {{count}}",
     "done": "{{created}} đã thêm, {{updated}} đã cập nhật.",
     "failed": "{{count}} hosts không thể ghi được."
+  },
+  "card": {
+    "title": "Tài khoản đám mây",
+    "loading": "Đang tải..."
   }
 }

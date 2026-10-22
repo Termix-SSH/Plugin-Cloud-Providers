@@ -123,5 +123,9 @@
     "import": "Importuoti {{count}}",
     "done": "{{created}} pridėta, {{updated}} atnaujinta.",
     "failed": "Nepavyko įrašyti {{count}} priimtuvo."
+  },
+  "card": {
+    "title": "Debesijos paskyros",
+    "loading": "Įkeliama..."
   }
 }

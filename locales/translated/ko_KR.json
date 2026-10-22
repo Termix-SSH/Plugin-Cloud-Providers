@@ -123,5 +123,9 @@
     "import": "{{count}}개 가져오기",
     "done": "{{created}}개 추가, {{updated}}개 업데이트됨.",
     "failed": "{{count}}개의 호스트를 저장하지 못했습니다."
+  },
+  "card": {
+    "title": "클라우드 계정",
+    "loading": "로딩 중..."
   }
 }

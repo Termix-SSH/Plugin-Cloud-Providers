@@ -123,5 +123,9 @@
     "import": "Εισαγωγή {{count}}",
     "done": "{{created}} προστέθηκαν, {{updated}} ενημερώθηκαν.",
     "failed": "Αδυναμία εγγραφής {{count}} hosts."
+  },
+  "card": {
+    "title": "Λογαριασμοί cloud",
+    "loading": "Φόρτωση..."
   }
 }

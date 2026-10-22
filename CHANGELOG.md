@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Added
+
+- Cloud accounts dashboard card: each account with when it last synced or why it failed, and Sync now
+
 ## 1.0.0
 
 ### Added

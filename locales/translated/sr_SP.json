@@ -123,5 +123,9 @@
     "import": "Увези {{count}}",
     "done": "{{created}} додатих, {{updated}} ажурираних.",
     "failed": "Није могуће сачувати {{count}} хостова."
+  },
+  "card": {
+    "title": "Наconti cloud налога",
+    "loading": "Учитавање..."
   }
 }

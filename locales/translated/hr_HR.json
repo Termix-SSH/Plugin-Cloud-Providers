@@ -123,5 +123,9 @@
     "import": "Uvezi {{count}}",
     "done": "{{created}} dodano, {{updated}} ažurirano.",
     "failed": "{{count}} hostova nije bilo moguće spremiti."
+  },
+  "card": {
+    "title": "Računi u oblaku",
+    "loading": "Učitavanje..."
   }
 }

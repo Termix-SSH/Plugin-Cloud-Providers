@@ -123,5 +123,9 @@
     "import": "Importér {{count}}",
     "done": "{{created}} tilføjet, {{updated}} opdateret.",
     "failed": "Kunne ikke gemme {{count}} værter."
+  },
+  "card": {
+    "title": "Cloud-konti",
+    "loading": "Indlæser..."
   }
 }

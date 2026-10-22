@@ -123,5 +123,9 @@
     "import": "Import {{count}}",
     "done": "{{created}} added, {{updated}} updated.",
     "failed": "{{count}} hosts could not be written."
+  },
+  "card": {
+    "title": "Cloud accounts",
+    "loading": "Loading..."
   }
 }

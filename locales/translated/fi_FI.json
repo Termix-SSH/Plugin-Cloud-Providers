@@ -123,5 +123,9 @@
     "import": "Tuo {{count}}",
     "done": "{{created}} lisätty, {{updated}} päivitetty.",
     "failed": "Virhe: {{count}} isäntää ei voitu kirjoittaa."
+  },
+  "card": {
+    "title": "Pilvipalvelut",
+    "loading": "Ladataan..."
   }
 }

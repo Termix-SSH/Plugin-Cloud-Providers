@@ -123,5 +123,9 @@
     "import": "{{count}} içe aktar",
     "done": "{{created}} eklendi, {{updated}} güncellendi.",
     "failed": "Bir {{count}} ana bilgisayar yazılamadı."
+  },
+  "card": {
+    "title": "Bulut hesapları",
+    "loading": "Yükleniyor..."
   }
 }

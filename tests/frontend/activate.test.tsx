@@ -86,3 +86,40 @@ describe(`${manifest.id} activate`, () => {
     expect(await screen.findByText(locales.empty)).toBeTruthy();
   });
 });
+
+describe("cloud accounts dashboard card", () => {
+  it("lists accounts with their sync state", async () => {
+    rendered = await renderWithApp(plugin, {
+      manifest,
+      locales,
+      permissions: ["cloud-providers.view"],
+      api: {
+        get: vi.fn(async () => ({
+          data: {
+            accounts: [
+              {
+                id: 1,
+                provider: "hetzner",
+                name: "Prod",
+                folder: null,
+                defaultUser: null,
+                defaultCredentialId: null,
+                addressPreference: "public",
+                syncMode: "auto",
+                intervalMinutes: 60,
+                onRemoved: "keep",
+                status: "error",
+                lastError: "bad token",
+                lastSyncAt: null,
+              },
+            ],
+          },
+        })),
+      } as never,
+    });
+    expect(rendered.registered.dashboardCards()).toEqual(["cloud-accounts"]);
+    rendered.renderDashboardCard("cloud-accounts");
+    expect(await screen.findByText("Prod")).toBeTruthy();
+    expect(screen.getByText(/bad token/)).toBeTruthy();
+  });
+});

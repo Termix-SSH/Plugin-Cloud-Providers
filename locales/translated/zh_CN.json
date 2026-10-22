@@ -123,5 +123,9 @@
     "import": "导入 {{count}} 项",
     "done": "已添加 {{created}} 项，已更新 {{updated}} 项。",
     "failed": "{{count}} 个主机无法写入。"
+  },
+  "card": {
+    "title": "云账户",
+    "loading": "加载中..."
   }
 }

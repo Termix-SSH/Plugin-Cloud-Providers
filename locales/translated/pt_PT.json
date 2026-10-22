@@ -123,5 +123,9 @@
     "import": "Importar {{count}}",
     "done": "{{created}} adicionados, {{updated}} atualizados.",
     "failed": "Não foi possível gravar {{count}} hosts."
+  },
+  "card": {
+    "title": "Contas na cloud",
+    "loading": "A carregar..."
   }
 }

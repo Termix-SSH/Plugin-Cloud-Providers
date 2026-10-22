@@ -123,5 +123,9 @@
     "import": "{{count}} をインポート",
     "done": "{{created}} 件追加、{{updated}} 件更新しました。",
     "failed": "{{count}} 台のホストの書き込みに失敗しました。"
+  },
+  "card": {
+    "title": "クラウドアカウント",
+    "loading": "読み込み中..."
   }
 }

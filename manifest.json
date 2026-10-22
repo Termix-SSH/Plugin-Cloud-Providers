@@ -1,7 +1,7 @@
 {
   "id": "cloud-providers",
   "name": "Cloud Providers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync.",
   "author": {
     "name": "Termix"
@@ -16,7 +16,8 @@
     "Works with AWS EC2 and Lightsail, Azure, Google Cloud, DigitalOcean, Hetzner, Linode, Vultr, Oracle Cloud, Scaleway and UpCloud",
     "Pick instances to import, or sync a whole account on a timer",
     "Follows IP and name changes and can mark or remove hosts that are gone",
-    "Cloud keys are stored encrypted and never shown again"
+    "Cloud keys are stored encrypted and never shown again",
+    "A dashboard card with each account and when it last synced"
   ],
   "env": [],
   "engine": {
@@ -56,6 +57,13 @@
         "titleKey": "permissions.manage.title",
         "descriptionKey": "permissions.manage.description",
         "defaultRoles": ["admin", "user"]
+      }
+    ],
+    "dashboardCards": [
+      {
+        "id": "cloud-accounts",
+        "titleKey": "card.title",
+        "icon": "Cloud"
       }
     ]
   },

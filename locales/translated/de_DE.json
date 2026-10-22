@@ -123,5 +123,9 @@
     "import": "{{count}} importieren",
     "done": "{{created}} hinzugefügt, {{updated}} aktualisiert.",
     "failed": "Die Daten von {{count}} Hosts konnten nicht gespeichert werden."
+  },
+  "card": {
+    "title": "Cloud-Konten",
+    "loading": "Wird geladen..."
   }
 }

@@ -123,5 +123,9 @@
     "import": "Importă {{count}}",
     "done": "{{created}} adăugat(e), {{updated}} actualizat(e).",
     "failed": "Nu s-au putut scrie {{count}} gazde."
+  },
+  "card": {
+    "title": "Conturi cloud",
+    "loading": "Se încarcă..."
   }
 }

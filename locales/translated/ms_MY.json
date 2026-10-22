@@ -123,5 +123,9 @@
     "import": "Import {{count}}",
     "done": "{{created}} ditambah, {{updated}} dikemas kini.",
     "failed": "{{count}} hos tidak dapat ditulis."
+  },
+  "card": {
+    "title": "Akaun awan",
+    "loading": "Memuatkan..."
   }
 }

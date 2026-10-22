@@ -123,5 +123,9 @@
     "import": "Impor {{count}}",
     "done": "{{created}} ditambahkan, {{updated}} diperbarui.",
     "failed": "{{count}} host tidak dapat ditulis."
+  },
+  "card": {
+    "title": "Akun cloud",
+    "loading": "Memuat..."
   }
 }

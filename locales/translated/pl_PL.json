@@ -123,5 +123,9 @@
     "import": "Importuj {{count}}",
     "done": "{{created}} dodano, {{updated}} zaktualizowano.",
     "failed": "Nie udało się zapisać {{count}} hostów."
+  },
+  "card": {
+    "title": "Konta w chmurze",
+    "loading": "Ładowanie..."
   }
 }

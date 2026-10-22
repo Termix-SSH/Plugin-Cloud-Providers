@@ -123,5 +123,9 @@
     "import": "Voer {{count}} in",
     "done": "{{created}} bygevoeg, {{updated}} opgedateer.",
     "failed": "{{count}} gasheerbedieners kon nie geskryf word nie."
+  },
+  "card": {
+    "title": "Wolrekeninge",
+    "loading": "Laai tans..."
   }
 }

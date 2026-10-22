@@ -123,5 +123,9 @@
     "import": "匯入 {{count}}",
     "done": "已新增 {{created}} 個，已更新 {{updated}} 個。",
     "failed": "無法寫入 {{count}} 個主機。"
+  },
+  "card": {
+    "title": "雲端帳戶",
+    "loading": "載入中..."
   }
 }

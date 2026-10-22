@@ -123,5 +123,9 @@
     "import": "Importēt {{count}}",
     "done": "{{created}} pievienots, {{updated}} atjaunināts.",
     "failed": "Neizdevās ierakstīt {{count}} saimniekdatorus."
+  },
+  "card": {
+    "title": "Mākoņa konti",
+    "loading": "Ielādē..."
   }
 }

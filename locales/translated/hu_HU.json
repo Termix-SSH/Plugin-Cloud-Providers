@@ -123,5 +123,9 @@
     "import": "{{count}} importálása",
     "done": "{{created}} hozzáadva, {{updated}} frissítve.",
     "failed": "Nem sikerült írni {{count}} gazdagépet."
+  },
+  "card": {
+    "title": "Felhő-fiókok",
+    "loading": "Betöltés..."
   }
 }

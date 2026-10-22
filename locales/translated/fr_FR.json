@@ -123,5 +123,9 @@
     "import": "Importer {{count}}",
     "done": "{{created}} ajouté(s), {{updated}} mis à jour.",
     "failed": "{{count}} hôtes n'ont pas pu être enregistrés."
+  },
+  "card": {
+    "title": "Comptes cloud",
+    "loading": "Chargement..."
   }
 }

@@ -123,5 +123,9 @@
     "import": "Importovat {{count}}",
     "done": "{{created}} přidáno, {{updated}} aktualizováno.",
     "failed": "Nelze uložit {{count}} hostitelů."
+  },
+  "card": {
+    "title": "Cloud účty",
+    "loading": "Načítání..."
   }
 }

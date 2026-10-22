@@ -123,5 +123,9 @@
     "import": "Uvozi {{count}}",
     "done": "{{created}} dodanih, {{updated}} posodobljenih.",
     "failed": "Ni bilo mogoče zapisati {{count}} gostiteljev."
+  },
+  "card": {
+    "title": "Računi v oblaku",
+    "loading": "Nalaganje ..."
   }
 }

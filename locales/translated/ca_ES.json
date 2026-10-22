@@ -123,5 +123,9 @@
     "import": "Importar {{count}}",
     "done": "{{created}} afegits, {{updated}} actualitzats.",
     "failed": "No s'han pogut escriure {{count}} amfitrions."
+  },
+  "card": {
+    "title": "Comptes al núvol",
+    "loading": "S'està carregant..."
   }
 }

@@ -123,5 +123,9 @@
     "import": "ייבוא {{count}}",
     "done": "{{created}} נוספו, {{updated}} עודכנו.",
     "failed": "לא ניתן היה לכתוב {{count}} מארחים."
+  },
+  "card": {
+    "title": "חשבונות ענן",
+    "loading": "טוען..."
   }
 }

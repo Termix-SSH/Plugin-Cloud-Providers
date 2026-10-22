@@ -31,6 +31,7 @@ import {
 } from "./api";
 import { AccountForm } from "./AccountForm";
 import { DiscoverView } from "./DiscoverView";
+import { CloudCard } from "./CloudCard";
 
 const TAB_ID = "cloud-providers";
 
@@ -253,5 +254,13 @@ export function activate(app: TermixApp): void {
     titleKey: "tab.title",
     singleton: true,
     hostless: true,
+  });
+  app.registerDashboardCard({
+    id: "cloud-accounts",
+    titleKey: "card.title",
+    defaultPanel: "side",
+    defaultHeight: 180,
+    frame: "framed",
+    component: CloudCard,
   });
 }

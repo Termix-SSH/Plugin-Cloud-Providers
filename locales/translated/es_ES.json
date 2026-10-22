@@ -123,5 +123,9 @@
     "import": "Importar {{count}}",
     "done": "{{created}} añadidos, {{updated}} actualizados.",
     "failed": "No se han podido escribir {{count}} hosts."
+  },
+  "card": {
+    "title": "Cuentas en la nube",
+    "loading": "Cargando..."
   }
 }

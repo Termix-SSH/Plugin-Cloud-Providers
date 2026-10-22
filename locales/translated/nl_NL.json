@@ -123,5 +123,9 @@
     "import": "Importeer {{count}}",
     "done": "{{created}} toegevoegd, {{updated}} bijgewerkt.",
     "failed": "Er konden {{count}} hosts niet worden opgeslagen."
+  },
+  "card": {
+    "title": "Cloudaccounts",
+    "loading": "Laden..."
   }
 }

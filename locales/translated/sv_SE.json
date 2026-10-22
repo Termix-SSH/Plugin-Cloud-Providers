@@ -123,5 +123,9 @@
     "import": "Importera {{count}}",
     "done": "{{created}} tillagda, {{updated}} uppdaterade.",
     "failed": "Det gick inte att skriva {{count}} värdar."
+  },
+  "card": {
+    "title": "Kontoktoner",
+    "loading": "Laddar..."
   }
 }

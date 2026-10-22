@@ -123,5 +123,9 @@
     "import": "Importer {{count}}",
     "done": "{{created}} lagt til, {{updated}} oppdatert.",
     "failed": "Kunne ikke skrive {{count}} vertsdatamaskiner."
+  },
+  "card": {
+    "title": "Skytjekontoer",
+    "loading": "Laster inn..."
   }
 }

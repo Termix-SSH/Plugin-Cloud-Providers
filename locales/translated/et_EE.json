@@ -123,5 +123,9 @@
     "import": "Impordi {{count}}",
     "done": "{{created}} lisatud, {{updated}} uuendatud.",
     "failed": "Ei õnnestunud kirjutada {{count}} hosti andmeid."
+  },
+  "card": {
+    "title": "Pilvesõlmused",
+    "loading": "Laadimine..."
   }
 }
