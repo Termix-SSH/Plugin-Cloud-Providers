@@ -1,7 +1,7 @@
 {
   "id": "cloud-providers",
   "name": "Cloud Providers",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync.",
   "author": {
     "name": "Termix"

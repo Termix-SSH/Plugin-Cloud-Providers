@@ -149,6 +149,7 @@ export function AccountForm({
               </label>
               {field.type === "secret" ? (
                 <PasswordInput
+                  className="h-8 pr-8 text-xs"
                   value={keys[field.key] ?? ""}
                   placeholder={account ? t("form.keepKeys") : field.placeholder}
                   onChange={(e) =>
