@@ -127,5 +127,17 @@
   "card": {
     "title": "Cloud accounts",
     "loading": "Loading..."
+  },
+  "operations": {
+    "list": {
+      "title": "List cloud accounts"
+    },
+    "sync": {
+      "title": "Sync cloud account"
+    },
+    "account": "Account",
+    "health": {
+      "title": "Cloud syncs"
+    }
   }
 }

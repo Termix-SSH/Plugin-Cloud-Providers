@@ -1,7 +1,7 @@
 {
   "id": "cloud-providers",
   "name": "Cloud Providers",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync.",
   "author": {
     "name": "Termix"
@@ -21,7 +21,7 @@
   ],
   "env": [],
   "engine": {
-    "termix": ">=26.10.3",
+    "termix": ">=26.11.1-0",
     "api": "^1.10"
   },
   "capabilities": [
@@ -34,7 +34,8 @@
     "hosts:write",
     "credentials:use",
     "users:impersonate",
-    "notify:send"
+    "notify:send",
+    "operations:provide"
   ],
   "contributes": {
     "tabs": [
@@ -65,7 +66,56 @@
         "titleKey": "card.title",
         "icon": "Cloud"
       }
-    ]
+    ],
+    "operations": {
+      "actions": [
+        {
+          "id": "cloud-providers.list-accounts",
+          "titleKey": "operations.list.title",
+          "scope": "server",
+          "risk": "read",
+          "permission": "view",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true,
+            "palette": false
+          }
+        },
+        {
+          "id": "cloud-providers.sync-account",
+          "titleKey": "operations.sync.title",
+          "icon": "RefreshCw",
+          "scope": "server",
+          "risk": "change",
+          "permission": "manage",
+          "dryRun": "describe",
+          "exclusive": true,
+          "inputs": [
+            {
+              "key": "account",
+              "type": "string",
+              "labelKey": "operations.account",
+              "required": true,
+              "optionsFrom": "cloud-providers.list-accounts"
+            }
+          ],
+          "surfaces": {
+            "assistant": true,
+            "mcp": true
+          }
+        }
+      ],
+      "signals": [
+        {
+          "id": "cloud-providers.sync-health",
+          "titleKey": "operations.health.title",
+          "read": "cloud-providers.list-accounts",
+          "scope": "server",
+          "kind": "status",
+          "refreshSec": 600
+        }
+      ]
+    }
   },
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"]

@@ -1,6 +1,14 @@
 # Changelog
 
-## 1.1.1
+## 1.2.0
+
+### Added
+
+- Sync a cloud account through Termix actions, so a rule, rollout or the CLI can run it, and see failing syncs as a status tile
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
 
 ### Fixed
 
