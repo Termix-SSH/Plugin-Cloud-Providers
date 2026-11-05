@@ -4,7 +4,6 @@ import {
   DownloadCloud,
   Pencil,
   Plug,
-  Plus,
   RefreshCw,
   Trash2,
 } from "lucide-react";
@@ -16,10 +15,14 @@ import {
   type TermixApp,
 } from "@termix-ssh/plugin-sdk/frontend";
 import {
-  Button,
   ListRow,
   ListRowAction,
   useConfirm,
+  PanelShell,
+  AddButton,
+  PanelList,
+  EmptyState,
+  LoadingState,
 } from "@termix-ssh/plugin-sdk/ui";
 import {
   createApi,
@@ -161,83 +164,84 @@ function CloudTab({ isVisible }: TabProps) {
   }
 
   return (
-    <div className="flex flex-col gap-3 p-4">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">{t("tab.title")}</h2>
-        <Button
-          type="button"
-          variant="outline"
-          size="sm"
-          className="border-accent-brand/40 text-accent-brand"
+    <PanelShell
+      icon={<Cloud className="size-4" />}
+      title={t("tab.title")}
+      actions={
+        <AddButton
+          label={t("add")}
           onClick={() => setView({ kind: "form", account: null })}
-        >
-          <Plus className="mr-1 size-3" /> {t("add")}
-        </Button>
-      </div>
-      <p className="text-xs text-muted-foreground">{t("description")}</p>
-      {loaded && accounts.length === 0 && (
-        <p className="py-4 text-xs text-muted-foreground">{t("empty")}</p>
-      )}
-      {accounts.map((account, index) => (
-        <ListRow
-          key={account.id}
-          stripe={index}
-          icon={<Cloud />}
-          title={account.name}
-          meta={
-            <span>
-              {t(`providers.${account.provider}`)} |{" "}
-              {t(`options.${account.syncMode}`)}
-              {" | "}
-              {account.status === "error"
-                ? (account.lastError ?? t("status.error"))
-                : account.lastSyncAt
-                  ? t("lastSync", {
-                      date: new Date(account.lastSyncAt).toLocaleString(),
-                    })
-                  : t("status.never")}
-            </span>
-          }
-          actions={
-            <>
-              <ListRowAction
-                label={t("test")}
-                disabled={busy === account.id}
-                onClick={() => void test(account)}
-              >
-                <Plug />
-              </ListRowAction>
-              <ListRowAction
-                label={t("discover.title")}
-                onClick={() => setView({ kind: "discover", account })}
-              >
-                <DownloadCloud />
-              </ListRowAction>
-              <ListRowAction
-                label={t("syncNow")}
-                disabled={busy === account.id}
-                onClick={() => void syncNow(account)}
-              >
-                <RefreshCw />
-              </ListRowAction>
-              <ListRowAction
-                label={t("edit")}
-                onClick={() => setView({ kind: "form", account })}
-              >
-                <Pencil />
-              </ListRowAction>
-              <ListRowAction
-                label={t("delete")}
-                tone="destructive"
-                onClick={() => void remove(account)}
-              >
-                <Trash2 />
-              </ListRowAction>
-            </>
-          }
         />
-      ))}
-    </div>
+      }
+    >
+      <p className="border-b border-border px-3 py-2 text-xs text-muted-foreground">
+        {t("description")}
+      </p>
+      {!loaded && <LoadingState />}
+      <PanelList
+        empty={loaded ? <EmptyState icon={Cloud} title={t("empty")} /> : null}
+      >
+        {accounts.map((account, index) => (
+          <ListRow
+            key={account.id}
+            stripe={index}
+            icon={<Cloud />}
+            title={account.name}
+            meta={
+              <span>
+                {t(`providers.${account.provider}`)} |{" "}
+                {t(`options.${account.syncMode}`)}
+                {" | "}
+                {account.status === "error"
+                  ? (account.lastError ?? t("status.error"))
+                  : account.lastSyncAt
+                    ? t("lastSync", {
+                        date: new Date(account.lastSyncAt).toLocaleString(),
+                      })
+                    : t("status.never")}
+              </span>
+            }
+            actions={
+              <>
+                <ListRowAction
+                  label={t("test")}
+                  disabled={busy === account.id}
+                  onClick={() => void test(account)}
+                >
+                  <Plug />
+                </ListRowAction>
+                <ListRowAction
+                  label={t("discover.title")}
+                  onClick={() => setView({ kind: "discover", account })}
+                >
+                  <DownloadCloud />
+                </ListRowAction>
+                <ListRowAction
+                  label={t("syncNow")}
+                  disabled={busy === account.id}
+                  onClick={() => void syncNow(account)}
+                >
+                  <RefreshCw />
+                </ListRowAction>
+                <ListRowAction
+                  label={t("edit")}
+                  onClick={() => setView({ kind: "form", account })}
+                >
+                  <Pencil />
+                </ListRowAction>
+                <ListRowAction
+                  label={t("delete")}
+                  tone="destructive"
+                  onClick={() => void remove(account)}
+                >
+                  <Trash2 />
+                </ListRowAction>
+              </>
+            }
+          />
+        ))}
+      </PanelList>
+    </PanelShell>
   );
 }
 

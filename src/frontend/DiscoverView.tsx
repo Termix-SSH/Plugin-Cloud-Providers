@@ -88,6 +88,7 @@ export function DiscoverView({
 
   return (
     <InlineView
+      stacked
       open
       onOpenChange={(open) => !open && onBack()}
       icon={<Cloud className="size-4" />}

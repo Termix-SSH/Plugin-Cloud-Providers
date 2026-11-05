@@ -22,7 +22,7 @@
   "env": [],
   "engine": {
     "termix": ">=26.11.1-0",
-    "api": "^1.10"
+    "api": "^1.15"
   },
   "capabilities": [
     "db:own",

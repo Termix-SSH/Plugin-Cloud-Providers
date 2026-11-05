@@ -94,6 +94,7 @@ export function AccountForm({
 
   return (
     <InlineView
+      stacked
       open
       onOpenChange={(open) => !open && onBack()}
       icon={<Cloud className="size-4" />}

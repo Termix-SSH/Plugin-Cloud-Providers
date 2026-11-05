@@ -9,6 +9,7 @@
 ### Changed
 
 - Needs Termix 26.11.1 or newer
+- The accounts page and its forms use the Termix page header and tile look
 
 ### Fixed
 
