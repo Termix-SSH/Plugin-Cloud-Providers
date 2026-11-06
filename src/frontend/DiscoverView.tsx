@@ -8,6 +8,7 @@ import {
   FormFooter,
   InlineView,
   SectionCard,
+  LoadingState,
 } from "@termix-ssh/plugin-sdk/ui";
 import {
   errorMessage,
@@ -111,9 +112,7 @@ export function DiscoverView({
         <div className="flex flex-col py-2">
           {failed && <p className="py-2 text-xs text-destructive">{failed}</p>}
           {!failed && instances === null && (
-            <p className="py-2 text-xs text-muted-foreground">
-              {t("discover.loading")}
-            </p>
+            <LoadingState label={t("discover.loading")} />
           )}
           {instances?.length === 0 && (
             <p className="py-2 text-xs text-muted-foreground">
