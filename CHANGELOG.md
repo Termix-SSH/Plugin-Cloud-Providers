@@ -5,6 +5,7 @@
 ### Added
 
 - Sync a cloud account through Termix actions, so a rule, rollout or the CLI can run it, and see failing syncs as a status tile
+- A homepage widget with your cloud accounts and any that fail
 
 ### Changed
 

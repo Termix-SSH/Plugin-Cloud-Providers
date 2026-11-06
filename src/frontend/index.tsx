@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { cloudWidget } from "./HomepageWidget";
 import {
   Cloud,
   DownloadCloud,
@@ -259,6 +260,8 @@ export function activate(app: TermixApp): void {
     singleton: true,
     hostless: true,
   });
+  app.registerExtension("homepage.widgets", cloudWidget(app.t));
+
   app.registerDashboardCard({
     id: "cloud-accounts",
     titleKey: "card.title",

@@ -139,5 +139,11 @@
     "health": {
       "title": "Cloud syncs"
     }
+  },
+  "widget": {
+    "name": "Cloud accounts",
+    "description": "Your cloud accounts and any that fail to sync.",
+    "accounts": "Accounts",
+    "failing": "Failing"
   }
 }
