@@ -4,7 +4,7 @@
 
 <h1>Cloud Providers</h1>
 
-<p>Add hosts from your cloud accounts and keep them in sync</p>
+<p>Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync</p>
 
 <!-- VIDEO:START -->
 
@@ -32,6 +32,8 @@ Read the [docs](https://docs.termix.site/plugins/cloud-providers) to set it up a
 - Follows IP and name changes, and can tag or delete hosts whose server is gone
 - Default SSH user and login for each account, with a tag to override the user for one instance
 - Cloud keys are stored encrypted and never shown again
+- Sync an account from rules, rollouts or the CLI, with failing syncs as a status tile
+- A homepage widget with your accounts and any that fail
 
 <br />
 
