@@ -127,5 +127,23 @@
   "card": {
     "title": "Cloudaccounts",
     "loading": "Laden..."
+  },
+  "operations": {
+    "list": {
+      "title": "Lijst met cloudaccounts"
+    },
+    "sync": {
+      "title": "Cloudaccount synchroniseren"
+    },
+    "account": "Account",
+    "health": {
+      "title": "Cloudsynchronisaties"
+    }
+  },
+  "widget": {
+    "name": "Cloudaccounts",
+    "description": "Je cloudaccounts en eventuele synchronisatiefouten.",
+    "accounts": "Accounts",
+    "failing": "Mislukt"
   }
 }

@@ -127,5 +127,23 @@
   "card": {
     "title": "클라우드 계정",
     "loading": "로딩 중..."
+  },
+  "operations": {
+    "list": {
+      "title": "클라우드 계정 목록"
+    },
+    "sync": {
+      "title": "클라우드 계정 동기화"
+    },
+    "account": "계정",
+    "health": {
+      "title": "클라우드 동기화"
+    }
+  },
+  "widget": {
+    "name": "클라우드 계정",
+    "description": "클라우드 계정 및 동기화 실패 항목",
+    "accounts": "계정",
+    "failing": "실패"
   }
 }

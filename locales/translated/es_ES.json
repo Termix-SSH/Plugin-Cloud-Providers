@@ -127,5 +127,23 @@
   "card": {
     "title": "Cuentas en la nube",
     "loading": "Cargando..."
+  },
+  "operations": {
+    "list": {
+      "title": "Listar cuentas en la nube"
+    },
+    "sync": {
+      "title": "Sincronizar cuenta en la nube"
+    },
+    "account": "Cuenta",
+    "health": {
+      "title": "Sincronizaciones en la nube"
+    }
+  },
+  "widget": {
+    "name": "Cuentas en la nube",
+    "description": "Tus cuentas en la nube y aquellas que fallan al sincronizarse.",
+    "accounts": "Cuentas",
+    "failing": "Con fallos"
   }
 }

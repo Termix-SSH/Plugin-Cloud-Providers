@@ -127,5 +127,23 @@
   "card": {
     "title": "Cloud-Konten",
     "loading": "Wird geladen..."
+  },
+  "operations": {
+    "list": {
+      "title": "Cloud-Konten auflisten"
+    },
+    "sync": {
+      "title": "Cloud-Konto synchronisieren"
+    },
+    "account": "Konto",
+    "health": {
+      "title": "Cloud-Synchronisierungen"
+    }
+  },
+  "widget": {
+    "name": "Cloud-Konten",
+    "description": "Ihre Cloud-Konten und alle, die nicht synchronisiert werden können.",
+    "accounts": "Konten",
+    "failing": "Fehlerhaft"
   }
 }

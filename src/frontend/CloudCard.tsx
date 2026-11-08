@@ -7,7 +7,12 @@ import {
   useTranslation,
   type DashboardCardProps,
 } from "@termix-ssh/plugin-sdk/frontend";
-import { ListRow, ListRowAction, PanelList } from "@termix-ssh/plugin-sdk/ui";
+import {
+  ListRow,
+  ListRowAction,
+  PanelList,
+  LoadingState,
+} from "@termix-ssh/plugin-sdk/ui";
 import { createApi, errorMessage, type Account } from "./api";
 
 const POLL_MS = 60_000;
@@ -58,9 +63,7 @@ export function CloudCard({ isVisible, shell }: DashboardCardProps) {
 
   if (!canView) return null;
   if (!accounts) {
-    return (
-      <p className="p-3 text-xs text-muted-foreground">{t("card.loading")}</p>
-    );
+    return <LoadingState compact label={t("card.loading")} />;
   }
 
   return (

@@ -127,5 +127,23 @@
   "card": {
     "title": "Comptes al núvol",
     "loading": "S'està carregant..."
+  },
+  "operations": {
+    "list": {
+      "title": "Llista comptes al núvol"
+    },
+    "sync": {
+      "title": "Sincronitza el compte al núvol"
+    },
+    "account": "Compte",
+    "health": {
+      "title": "Sincronitzacions al núvol"
+    }
+  },
+  "widget": {
+    "name": "Comptes al núvol",
+    "description": "Els vostres comptes al núvol i qualsevol que no es pugui sincronitzar.",
+    "accounts": "Comptes",
+    "failing": "Errors"
   }
 }

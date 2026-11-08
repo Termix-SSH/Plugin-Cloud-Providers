@@ -127,5 +127,23 @@
   "card": {
     "title": "Bulut hesapları",
     "loading": "Yükleniyor..."
+  },
+  "operations": {
+    "list": {
+      "title": "Bulut hesaplarını listele"
+    },
+    "sync": {
+      "title": "Bulut hesabını senkronize et"
+    },
+    "account": "Hesap",
+    "health": {
+      "title": "Bulut senkronizasyonları"
+    }
+  },
+  "widget": {
+    "name": "Bulut hesapları",
+    "description": "Bulut hesaplarınız ve senkronizasyonu başarısız olanlar.",
+    "accounts": "Hesaplar",
+    "failing": "Başarısız"
   }
 }

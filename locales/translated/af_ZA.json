@@ -127,5 +127,23 @@
   "card": {
     "title": "Wolrekeninge",
     "loading": "Laai tans..."
+  },
+  "operations": {
+    "list": {
+      "title": "Lys wolrekeninge"
+    },
+    "sync": {
+      "title": "Sinkroniseer wolrekening"
+    },
+    "account": "Rekening",
+    "health": {
+      "title": "Wol-sinkroniserings"
+    }
+  },
+  "widget": {
+    "name": "Wolrekeninge",
+    "description": "Jou wolrekeninge en enige wat nie sinkroniseer nie.",
+    "accounts": "Rekeninge",
+    "failing": "Misluk"
   }
 }

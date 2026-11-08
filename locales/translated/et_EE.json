@@ -127,5 +127,23 @@
   "card": {
     "title": "Pilvesõlmused",
     "loading": "Laadimine..."
+  },
+  "operations": {
+    "list": {
+      "title": "Loe pilvkontod"
+    },
+    "sync": {
+      "title": "Sünkrooni pilvkonto"
+    },
+    "account": "Konto",
+    "health": {
+      "title": "Pilvesünkroonid"
+    }
+  },
+  "widget": {
+    "name": "Pilvkontod",
+    "description": "Sinu pilvkontod ja need, mille sünkroonimine ebaõnnestub.",
+    "accounts": "Kontod",
+    "failing": "Ebaõnnestunud"
   }
 }

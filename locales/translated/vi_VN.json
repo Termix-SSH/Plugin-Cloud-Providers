@@ -127,5 +127,23 @@
   "card": {
     "title": "Tài khoản đám mây",
     "loading": "Đang tải..."
+  },
+  "operations": {
+    "list": {
+      "title": "Danh sách tài khoản đám mây"
+    },
+    "sync": {
+      "title": "Đồng bộ tài khoản đám mây"
+    },
+    "account": "Tài khoản",
+    "health": {
+      "title": "Đồng bộ đám mây"
+    }
+  },
+  "widget": {
+    "name": "Tài khoản đám mây",
+    "description": "Các tài khoản đám mây của bạn và những tài khoản không đồng bộ được.",
+    "accounts": "Tài khoản",
+    "failing": "Lỗi"
   }
 }

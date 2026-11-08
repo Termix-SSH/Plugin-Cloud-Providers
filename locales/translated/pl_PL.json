@@ -127,5 +127,23 @@
   "card": {
     "title": "Konta w chmurze",
     "loading": "Ładowanie..."
+  },
+  "operations": {
+    "list": {
+      "title": "Lista kont w chmurze"
+    },
+    "sync": {
+      "title": "Synchronizuj konto w chmurze"
+    },
+    "account": "Konto",
+    "health": {
+      "title": "Synchronizacje w chmurze"
+    }
+  },
+  "widget": {
+    "name": "Konta w chmurze",
+    "description": "Twoje konta w chmurze oraz te, których synchronizacja nie powiodła się.",
+    "accounts": "Konta",
+    "failing": "Nieudane"
   }
 }

@@ -127,5 +127,23 @@
   "card": {
     "title": "Računi u oblaku",
     "loading": "Učitavanje..."
+  },
+  "operations": {
+    "list": {
+      "title": "Popis cloud računa"
+    },
+    "sync": {
+      "title": "Sinkronizacija cloud računa"
+    },
+    "account": "Račun",
+    "health": {
+      "title": "Cloud sinkronizacije"
+    }
+  },
+  "widget": {
+    "name": "Cloud računi",
+    "description": "Vaši cloud računi i oni koji ne uspijevaju sinkronizirati.",
+    "accounts": "Računi",
+    "failing": "Neuspješni"
   }
 }

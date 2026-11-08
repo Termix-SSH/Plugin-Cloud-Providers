@@ -127,5 +127,23 @@
   "card": {
     "title": "Kontoktoner",
     "loading": "Laddar..."
+  },
+  "operations": {
+    "list": {
+      "title": "Lista molnkonton"
+    },
+    "sync": {
+      "title": "Synkronisera molnkonto"
+    },
+    "account": "Konto",
+    "health": {
+      "title": "Molnsynkroniseringar"
+    }
+  },
+  "widget": {
+    "name": "Molnkonton",
+    "description": "Dina molnkonton och de som misslyckas med synkronisering.",
+    "accounts": "Konton",
+    "failing": "Misslyckas"
   }
 }

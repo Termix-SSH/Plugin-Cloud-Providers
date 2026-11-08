@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0
+
+### Added
+
+- Sync a cloud account through Termix actions, so a rule, rollout or the CLI can run it, and see failing syncs as a status tile
+- A homepage widget with your cloud accounts and any that fail
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
+- The accounts page and its forms use the Termix page header and tile look
+- Toolbars, loading screens, back buttons and Save bars match the rest of Termix
+
+### Fixed
+
+- Password fields with the show button are the same height as the other fields next to them
+
 ## 1.1.0
 
 ### Added

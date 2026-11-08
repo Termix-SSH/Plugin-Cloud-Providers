@@ -127,5 +127,23 @@
   "card": {
     "title": "クラウドアカウント",
     "loading": "読み込み中..."
+  },
+  "operations": {
+    "list": {
+      "title": "クラウドアカウントの一覧"
+    },
+    "sync": {
+      "title": "クラウドアカウントを同期"
+    },
+    "account": "アカウント",
+    "health": {
+      "title": "クラウド同期"
+    }
+  },
+  "widget": {
+    "name": "クラウドアカウント",
+    "description": "クラウドアカウントと、同期に失敗しているアカウントを表示します。",
+    "accounts": "アカウント",
+    "failing": "失敗"
   }
 }

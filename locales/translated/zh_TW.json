@@ -127,5 +127,23 @@
   "card": {
     "title": "雲端帳戶",
     "loading": "載入中..."
+  },
+  "operations": {
+    "list": {
+      "title": "列出雲端帳戶"
+    },
+    "sync": {
+      "title": "同步雲端帳戶"
+    },
+    "account": "帳戶",
+    "health": {
+      "title": "雲端同步"
+    }
+  },
+  "widget": {
+    "name": "雲端帳戶",
+    "description": "您的雲端帳戶，以及任何同步失敗的帳戶。",
+    "accounts": "帳戶",
+    "failing": "失敗"
   }
 }

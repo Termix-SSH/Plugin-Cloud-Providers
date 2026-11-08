@@ -127,5 +127,23 @@
   "card": {
     "title": "Akaun awan",
     "loading": "Memuatkan..."
+  },
+  "operations": {
+    "list": {
+      "title": "Senaraikan akaun awan"
+    },
+    "sync": {
+      "title": "Serentak akaun awan"
+    },
+    "account": "Akaun",
+    "health": {
+      "title": "Penyerentakan awan"
+    }
+  },
+  "widget": {
+    "name": "Akaun awan",
+    "description": "Akaun awan anda dan mana-mana yang gagal diselaraskan.",
+    "accounts": "Akaun",
+    "failing": "Gagal"
   }
 }

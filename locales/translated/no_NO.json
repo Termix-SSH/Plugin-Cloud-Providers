@@ -127,5 +127,23 @@
   "card": {
     "title": "Skytjekontoer",
     "loading": "Laster inn..."
+  },
+  "operations": {
+    "list": {
+      "title": "Liste opp skykontoer"
+    },
+    "sync": {
+      "title": "Synkroniser skykonto"
+    },
+    "account": "Konto",
+    "health": {
+      "title": "Sky-synkroniseringer"
+    }
+  },
+  "widget": {
+    "name": "Skykontoer",
+    "description": "Dine skykontoer og eventuelle som ikke klarer å synkronisere.",
+    "accounts": "Kontoer",
+    "failing": "Mislykkes"
   }
 }

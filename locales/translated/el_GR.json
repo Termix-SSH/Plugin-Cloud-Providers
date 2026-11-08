@@ -127,5 +127,23 @@
   "card": {
     "title": "Λογαριασμοί cloud",
     "loading": "Φόρτωση..."
+  },
+  "operations": {
+    "list": {
+      "title": "Αναφορά λογαριασμών cloud"
+    },
+    "sync": {
+      "title": "Συγχρονισμός λογαριασμού cloud"
+    },
+    "account": "Λογαριασμός",
+    "health": {
+      "title": "Συγχρονισμοί cloud"
+    }
+  },
+  "widget": {
+    "name": "Λογαριασμοί cloud",
+    "description": "Οι λογαριασμοί cloud σας και αυτοί που αποτυγχάνουν να συγχρονιστούν.",
+    "accounts": "Λογαριασμοί",
+    "failing": "Αποτυχίες"
   }
 }

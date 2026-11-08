@@ -127,5 +127,23 @@
   "card": {
     "title": "Računi v oblaku",
     "loading": "Nalaganje ..."
+  },
+  "operations": {
+    "list": {
+      "title": "Seznam računov v oblaku"
+    },
+    "sync": {
+      "title": "Sinhronizacija računa v oblaku"
+    },
+    "account": "Račun",
+    "health": {
+      "title": "Sinhronizacije v oblaku"
+    }
+  },
+  "widget": {
+    "name": "Računi v oblaku",
+    "description": "Vaši računi v oblaku in tisti, ki se ne sinhronizirajo.",
+    "accounts": "Računi",
+    "failing": "Napake"
   }
 }

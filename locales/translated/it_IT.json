@@ -127,5 +127,23 @@
   "card": {
     "title": "Account cloud",
     "loading": "Caricamento..."
+  },
+  "operations": {
+    "list": {
+      "title": "Elenca account cloud"
+    },
+    "sync": {
+      "title": "Sincronizza account cloud"
+    },
+    "account": "Account",
+    "health": {
+      "title": "Sincronizzazioni cloud"
+    }
+  },
+  "widget": {
+    "name": "Account cloud",
+    "description": "I tuoi account cloud e quelli che non riescono a sincronizzarsi.",
+    "accounts": "Account",
+    "failing": "In errore"
   }
 }

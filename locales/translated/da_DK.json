@@ -127,5 +127,23 @@
   "card": {
     "title": "Cloud-konti",
     "loading": "Indlæser..."
+  },
+  "operations": {
+    "list": {
+      "title": "List cloud accounts"
+    },
+    "sync": {
+      "title": "Sync cloud account"
+    },
+    "account": "Account",
+    "health": {
+      "title": "Cloud syncs"
+    }
+  },
+  "widget": {
+    "name": "Cloud accounts",
+    "description": "Your cloud accounts and any that fail to sync.",
+    "accounts": "Accounts",
+    "failing": "Failing"
   }
 }

@@ -127,5 +127,23 @@
   "card": {
     "title": "Debesijos paskyros",
     "loading": "Įkeliama..."
+  },
+  "operations": {
+    "list": {
+      "title": "Sąrašas debesijos paskyrų"
+    },
+    "sync": {
+      "title": "Sinchronizuoti debesijos paskyrą"
+    },
+    "account": "Paskyra",
+    "health": {
+      "title": "Debesijos sinchronizacijos"
+    }
+  },
+  "widget": {
+    "name": "Debesijos paskyros",
+    "description": "Jūsų debesijos paskyros ir tos, kurių sinchronizacija nepavyksta.",
+    "accounts": "Paskyros",
+    "failing": "Nepavyksta"
   }
 }

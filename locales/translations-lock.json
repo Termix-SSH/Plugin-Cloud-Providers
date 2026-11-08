@@ -101,5 +101,13 @@
   "discover.done": "8087fe038437",
   "discover.failed": "68d85f333760",
   "card.title": "33b09e26bef7",
-  "card.loading": "b04ba49f8486"
+  "card.loading": "b04ba49f8486",
+  "operations.list.title": "9b9ce2d5183a",
+  "operations.sync.title": "9d949bc8b566",
+  "operations.account": "85dfa32c97d8",
+  "operations.health.title": "3a804ab6b6e4",
+  "widget.name": "33b09e26bef7",
+  "widget.description": "1a35e145598f",
+  "widget.accounts": "36bae31694f8",
+  "widget.failing": "2181f599443f"
 }

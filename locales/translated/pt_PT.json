@@ -127,5 +127,23 @@
   "card": {
     "title": "Contas na cloud",
     "loading": "A carregar..."
+  },
+  "operations": {
+    "list": {
+      "title": "Listar contas na cloud"
+    },
+    "sync": {
+      "title": "Sincronizar conta na cloud"
+    },
+    "account": "Conta",
+    "health": {
+      "title": "Sincronizações na cloud"
+    }
+  },
+  "widget": {
+    "name": "Contas na cloud",
+    "description": "As suas contas na cloud e as que falham na sincronização.",
+    "accounts": "Contas",
+    "failing": "Com falha"
   }
 }

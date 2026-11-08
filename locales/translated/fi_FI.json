@@ -127,5 +127,23 @@
   "card": {
     "title": "Pilvipalvelut",
     "loading": "Ladataan..."
+  },
+  "operations": {
+    "list": {
+      "title": "Listaa pilvitilit"
+    },
+    "sync": {
+      "title": "Synkronoi pilvitili"
+    },
+    "account": "Tili",
+    "health": {
+      "title": "Pilvisynkronoinnit"
+    }
+  },
+  "widget": {
+    "name": "Pilvitilit",
+    "description": "Pilvitilisi ja ne, joiden synkronointi epäonnistuu.",
+    "accounts": "Tilit",
+    "failing": "Epäonnistuneet"
   }
 }

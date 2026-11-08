@@ -127,5 +127,23 @@
   "card": {
     "title": "Conturi cloud",
     "loading": "Se încarcă..."
+  },
+  "operations": {
+    "list": {
+      "title": "Listează conturile cloud"
+    },
+    "sync": {
+      "title": "Sincronizează contul cloud"
+    },
+    "account": "Cont",
+    "health": {
+      "title": "Sincronizări cloud"
+    }
+  },
+  "widget": {
+    "name": "Conturi cloud",
+    "description": "Conturile tale cloud și cele care nu se sincronizează.",
+    "accounts": "Conturi",
+    "failing": "Eșuate"
   }
 }

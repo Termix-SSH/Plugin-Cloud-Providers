@@ -127,5 +127,23 @@
   "card": {
     "title": "Akun cloud",
     "loading": "Memuat..."
+  },
+  "operations": {
+    "list": {
+      "title": "Daftar akun cloud"
+    },
+    "sync": {
+      "title": "Sinkronkan akun cloud"
+    },
+    "account": "Akun",
+    "health": {
+      "title": "Sinkronisasi cloud"
+    }
+  },
+  "widget": {
+    "name": "Akun cloud",
+    "description": "Akun cloud Anda dan yang gagal disinkronkan.",
+    "accounts": "Akun",
+    "failing": "Gagal"
   }
 }

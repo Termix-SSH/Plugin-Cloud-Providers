@@ -127,5 +127,23 @@
   "card": {
     "title": "Felhő-fiókok",
     "loading": "Betöltés..."
+  },
+  "operations": {
+    "list": {
+      "title": "Felhőfiókok listázása"
+    },
+    "sync": {
+      "title": "Felhőfiók szinkronizálása"
+    },
+    "account": "Fiók",
+    "health": {
+      "title": "Felhőszinkronizálások"
+    }
+  },
+  "widget": {
+    "name": "Felhőfiókok",
+    "description": "A felhőfiókjaid és azok, amelyeknek a szinkronizálása sikertelen.",
+    "accounts": "Fiókok",
+    "failing": "Sikertelen"
   }
 }

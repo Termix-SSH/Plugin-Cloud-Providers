@@ -127,5 +127,23 @@
   "card": {
     "title": "Comptes cloud",
     "loading": "Chargement..."
+  },
+  "operations": {
+    "list": {
+      "title": "Lister les comptes cloud"
+    },
+    "sync": {
+      "title": "Synchroniser le compte cloud"
+    },
+    "account": "Compte",
+    "health": {
+      "title": "Synchronisations cloud"
+    }
+  },
+  "widget": {
+    "name": "Comptes cloud",
+    "description": "Vos comptes cloud et ceux qui échouent lors de la synchronisation.",
+    "accounts": "Comptes",
+    "failing": "En échec"
   }
 }

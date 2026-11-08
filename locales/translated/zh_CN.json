@@ -127,5 +127,23 @@
   "card": {
     "title": "云账户",
     "loading": "加载中..."
+  },
+  "operations": {
+    "list": {
+      "title": "列出云账户"
+    },
+    "sync": {
+      "title": "同步云账户"
+    },
+    "account": "账户",
+    "health": {
+      "title": "云同步"
+    }
+  },
+  "widget": {
+    "name": "云账户",
+    "description": "您的云账户以及同步失败的账户。",
+    "accounts": "账户",
+    "failing": "失败"
   }
 }

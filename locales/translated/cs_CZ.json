@@ -127,5 +127,23 @@
   "card": {
     "title": "Cloud účty",
     "loading": "Načítání..."
+  },
+  "operations": {
+    "list": {
+      "title": "Seznam cloudových účtů"
+    },
+    "sync": {
+      "title": "Synchronizovat cloudový účet"
+    },
+    "account": "Účet",
+    "health": {
+      "title": "Cloudové synchronizace"
+    }
+  },
+  "widget": {
+    "name": "Cloudové účty",
+    "description": "Vaše cloudové účty a ty, které se nedaří synchronizovat.",
+    "accounts": "Účty",
+    "failing": "Selhávající"
   }
 }

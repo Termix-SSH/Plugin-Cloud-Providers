@@ -3,6 +3,7 @@ import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import { accounts, instances } from "./tables.js";
 import { registerRoutes } from "./routes.js";
 import { createSync } from "./sync.js";
+import { registerOperations } from "./operations.js";
 
 const TICK_MS = 60_000;
 const FIRST_RUN_MS = 10_000;
@@ -14,6 +15,7 @@ export async function activate(ctx: PluginContext) {
   };
   const sync = createSync(ctx, stores);
 
+  registerOperations(ctx, stores, sync);
   registerRoutes(ctx.http.router<Router>(), ctx, stores, sync);
 
   // Auto accounts run when their interval has passed.

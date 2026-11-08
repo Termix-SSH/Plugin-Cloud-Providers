@@ -127,5 +127,23 @@
   "card": {
     "title": "Mākoņa konti",
     "loading": "Ielādē..."
+  },
+  "operations": {
+    "list": {
+      "title": "Sarakstīt mākoņa kontus"
+    },
+    "sync": {
+      "title": "Sinhronizēt mākoņa kontu"
+    },
+    "account": "Konts",
+    "health": {
+      "title": "Mākoņa sinhronizācijas"
+    }
+  },
+  "widget": {
+    "name": "Mākoņa konti",
+    "description": "Jūsu mākoņa konti un tie, kuru sinhronizācija neizdodas.",
+    "accounts": "Konti",
+    "failing": "Neizdodas"
   }
 }
