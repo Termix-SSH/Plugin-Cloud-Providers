@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [
+    {
+      "as": "admin",
+      "method": "POST",
+      "path": "/plugin-api/cloud-providers/accounts",
+      "body": {
+        "provider": "digitalocean",
+        "name": "authz-own-cloud",
+        "credentials": {
+          "token": "authz-token"
+        },
+        "onRemoved": "keep"
+      },
+      "capture": {
+        "cloud-providers.accounts": "account.id"
+      }
+    }
+  ],
+  "routes": {
+    "GET /plugin-api/cloud-providers/accounts": {
+      "access": "user",
+      "permission": "cloud-providers.view"
+    },
+    "POST /plugin-api/cloud-providers/accounts": {
+      "access": "user"
+    },
+    "DELETE /plugin-api/cloud-providers/accounts/:id": {
+      "access": "user",
+      "destructive": true
+    },
+    "PUT /plugin-api/cloud-providers/accounts/:id": {
+      "access": "user"
+    },
+    "POST /plugin-api/cloud-providers/accounts/:id/discover": {
+      "access": "user"
+    },
+    "POST /plugin-api/cloud-providers/accounts/:id/import": {
+      "access": "user",
+      "resource": {
+        "kind": "own",
+        "fixture": "cloud-providers.accounts"
+      },
+      "params": {
+        "id": "cloud-providers.accounts"
+      }
+    },
+    "POST /plugin-api/cloud-providers/accounts/:id/sync": {
+      "access": "user",
+      "resource": {
+        "kind": "own",
+        "fixture": "cloud-providers.accounts"
+      },
+      "params": {
+        "id": "cloud-providers.accounts"
+      }
+    },
+    "POST /plugin-api/cloud-providers/accounts/:id/test": {
+      "access": "user"
+    },
+    "GET /plugin-api/cloud-providers/credentials": {
+      "access": "user",
+      "permission": "cloud-providers.manage"
+    },
+    "GET /plugin-api/cloud-providers/providers": {
+      "access": "user",
+      "permission": "cloud-providers.view"
+    }
+  }
+}
