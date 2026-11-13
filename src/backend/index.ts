@@ -20,7 +20,10 @@ export async function activate(ctx: PluginContext) {
 
   // Auto accounts run when their interval has passed.
   ctx.schedule.after(FIRST_RUN_MS, () => sync.runDue());
-  ctx.schedule.every(TICK_MS, () => sync.runDue(), { jitterMs: 5_000 });
+  ctx.schedule.every(TICK_MS, () => sync.runDue(), {
+    id: "tick",
+    jitterMs: 5_000,
+  });
 }
 
 export async function deactivate() {
