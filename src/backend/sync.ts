@@ -10,6 +10,7 @@ import {
   type CloudInstance,
   type Credentials,
 } from "./providers/index.js";
+import { keepAwake } from "./keep-awake.js";
 
 export type AddressPreference = "public" | "private" | "public-first";
 export type RemovedPolicy = "keep" | "mark" | "delete";
@@ -356,6 +357,8 @@ export function createSync(
       .select()
       .from(stores.accounts)
       .where(eq(stores.accounts.syncMode, "auto"));
+    // No account syncs on its own: nothing keeps the process running.
+    keepAwake(ctx, "tick", rows.length > 0);
     for (const row of rows) {
       const last = row.lastSyncAt ? new Date(row.lastSyncAt).getTime() : 0;
       if (now - last < row.intervalMinutes * 60_000) continue;

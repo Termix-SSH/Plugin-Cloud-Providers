@@ -1,6 +1,7 @@
 import type { Router } from "express";
 import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import { accounts, instances } from "./tables.js";
+import { keepAwake } from "./keep-awake.js";
 import { registerRoutes } from "./routes.js";
 import { createSync } from "./sync.js";
 import { registerOperations } from "./operations.js";
@@ -19,6 +20,7 @@ export async function activate(ctx: PluginContext) {
   registerRoutes(ctx.http.router<Router>(), ctx, stores, sync);
 
   // Auto accounts run when their interval has passed.
+  keepAwake(ctx, "tick", true);
   ctx.schedule.after(FIRST_RUN_MS, () => sync.runDue());
   ctx.schedule.every(TICK_MS, () => sync.runDue(), {
     id: "tick",
