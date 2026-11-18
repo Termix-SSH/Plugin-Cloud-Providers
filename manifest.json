@@ -1,7 +1,7 @@
 {
   "id": "cloud-providers",
   "name": "Cloud Providers",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Add hosts from AWS, Azure, Google Cloud, DigitalOcean, Hetzner and other clouds, and keep them in sync.",
   "author": {
     "name": "Termix"
@@ -21,8 +21,8 @@
   ],
   "env": [],
   "engine": {
-    "termix": ">=26.11.1-0",
-    "api": "^1.15"
+    "termix": ">=26.11.2-0",
+    "api": "^2.0.0"
   },
   "capabilities": [
     "db:own",
@@ -37,6 +37,14 @@
     "notify:send",
     "operations:provide"
   ],
+  "sandbox": {
+    "schedules": [
+      {
+        "id": "tick",
+        "every": 60000
+      }
+    ]
+  },
   "contributes": {
     "tabs": [
       {
